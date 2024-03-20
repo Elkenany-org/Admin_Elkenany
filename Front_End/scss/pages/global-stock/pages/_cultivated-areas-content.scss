@@ -1,0 +1,23 @@
+
+.cultivated-areas-content__container {
+  text-align: center;
+
+  .title {
+    font-size: 1.8rem;
+    color: $color-main;
+    font-weight: 700;
+  }
+
+  .caution__container {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .table {
+    .head, .rows {
+      .title, .data {
+        width: 45%;
+      }
+    }
+  }
+}

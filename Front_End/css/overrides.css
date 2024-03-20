@@ -1,0 +1,27 @@
+/* ****************************Scroll BAR****************************** */
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #9D9D9D; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FFAA00;
+  border-radius: 10px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(247, 125, 14, 0.7); }
+
+/* ****************************Scroll BAR****************************** */
+@font-face {
+  font-family: 'bein';
+  src: url("../../Front_End/fonts/beinNormal.ttf"); }
+
+body {
+  direction: rtl;
+  text-align: right;
+  font-family: "bein", sans-serif; }

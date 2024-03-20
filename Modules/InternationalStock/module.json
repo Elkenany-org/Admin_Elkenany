@@ -1,0 +1,13 @@
+{
+    "name": "InternationalStock",
+    "alias": "internationalstock",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\InternationalStock\\Providers\\InternationalStockServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

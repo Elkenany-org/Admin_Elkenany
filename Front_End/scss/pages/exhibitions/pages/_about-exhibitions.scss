@@ -1,0 +1,378 @@
+.company-gallery {
+  padding: 1.5em 2em;
+
+  .slider {
+    padding: 0;
+
+    .slick-dots {
+      display: none !important;
+    }
+
+    .slick-arrow {
+      top: 37%;
+    }
+
+    .slick-prev {
+      left: 0%;
+    }
+
+    .partners-slider, .products-slider, .market-slider, .gallery-slider {
+      .item {
+        .logo-holder {
+          border: none;
+          padding: 0;
+          font-weight: bold;
+          font-size: 20px;
+          color: $font-color-second;
+
+          img {
+            border-radius: 20px;
+            border: 1px solid $bg-color-second;
+          }
+
+          &:hover img {
+            transform: none;
+          }
+        }
+      }
+    }
+
+    .gallery-slider {
+      .item {
+        a {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .tags {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .tag {
+      background: #EEEEEE;
+      border: 1px solid $color-main;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0.2rem;
+      padding: 0.2rem 0.5rem;
+      transition: all ease-in-out 0.2s;
+      cursor: pointer;
+
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        background: #FFFFFF;
+      }
+    ;
+    }
+  }
+}
+
+.modal {
+  padding: 0;
+
+  .modal-dialog {
+    max-width: 45%;
+
+    .close {
+      margin: -1rem 0 -1rem -1rem;
+    }
+
+    .modal-body {
+      direction: ltr;
+
+      .popup-slider {
+        width: 90%;
+
+        .slick-track {
+          img {
+            height: 500px;
+            max-height: 500px;
+          }
+        }
+
+        .slick-arrow {
+          z-index: 20;
+          top: 45%;
+
+          &::before {
+            font-size: 50px;
+            color: $bg-color-second;
+          }
+        }
+
+        .slick-prev {
+          left: -35px;
+        }
+
+        .slick-next {
+          right: -5px;
+        }
+      }
+    }
+  }
+}
+
+.rate {
+  //display: flex;
+  //flex-flow: column;
+  //justify-content: flex-start;
+  //width: 100%;
+  //align-items: flex-start;
+  //margin: 0.5rem 0 1rem;
+
+  .rating {
+    width: 100% !important;
+    font-size: 1.5rem;
+  }
+
+  span {
+    margin-left: 1rem;
+  }
+}
+
+.share__container {
+  h4 {
+    color: $color-main;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .area__container {
+    border: 1px $color-main solid;
+    border-radius: 4px;
+    padding: 1rem;
+    text-align: center;
+    color: $color-main;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+
+    .p__link {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      cursor: pointer;
+      color: $bg-color-main-hover;
+      border: 0;
+      box-shadow: none;
+      outline: none;
+      background: transparent;
+    }
+
+    &:hover {
+      background: $bg-color-main;
+
+      .p__link {
+        font-size: 1.1rem;
+        color: $color-main;
+
+      }
+    }
+
+  }
+}
+
+.dsq {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: $font-color-second;
+  padding: 1.5em 2em;
+
+  .rate {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    line-height: 1;
+
+    .rating {
+      direction: ltr;
+      font-size: 25px;
+
+      span {
+        color: $font-color-main;
+        cursor: pointer;
+      }
+    }
+
+    .raters-number {
+      color: #757677;
+      margin: 6.5px 10px 0 0;
+    }
+  }
+}
+
+
+.form__container {
+  .form__box {
+    color: $font-color-second;
+    width: 100%;
+    margin: 0.2rem auto;
+
+
+    input, textarea {
+      width: 100%;
+      border-radius: 4px;
+      border: 2px solid #EEE;
+      color: $bg-color-main-hover;
+
+      &:hover {
+        border: 2px solid $bg-color-second;
+      }
+
+      &:focus-visible {
+        outline: none !important;
+      }
+    }
+
+    .inputs {
+      width: 100%;
+      padding: 0 10px;
+      outline: none;
+      border-radius: 5px;
+      border: 2px solid #eee;
+      height: 48px;
+      margin-bottom: 10px;
+      transition: all .2s;
+    }
+
+    textarea {
+      min-height: 96px;
+      height: auto;
+      border: 2px solid #eee;
+    }
+
+    .btn__submit {
+      background-color: $font-color-main;
+      color: $font-color-second;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      box-shadow: 0px 4px 5px #ddd;
+      transition: all .5s;
+      width: 100%;
+      display: block;
+      text-align: center;
+      border-radius: 5px;
+      padding: 10px 0;
+
+      &:hover {
+        background-color: $bg-color-main-hover;
+      }
+    }
+  }
+}
+
+
+.about__exhibition-content {
+
+  .content__card {
+    .title {
+      color: $color-main;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .body {
+      ul {
+        li {
+          i {
+            margin-left: 0.5rem;
+          }
+
+          p {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+          }
+
+          .single__data-big {
+            .body__title {
+              font-size: 1.4rem;
+              font-weight: 500;
+
+
+            }
+
+            .body__content {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .modal {
+    .modal-dialog {
+      max-width: 60% !important;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .modal {
+    .modal-dialog {
+      max-width: 80% !important;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .modal {
+    .modal-dialog {
+      max-width: 95% !important;
+    }
+  }
+}
+
+@media (max-width: 499px) {
+  .company-gallery {
+    padding: 1.5em 0 !important;
+
+    .slider {
+      .slick-arrow {
+        display: none !important;
+      }
+    }
+  }
+  .modal {
+    .modal-dialog {
+      max-width: 95% !important;
+
+      .modal-body {
+        direction: ltr;
+
+        .popup-slider {
+          width: 90%;
+
+          img {
+            height: 300px !important;
+            max-height: 300px !important;
+          }
+
+          .slick-arrow {
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

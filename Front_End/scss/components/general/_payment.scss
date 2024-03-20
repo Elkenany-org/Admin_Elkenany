@@ -1,0 +1,97 @@
+.payment__data__container {
+  width: 40%;
+  background-color: #f5f5f5;
+  padding: 2em;
+  margin: 4em auto 0;
+  border-radius: 10px;
+
+  &-holder {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+
+    .title {
+      font-weight: bold;
+      padding-bottom: 1em;
+    }
+
+    .payment-box {
+      .payment-icons {
+        display: flex;
+        flex-flow: row nowrap;
+        direction: ltr;
+        justify-content: center;
+
+        .icons {
+          width: 50px;
+
+          &:first-of-type {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .description {
+        font-size: 22px;
+
+        .price {
+          color: $bg-color-main;
+        }
+      }
+    }
+
+    .thanks-card-box {
+      p {
+        font-size: 26px;
+
+        a {
+          color: $bg-color-main-hover;
+          transition: all .5s;
+          border-bottom: 2px solid $bg-color-main-hover;
+          line-height: 1.1 !important;
+          display: inline-block;
+
+          &:hover {
+            color: $bg-color-main;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .payment__data__container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 950px) {
+  .payment__data__container {
+    width: 60%;
+  }
+}
+
+@media (max-width: 800px) {
+  .payment__data__container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 650px) {
+  .payment__data__container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 550px) {
+  .payment__data__container {
+    width: 90%;
+    padding: 2em 1em;
+
+    &-holder {
+      width: 90%;
+    }
+  }
+}
+

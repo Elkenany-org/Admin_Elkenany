@@ -1,0 +1,461 @@
+
+.rate-box {
+  width: 100%;
+
+  .rating {
+    direction: ltr;
+    font-size: 25px;
+
+    span {
+      color: $font-color-main;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.consultants__content {
+  .all-cards {
+    margin-top: 2em;
+
+    .one-card, .details-and-reservation {
+      display: block;
+      color: $font-color-second;
+      position: relative;
+      border-radius: 10px;
+      padding: 2em 1em;
+      margin: 1em auto 2em;
+      transition: all .5s;
+      width: 100%;
+      background-color: #F3F3F3;
+      border: 2px solid transparent;
+
+      .top {
+        display: flex;
+        flex-flow: row nowrap;
+
+        .right-ppic {
+          text-align: center;
+          padding: 0 .5em 0 1.5em;
+
+          img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            padding: 5px;
+            border: 2px solid $bg-color-second;
+          }
+        }
+
+        .main-content {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: right;
+
+          .consultant__title {
+            display: inline-block;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 0.5rem;
+          }
+
+          .fields__container {
+            width: 100%;
+            text-align: right;
+            margin: 2px 0 0 0;
+
+
+            .body__title {
+              font-size: 20px;
+              line-height: 1.2;
+            }
+
+            .body__content {
+              font-size: $fs-18;
+
+
+              a {
+                color: $bg-color-second;
+
+                &:hover {
+                  color: $bg-color-fourth;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .details-and-reservation {
+      background-color: transparent;
+      padding: 0 1em;
+
+      .top {
+        justify-content: center;
+
+        .main-content {
+          justify-content: center;
+
+          .address-box {
+            display: flex;
+            line-height: 1;
+
+            i {
+              font-size: 20px;
+              margin: 2px 0 0 10px;
+              color: $font-color-second;
+            }
+
+            .address {
+              font-size: 25px;
+            }
+          }
+
+          .note {
+            font-size: 25px;
+            text-align: center;
+            margin-top: 1em;
+          }
+
+          .boxes {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            width: 90%;
+            margin: 2em 0;
+
+            .box {
+              width: 30%;
+              border-radius: 10px;
+              background-color: $bg-color-second;
+              height: 115px;
+              position: relative;
+              overflow: hidden;
+
+              span {
+                display: block;
+                text-align: center;
+                color: $font-color-second;
+                font-size: 24px;
+                line-height: 1.2;
+              }
+
+              .reservation-top {
+                background-color: $bg-color-main;
+                height: 80px;
+                width: 100%;
+                border-radius: 10px;
+                position: absolute;
+                z-index: 2;
+                padding-top: 10px;
+                top: 0%;
+                transition: all .5s;
+              }
+
+              .reserve-box {
+                position: absolute;
+                z-index: 1;
+                bottom: 3%;
+                width: 100%;
+                transition: all .5s;
+
+                .reserve-now {
+                  color: $font-color-third;
+                }
+              }
+
+              &:hover .reservation-top {
+                transform: translateY(-100%);
+              }
+
+              &:hover .reserve-box {
+                bottom: 40%;
+              }
+            }
+          }
+
+          .warning {
+            display: block;
+            text-align: center;
+            color: $font-color-second;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// End Global Sections //
+
+// Start Testimonials //
+.testimonials {
+  padding: 1.5em 0;
+
+  .slider {
+    padding: 0;
+
+    .slick-dots {
+      display: none !important;
+    }
+
+    .slick-arrow {
+      top: 37%;
+    }
+
+    .slick-prev {
+      left: 0%;
+    }
+
+    .market-slider {
+      .item {
+        .logo-holder {
+          border: none;
+          padding: 0;
+          font-weight: bold;
+          font-size: 20px;
+          color: $font-color-second;
+          cursor: pointer;
+          transition: all .2s;
+
+          img {
+            border-radius: 20px;
+            border: 1px solid $bg-color-second;
+          }
+
+          &:hover img {
+            transform: none;
+          }
+
+          &:hover {
+            color: $bg-color-main;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .consultants__content {
+    .all-cards {
+      .one-card, .details-and-reservation {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .consultants__content {
+    .all-cards {
+      .one-card, .details-and-reservation {
+        padding: 1em;
+
+        .top {
+          .right-ppic {
+            padding: 0 0 0 .5em;
+
+            img {
+              width: 70px;
+              height: 70px;
+            }
+          }
+
+          .main-content {
+            .consultant__title {
+              font-size: 25px;
+            }
+
+            p {
+              font-size: $fs-16;
+
+            }
+
+            .rate-box {
+              .rating-readonly {
+                font-size: 20px;
+              }
+            }
+
+            .address-box {
+              i {
+                font-size: 15px;
+              }
+
+              .address {
+                font-size: $fs-16;
+
+              }
+            }
+          }
+        }
+      }
+
+
+      .details-and-reservation {
+        .top {
+          .main-content {
+            .address-box {
+              i {
+                font-size: $fs-18;
+
+                margin: 0 0 0 10px;
+              }
+
+              .address {
+                font-size: 20px;
+              }
+            }
+
+            .note {
+              font-size: 20px;
+            }
+
+            .boxes {
+              margin: 1em 0;
+
+
+              .box {
+                span {
+                  font-size: $fs-19;
+
+                  line-height: 1.5;
+                }
+              }
+            }
+
+            .warning {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .consultants__content {
+    .all-cards {
+      .one-card, .about, .details-and-reservation {
+        .top {
+          .right-ppic {
+            img {
+              width: 50px;
+              height: 50px;
+            }
+          }
+
+          .main-content {
+            .consultant__title {
+              font-size: 22px;
+            }
+
+            p {
+              font-size: $fs-14;
+
+            }
+
+            .rate-box {
+              .rating-readonly {
+                font-size: $fs-18;
+
+              }
+            }
+
+            .address-box {
+              i {
+                font-size: $fs-14;
+
+              }
+
+              .address {
+                font-size: $fs-14;
+
+              }
+            }
+          }
+        }
+      }
+
+      .about {
+        .top {
+          .main-content {
+            .consultant__title {
+              font-size: $fs-18;
+
+              margin-bottom: .2em;
+            }
+
+            .name, .details {
+              font-size: $fs-16;
+
+            }
+          }
+        }
+      }
+
+      .details-and-reservation {
+        margin-bottom: 0;
+
+        .top {
+          .main-content {
+            .address-box {
+              i {
+                font-size: $fs-16;
+
+                margin: 0 0 0 5px;
+              }
+
+              .address {
+                font-size: $fs-16;
+
+              }
+            }
+
+            .note {
+              font-size: $fs-16;
+
+            }
+
+            .boxes {
+              margin: 1.5em 0;
+
+              .box {
+                height: 92px;
+
+                span {
+                  font-size: 10px;
+                  line-height: 2.5;
+                  font-weight: bold;
+                }
+
+                .reservation-top {
+                  height: 65px;
+                }
+              }
+            }
+
+            .warning {
+              font-size: $fs-16;
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .testimonials {
+    padding: 1.5em 0 !important;
+  }
+}
+
+
+

@@ -1,0 +1,40 @@
+
+.courses-slider {
+  padding: 1.5rem 0;
+
+  .sub__header {
+    margin-bottom: 1.5rem;
+    transition: 0.2s all ease-in-out;
+
+    a {
+      text-decoration: none;
+      color: $bg-color-second;
+      font-size: 1.6rem;
+
+      @media (max-width: 767px) {
+        font-size: 1.3rem;
+      }
+
+    }
+
+    &:hover {
+      a {
+        color: $bg-color-main;
+      }
+    }
+  }
+
+  .courses {
+    width: 97%;
+
+    .slick-slide {
+      margin: 0 10px;
+    }
+
+    /* the parent */
+    .slick-list {
+      margin: 0 -10px;
+    }
+
+  }
+}

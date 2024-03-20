@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7e91797e-49de-4a8c-a265-ecdc49f76dc7" name="test_elkenany">
+        <fileTransfer accessType="SFTP" host="139.59.190.18" port="22" sshConfigId="1c04972f-6f0f-445f-a598-752834eac77c" sshConfig="stest@139.59.190.18:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="9db89286-805e-49c4-9bce-4cd3aa1d8ee2" name="elkenany">
+        <fileTransfer accessType="SFTP" host="139.59.190.18" port="22" sshConfigId="c0c7047e-c46d-4897-9eea-faacf796e361" sshConfig="kenany@139.59.190.18:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="ebb85cb0-bb18-45ab-b458-6b143eb9b015" name="group">
+        <fileTransfer accessType="SFTP" host="139.59.190.18" port="22" sshConfigId="296275b9-b35f-4bf6-823d-a7f92f9d9889" sshConfig="angular@139.59.190.18:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="8ee9ba8a-9578-48e0-a5df-ebe6b9b07595" name="elkenany front">
+        <fileTransfer accessType="SFTP" host="139.59.190.18" port="22" sshConfigId="296275b9-b35f-4bf6-823d-a7f92f9d9889" sshConfig="angular@139.59.190.18:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="40f084a7-1dc9-4af8-bb16-094de774ae3f" name="doctor angular">
+        <fileTransfer accessType="SFTP" host="139.59.190.18" port="22" sshConfigId="51b442c5-cc90-40e3-b803-df5014478680" sshConfig="dr.gamal@139.59.190.18:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="431589d0-c24c-4a4c-bc21-ab58b44dc3a0" name="doctor dashboard">
+        <fileTransfer accessType="SFTP" host="139.59.190.18" port="22" sshConfigId="e2eefde1-6a2b-43d2-8fc3-e1c96964be2d" sshConfig="admin@139.59.190.18:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="4bd45dac-4c25-486f-aad4-350cdcc429f9" name="elkenanygroup dashboard">
+        <fileTransfer accessType="SFTP" host="139.59.190.18" port="22" sshConfigId="a98a2654-d989-4d40-9d0c-d7313e297931" sshConfig="kgdash@139.59.190.18:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

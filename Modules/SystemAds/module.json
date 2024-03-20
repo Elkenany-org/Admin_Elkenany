@@ -1,0 +1,13 @@
+{
+    "name": "SystemAds",
+    "alias": "systemads",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\SystemAds\\Providers\\SystemAdsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

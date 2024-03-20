@@ -1,0 +1,89 @@
+.card__main {
+  @include semi-flex(center, center, column, nowrap);
+  text-align: center;
+  background: $semi-gray;
+  margin: 2rem auto;
+  padding: 2rem 1rem 0 1rem;
+  border-radius: $rd-12;
+
+  .no__data-title {
+    font-weight: $fw-bold;
+    color: $color-main;
+  }
+
+  .no__data-img {
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  .description {
+    .content {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .form__container {
+      .form__box {
+        color: $font-color-second;
+        width: 100%;
+        margin: 0.2rem auto;
+
+        input, textarea {
+          width: 100%;
+          border-radius: 4px;
+          border: 2px solid #EEE;
+          color: $bg-color-main-hover;
+
+          &:hover {
+            border: 2px solid $bg-color-second;
+
+          }
+
+          &:focus-visible {
+            outline: none !important;
+          }
+        }
+
+        .inputs {
+          width: 100%;
+          padding: 0 10px;
+          outline: none;
+          border-radius: 5px;
+          border: 2px solid #eee;
+          height: 48px;
+          margin-bottom: 10px;
+          transition: all .2s;
+        }
+
+        textarea {
+          min-height: 96px;
+          height: auto;
+          border: 2px solid #eee;
+        }
+
+        .btn__submit {
+          background-color: $font-color-main;
+          color: $font-color-second;
+          font-size: 20px;
+          font-weight: bold;
+          border: none;
+          box-shadow: 0px 4px 5px #ddd;
+          transition: all .5s;
+          width: 100%;
+          display: block;
+          text-align: center;
+          border-radius: 5px;
+          padding: 10px 0;
+
+          &:hover {
+            background-color: $bg-color-main-hover;
+          }
+        }
+      }
+    }
+
+  }
+
+}

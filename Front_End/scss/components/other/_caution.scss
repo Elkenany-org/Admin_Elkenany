@@ -1,0 +1,79 @@
+// Start Caution //
+.caution {
+  @include semi-flex(center, flex-start, row, nowrap);
+
+  .icon {
+    font-size: 25px;
+    color: #d63031;
+  }
+
+  .caution-description {
+    text-align: center;
+    color: $bg-color-second;
+    font-size: 24px;
+    margin: 0 10px 0 0;
+  }
+}
+
+// End Caution //
+
+// Start Media Query //
+@media (max-width: 991px) {
+  .caution {
+
+    .icon {
+      font-size: 20px;
+    }
+
+    .caution-description {
+      font-size: $fs-18;
+      font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .caution {
+    .icon {
+      font-size: $fs-19;
+    }
+
+    .caution-description {
+      font-size: $fs-16;
+      font-weight: bold;
+    }
+
+  }
+}
+
+@media (max-width: 500px) {
+  .caution {
+
+    .icon {
+      font-size: $fs-18;
+
+    }
+
+    .caution-description {
+      font-size: $fs-14;
+
+      font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .caution {
+
+    .icon {
+      font-size: $fs-18;
+    }
+
+    .caution-description {
+      font-size: $fs-14;
+
+      font-weight: bold;
+    }
+  }
+}
+

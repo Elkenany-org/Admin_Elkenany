@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="This is Description Area">
+    <!-- Icon -->
+    <link rel="icon" href="../images/favicon.png">
+    <!-- Title -->
+    <title>مقارنة بورصة عادية</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../css/ordinary_comparison.css">
+</head>
+
+<body>
+<!-- Start Loading Screen -->
+<article class="loading-screen">
+    <div class="chicken-loader">
+        <span></span>
+    </div>
+</article>
+<!-- End Loading Screen -->
+
+<!-- Start button to top -->
+<button id="myBtn" class="btn_top">
+    <span class="arrow"></span>
+</button>
+<!-- End button to top -->
+
+<!-- Start Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../home.html">
+        <img src="../images/logo.png" alt="main logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="daily_stock_exchange.html">البورصة اليومية <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    البورصة العالمية
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">البورصة العالمية</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">البورصة العالمية</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">البورصة العالمية</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="companies_guide.html">دليل الشركات</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="consultants.html">الاستشاريين</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="market_home.html">سوق الكناني</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">الاخبار</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="search-area" type="search" placeholder="بحث">
+            <button class="submit" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+        <section class="sign-box">
+            <a class="log-in" href="login.html">الدخول</a>
+            <a class="sign-up" href="sign_up.html">انضم الان</a>
+        </section>
+    </div>
+    <section class="profile-box dropdown d-lg-block d-none">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">
+            <img class="profile-photo" src="../images/avatar.svg" alt="profile pic">
+            <h6>حسين كمال</h6>
+            <div class="arrow">
+                <img class="arrow-down" src="../images/down_arrow.svg" alt="arrow down">
+            </div>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item dropdown-item-especial" href="#">
+                <img class="profile-photo" src="../images/avatar.svg" alt="profile pic">
+                <h6>حسين كمال الدين حسين</h6>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="settings.html">الإعدادات</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">تسجيل الخروج</a>
+        </div>
+    </section>
+</nav>
+<!-- End Navigation Bar -->
+
+<!-- Start Header -->
+<header>
+    <div class="container-fluid one-full-slider">
+        <a href="#" target="_blank"><img class="banner" src="../images/banner.png" alt="banner"></a>
+        <a href="#" target="_blank"><img class="banner" src="../images/banner.png" alt="banner"></a>
+        <a href="#" target="_blank"><img class="banner" src="../images/banner.png" alt="banner"></a>
+    </div>
+</header>
+<!-- End Header -->
+
+<!-- Start Search Box -->
+<article class="inner-search-box d-lg-block d-none">
+    <div class="container holder">
+        <form class="box-tabs">
+            <section class="tabs">
+                <i class="far fa-building"></i>
+                <h4 class="title">الشركات:</h4>
+                <!-- Start MultisSelect Box -->
+                <div class="multiselect" id="multiselect-companies">
+                    <div class="selectBox" onclick="showCheckboxes('companies')">
+                        <select>
+                            <option>اختر الشركات</option>
+                        </select>
+                        <span class="warning">حد أقصي 3 شركات</span>
+                        <span class="companies-error">اختر شركة واحد علي الاقل</span>
+                        <div class="overSelect"></div>
+                    </div>
+                    <div id="checkboxes-companies" class="checkboxes">
+                        <label for="company-one">
+                            <input class="checks  checks-company" name="companies" type="checkbox"
+                                   id="company-one">شركة الكناني
+                            جروب</label>
+                        <label for="company-two">
+                            <input class="checks  checks-company" name="companies" type="checkbox"
+                                   id="company-two">شركة الكناني
+                            جروب</label>
+                        <label for="company-three">
+                            <input class="checks  checks-company" name="companies" type="checkbox"
+                                   id="company-three">شركة الكناني
+                            جروب</label>
+                        <label for="company-four">
+                            <input class="checks  checks-company" name="companies" type="checkbox"
+                                   id="company-four">شركة الكناني
+                            جروب</label>
+                        <label for="company-five">
+                            <input class="checks  checks-company" name="companies" type="checkbox"
+                                   id="company-five">شركة الكناني
+                            جروب</label>
+                        <label for="company-six">
+                            <input class="checks  checks-company" name="companies" type="checkbox"
+                                   id="company-six">شركة الكناني
+                            جروب</label>
+                        <label for="company-seven">
+                            <input class="checks  checks-company" name="companies" type="checkbox"
+                                   id="company-seven">شركة الكناني
+                            جروب</label>
+                    </div>
+                </div>
+                <!-- End MultisSelect Box -->
+            </section>
+            <section class="tabs tabs-especial" onClick="submit()">
+                <span class="submit" id="search-box-submit">تطبيق</span>
+            </section>
+        </form>
+    </div>
+</article>
+<!-- End Search Box -->
+
+<!-- Start Accordion Section -->
+<section class="right col-lg-3 col-md-7 col-sm-12">
+    <h2 id="show-hide-accordion" class="main-title">
+        تحديد الشركات
+        <i class="icon-s fas fa-search"></i>
+    </h2>
+    <div id="accordion" class="accordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                        <i class="far fa-building"></i>
+                        الشركات
+                    </button>
+                    <span class="companies-error-accordion">اختر شركة واحد علي الاقل</span>
+                </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    <!-- Start MultisSelect Box -->
+                    <div class="multiselect multiselect-accordion" id="multiselect-companies-accordion">
+                        <div class="selectBox" onclick="showCheckboxes('companies')">
+                            <span class="warning">حد أقصي 3 شركات</span>
+                            <div class="overSelect"></div>
+                        </div>
+                        <div id="checkboxes-companies-accordion" class="checkboxes">
+                            <label for="company-accordion-one">
+                                <input class="checks checks-company-accordion" name="companies-accordion"
+                                       type="checkbox" id="company-accordion-one">شركة الكناني
+                                جروب</label>
+                            <label for="company-accordion-two">
+                                <input class="checks checks-company-accordion" name="companies-accordion"
+                                       type="checkbox" id="company-accordion-two">شركة الكناني
+                                جروب</label>
+                            <label for="company-accordion-three">
+                                <input class="checks checks-company-accordion" name="companies-accordion"
+                                       type="checkbox" id="company-accordion-three">شركة
+                                الكناني
+                                جروب</label>
+                            <label for="company-accordion-four">
+                                <input class="checks checks-company-accordion" name="companies-accordion"
+                                       type="checkbox" id="company-accordion-four">شركة
+                                الكناني
+                                جروب</label>
+                            <label for="company-accordion-five">
+                                <input class="checks checks-company-accordion" name="companies-accordion"
+                                       type="checkbox" id="company-accordion-five">شركة
+                                الكناني
+                                جروب</label>
+                            <label for="company-accordion-six">
+                                <input class="checks checks-company-accordion" name="companies-accordion"
+                                       type="checkbox" id="company-accordion-six">شركة الكناني
+                                جروب</label>
+                            <label for="company-accordion-seven">
+                                <input class="checks checks-company-accordion" name="companies-accordion"
+                                       type="checkbox" id="company-accordion-seven">شركة
+                                الكناني
+                                جروب</label>
+                        </div>
+                    </div>
+                    <!-- End MultisSelect Box -->
+                </div>
+            </div>
+        </div>
+        <a class="submit-accordion" onclick="submitAccordion()">تطبيق</a>
+    </div>
+</section>
+<!-- End Accordion Section -->
+
+<!-- Start Partners -->
+<article class="partners slider">
+    <div class="container-fluid holder">
+        <section class="partners-slider">
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_1.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_2.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_3.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_4.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_5.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_6.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_7.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_8.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_9.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_10.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+        </section>
+    </div>
+</article>
+<!-- End Partners -->
+
+<!-- Start Comparison -->
+<article class="comparison">
+    <div class="container-fluid">
+        <div class="holder" id="comparison-holder">
+        </div>
+    </div>
+</article>
+<!-- End Comparison -->
+
+<!-- Start Footer -->
+<footer>
+    <div class="overlay">
+        <div class="container holder">
+            <div class="row">
+                <ul class="col-lg-3 col-12">
+                    <li class="title">الشركة</li>
+                    <li><a href="#">من نحن</a></li>
+                    <li><a href="#">فريق الكناني</a></li>
+                    <li><a href="#">الوظائف</a></li>
+                    <li><a href="#">اخبارنا</a></li>
+                </ul>
+                <ul class="col-lg-3 col-12">
+                    <li class="title">تحتاج للمساعدة؟</li>
+                    <li><a href="#">اتصل بنا</a></li>
+                    <li><a href="#">شروط الاستخدام</a></li>
+                    <li><a href="#">اتفاقية الخصوصية</a></li>
+                </ul>
+                <ul class="col-lg-3 col-12">
+                    <li class="title">هل انت صاحب مزرعة؟</li>
+                    <li><a href="#">انصم الي مزارع الكناني</a></li>
+                </ul>
+                <section class="media-box col-lg-3 col-12">
+                    <a class="google-play" href="#"><img src="../images/android_ar.png" alt="google play"></a>
+                    <a class="app-store" href="#"><img src="../images/iphone_ar.png" alt="app store"></a>
+                    <section class="social-media">
+                        <a class="instagram" href="#">
+                            <i class="fab fa-instagram-square"></i>
+                        </a>
+                        <a class="facebook" href="#">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </section>
+                </section>
+                <h5 class="col-12">جميع الحقوق محفوظة للكناني</h5>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+
+<!-- Start Scripts -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS v4.5 -->
+<script src="../js/jquery-3.5.1.slim.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<!-- JQuery -->
+<script src="../js/jquery-3.5.1.js"></script>
+<!-- Slick -->
+<script src="../slick/slick.min.js"></script>
+<script src="../js/slick_initialising.js"></script>
+<!-- Rating -->
+<!-- My JavaScript -->
+<script src="../js/global.js"></script>
+<script src="../js/ordinary_comparison .js"></script>
+<!-- End Scripts -->
+</body>
+
+</html>

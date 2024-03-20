@@ -1,0 +1,13 @@
+{
+    "name": "Wafer",
+    "alias": "wafer",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Wafer\\Providers\\WaferServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

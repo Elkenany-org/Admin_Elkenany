@@ -1,0 +1,414 @@
+
+.main-title {
+  background-color: $bg-color-main;
+  border-radius: 20px 0 20px 0;
+  display: inline-block;
+  padding: 10px 35px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cards {
+  border: 2px solid $bg-color-main;
+  border-radius: 40px 40px 0 0;
+  box-shadow: $fixed-box-shadow-regular;
+  padding: 1rem;
+  margin: 1em 0 2em;
+  transition: all .5s;
+}
+
+
+.company__details__container {
+  padding-top: 2em;
+
+  .company-info, .about-company, .company-details {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: $font-color-second;
+    padding: 1.5em 2em;
+
+    .image-holder {
+      text-align: center;
+      width: 100%;
+      margin-top: 1em;
+
+      .company-image {
+        width: 100px;
+        border-radius: 0.8rem;
+      }
+    }
+
+    p {
+      width: 100%;
+      font-size: 1.2rem;
+      margin: .8em 0;
+      text-align: center;
+    }
+
+    .rate {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      line-height: 1;
+
+      .rating {
+        direction: ltr;
+        font-size: 25px;
+
+        span {
+          color: $font-color-main;
+          cursor: pointer;
+        }
+      }
+
+      .raters-number {
+        color: #757677;
+        margin: 6.5px 10px 0 0;
+      }
+    }
+  }
+
+
+  .about-company {
+    p {
+      text-align: justify;
+      font-size: 1.2rem;
+    }
+  }
+
+
+  .company-products, .company-market, .company-gallery, .transport-cost {
+    padding: 1.5em 2em;
+
+    .main-title {
+      margin: 0 auto 1rem auto;
+      display: table;
+    }
+
+    .slider {
+      padding: 0;
+
+      .slick-dots {
+        display: none !important;
+      }
+
+      .slick-arrow {
+        top: 37%;
+      }
+
+      .slick-prev {
+        left: 0%;
+      }
+
+      .partners-slider, .products-slider, .market-slider, .gallery-slider {
+        .item {
+          .logo-holder {
+            border: none;
+            padding: 0;
+            font-weight: bold;
+            font-size: 20px;
+            color: $font-color-second;
+
+            img {
+              border-radius: 20px;
+              border: 1px solid $bg-color-second;
+            }
+
+            &:hover img {
+              transform: none;
+            }
+          }
+        }
+      }
+
+      .gallery-slider {
+        .item {
+          a {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .transport-cost {
+    .transport-holder {
+      .content {
+        .content__title {
+          text-align: center;
+          margin-bottom: 0.5rem;
+          font-size: $fs-24;
+          font-weight: $fw-bold;
+        }
+      }
+
+      padding: 1rem;
+      text-align: center;
+
+      .table__transport {
+        margin-top: 0.5rem;
+        display: flex;
+        flex-flow: row wrap;
+        color: $color-main;
+
+        .select__categories {
+          border-color: transparent;
+        }
+
+        .head, .rows {
+          @include semi-flex(flex-start, space-between, row, nowrap);
+          width: 100%;
+
+          .title, .data {
+            width: 48%;
+            text-align: center;
+            padding: .6rem 0;
+          }
+
+          .title {
+            height: 46px;
+            @include semi-flex(center, center, row, nowrap);
+          }
+        }
+
+        .head {
+          margin-bottom: 1em;
+
+          .title {
+            border-radius: 5px;
+            border: 2px solid $bg-color-main;
+            font-size: 1.2rem;
+
+            @media (max-width: 767px) {
+              font-size: 1rem;
+            }
+
+            @media (max-width: 500px) {
+              font-size: .7rem;
+            }
+          }
+        }
+
+        .rows {
+          box-shadow: $fixed-box-shadow-regular;
+          border-radius: 5px;
+          margin-bottom: 1em;
+
+          .data {
+            h4 {
+              margin: 0.2rem auto;
+            }
+          }
+
+          .wall {
+            height: 100%;
+            width: 2px;
+            background-color: $bg-color-second;
+          }
+        }
+      }
+
+      @media (max-width: 991px) {
+        .table__transport {
+          .head {
+            .title {
+              font-size: 0.9rem;
+              width: 48%;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 690px) {
+        .table__transport {
+          .head {
+            margin-bottom: .5em;
+
+            .title {
+              font-size: 1.2rem;
+            }
+          }
+
+          .rows {
+            .data {
+              h4 {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 600px) {
+        .table__transport {
+          .head {
+            .title {
+              font-size: 1.2rem;
+            }
+          }
+
+          .rows {
+            .data {
+              h4 {
+                font-size: 1.2rem;
+              }
+
+              h6 {
+                font-size: .8rem;
+              }
+            }
+
+            .companies-logo {
+              width: 50px !important;
+            }
+
+            .company-name {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 500px) {
+        .table__transport {
+          .head {
+            .title {
+              font-size: .9rem;
+            }
+          }
+
+          .rows {
+            .data {
+              padding: 5px 0;
+
+              h4 {
+                margin: 0.5rem auto;
+                font-size: 0.8rem;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 320px) {
+        .table__transport {
+          .head {
+            .title {
+              font-size: .8rem;
+            }
+          }
+
+          .rows {
+            .data {
+              padding: 5px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .company-details {
+    .address-box, .contact-box {
+      width: 100%;
+      text-align: center;
+      margin-top: 1em;
+      font-size: 25px;
+
+      i {
+        font-size: 20px;
+        margin-left: 10px;
+      }
+
+      .addresses, .contacts {
+        .address-title, .contact-title {
+          color: $bg-color-main;
+          font-weight: bold;
+        }
+
+        .address-content, .contact-content {
+          color: $font-color-second;
+          transition: all .5s;
+
+          &:hover {
+            color: $font-color-fourth;
+          }
+        }
+      }
+
+      .email {
+        font-size: 20px;
+        color: $font-color-second;
+        transition: all .5s;
+        font-weight: bold;
+
+        &:hover {
+          color: $font-color-fourth;
+        }
+      }
+    }
+
+    .social-box {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      margin-top: 1em;
+      font-size: 20px;
+
+      .social-holder {
+        font-size: 30px;
+
+        a {
+          margin-right: 5px;
+
+          i {
+            color: $font-color-fourth;
+            transition: all .5s;
+          }
+        }
+
+        .web {
+          i {
+            &:hover {
+              color: #F2D383;
+            }
+          }
+        }
+
+        .facebook {
+          i {
+            &:hover {
+              color: #507CBD;
+            }
+          }
+        }
+
+        .instagram {
+          i {
+            &:hover {
+              color: #DA7493;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 499px) {
+  .company-products, .company-market, .company-gallery {
+    padding: 1.5em 0 !important;
+
+    .slider {
+      .slick-arrow {
+        display: none !important;
+      }
+    }
+  }
+}
+

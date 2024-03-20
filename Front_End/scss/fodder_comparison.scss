@@ -1,0 +1,334 @@
+@import "variables";
+@import "placeholders";
+@import "inner_pages_navbar";
+@import "footer";
+@import "accordion";
+@import "logos_slider";
+@import "inner-search-box";
+
+// Start Header //
+header {
+  direction: ltr;
+  margin-top: 1em;
+
+  .banner {
+    width: 100%;
+  }
+}
+
+// End Header //
+
+// Start MultisSelect for search Box //
+.multiselect {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  cursor: pointer;
+
+  .selectBox {
+    position: relative;
+
+    select {
+      width: 100%;
+      font-weight: bold;
+    }
+
+    .warning, .items-counter {
+      color: gray;
+    }
+
+    .items-error, .companies-error {
+      display: none;
+      color: red;
+    }
+
+    .overSelect {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  .checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+    position: absolute;
+    background-color: white;
+    z-index: 5;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border-color: $bg-color-second;
+
+    label {
+      display: flex;
+      font-weight: bold;
+      padding: 5px 10px;
+      margin: 0;
+      cursor: pointer;
+      user-select: none;
+
+      .checks {
+        margin: 3px 0 0 5px;
+        height: 15px;
+        width: 15px;
+      }
+
+      &:hover {
+        background-color: #ddd;
+        border-radius: 1rem;
+
+      }
+    }
+  }
+}
+
+// End MultisSelect for search Box //
+
+// Start multiselect for accordion //
+.multiselect-accordion {
+  margin: 0;
+  width: 100%;
+
+  .checkboxes {
+    display: block;
+    position: relative;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+// End multiselect for accordion //
+
+// Start Slider //
+.slider {
+  padding: 3em 0 0;
+
+  .slick-dots {
+    display: none !important;
+  }
+}
+
+// End Slider //
+
+// Start Search Box //
+.inner-search-box {
+  .holder {
+    .box-tabs {
+      margin: 0 auto;
+      width: 60%;
+      border-radius: 35px;
+
+      .tabs {
+        width: 40%;
+
+        &:nth-of-type(2) {
+          border: none;
+        }
+
+        &:last-of-type {
+          width: 20%;
+        }
+      }
+
+      .tabs-especial {
+        border-radius: 35px 0 0 35px;
+        cursor: pointer;
+        position: relative;
+
+        .submit {
+          background-image: none;
+          font-weight: bold;
+          font-size: 33px;
+          color: $font-color-second;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}
+
+// End Search Box //
+
+// Start Accordion Section //
+.right {
+  display: none;
+  margin: 3em auto 1em;
+
+  .accordion {
+    padding-bottom: 1em;
+
+    .card {
+      &:last-of-type {
+        border-radius: 0;
+      }
+
+      .companies-error-accordion, .items-error-accordion {
+        font-size: 16px;
+        color: red;
+        margin: 0 15px;
+        display: none;
+      }
+    }
+
+    .submit-accordion {
+      width: 90%;
+      margin: .5em auto 0;
+      display: block;
+      background-color: $bg-color-main;
+      color: $font-color-second;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all .5s;
+      border-radius: 0.5rem;
+
+      &:hover {
+        background-color: $bg-color-main-hover;
+      }
+    }
+  }
+}
+
+// End Accordion Section //
+
+// Start Comparison //
+.comparison {
+  padding: 2em 0;
+
+  .holder {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    .company-card {
+      text-align: center;
+      border: 1px solid $bg-color-main;
+      border-radius: 5px;
+      display: inline-block;
+      padding: 20px 10px 10px;
+      //width better than padding for fixed cards with diffrent content
+      width: 25%;
+      transition: all .5s;
+
+      .company-head {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        color: $font-color-second;
+        transition: all .5s;
+        margin-bottom: 20px;
+
+        .company-logo {
+          width: 30px;
+          height: 30px;
+        }
+
+        .company-title {
+          margin: 0 10px 0 0;
+          text-align: right;
+        }
+
+        //&:hover
+        //{
+        //    color: $bg-color-main-hover;
+        //}
+      }
+
+      .item-box {
+        text-align: center;
+        padding-top: 5px;
+        border-top: 1px solid #ddd;
+      }
+
+      &:hover {
+        background: $bg-color-main;
+        color: #FFF;
+        border-color: $bg-color-fourth;
+
+        .company-head {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .center {
+      margin: 0 2em;
+    }
+  }
+}
+
+// End Comparison //
+
+// Start Media Query //
+@media (min-width: 992px) and (max-width: 3000px) {
+  .right {
+    display: none !important;
+  }
+}
+
+@media (max-width: 940px) {
+  .comparison {
+    .holder {
+      .company-card {
+        width: 33.3%;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .comparison {
+    .holder {
+      .company-card {
+        .company-head {
+          flex-flow: row wrap;
+          justify-content: center;
+
+          .company-title {
+            margin: 0;
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+
+      .center {
+        margin: 0 1em;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .comparison {
+    .holder {
+      .company-card {
+        .company-head {
+          .company-title {
+            font-size: 1.5rem;
+          }
+        }
+
+        .item-box {
+          h4 {
+            font-size: 1.2rem;
+          }
+
+          h5 {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// End Media Query //

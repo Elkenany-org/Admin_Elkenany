@@ -1,0 +1,994 @@
+@mixin table__chart-2($col-size , $fs, $semi-size:0.8rem) {
+  .head {
+    .title {
+      width: $col-size;
+    }
+
+    .title__chart {
+      width: $col-size;
+    }
+  }
+
+  .rows__container {
+    .rows {
+      .data {
+        width: $col-size;
+
+        .company__name {
+          font-size: $fs;
+        }
+
+        .data__content {
+          font-size: $fs;
+        }
+      }
+
+      .data__charts {
+        width: $col-size;
+      }
+    }
+  }
+  .semi__title {
+    font-size: $semi-size;
+  }
+}
+
+.row__shadow {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2) inset;
+}
+
+.table {
+  display: flex;
+  flex-flow: row wrap;
+
+  .mh-55 {
+    min-height: 55px;
+  }
+
+  .head {
+    @include semi-flex(center, space-around, row, nowrap);
+    margin-bottom: 0.5rem;
+    width: 100%;
+    color: $color-main;
+
+    .title {
+      //@include semi-flex(center, space-around, row, nowrap);
+      text-align: center;
+      padding: .6rem 0;
+      border-radius: 5px;
+      border: 2px solid $bg-color-main;
+      font-weight: 600;
+      font-size: 1.2rem;
+
+      @media (max-width: 767px) {
+        font-size: 1rem;
+      }
+
+      @media (max-width: 500px) {
+        font-size: .7rem;
+      }
+    }
+
+    .title__chart {
+      width: 20%;
+    }
+  }
+
+  .rows__container {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    overflow-y: auto;
+    direction: ltr;
+    padding: 0 0.4rem;
+
+    .rows {
+      direction: rtl;
+      width: 100%;
+      @include semi-flex(center, space-around, row, nowrap);
+      color: $color-main;
+      box-shadow: $fixed-box-shadow-regular;
+      border-radius: 5px;
+      margin-bottom: 1em;
+      min-height: 135px;
+      height: 100%;
+      max-height: 140px;
+
+
+      .data {
+        text-align: center;
+        padding: .6rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.data__title__img {
+          flex-flow: column;
+        }
+
+        .companies__logo {
+          width: 75px;
+          height: 75px;
+        }
+
+        .company__name {
+          display: block;
+          color: $font-color-second;
+          font-weight: bold;
+          transition: all .5s;
+          width: 100%;
+          height: auto;
+          font-size: $fs-14;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          max-width: 100%;
+
+          &:hover {
+            color: $bg-color-main-hover;
+          }
+
+          &.name__big {
+            font-size: $fs-20;
+          }
+        }
+
+        .data__content {
+          margin: 0;
+          font-size: 1.2rem;
+        }
+
+        .date {
+          direction: ltr;
+        }
+
+        h6 {
+          margin: 0;
+        }
+
+        .up {
+          margin: 0;
+          color: green;
+        }
+
+        .down {
+          margin: 0;
+          color: red;
+        }
+
+        &:hover .company__name {
+          color: $bg-color-main-hover;
+        }
+
+        &.data__container {
+          @include semi-flex(center, center, column, nowrap);
+        }
+      }
+
+      .data__charts {
+        padding: 0 0.5rem;
+        text-align: center;
+      }
+
+      .charts {
+        padding: 0;
+        width: 20%;
+      }
+
+      .wall {
+        width: 2px;
+        height: 100%;
+        background-color: $bg-color-second;
+      }
+
+      &.semi__rows {
+        min-height: 75px;
+      }
+    }
+
+    .ads {
+      background-color: $bg-color-main;
+
+      &:hover .company-name {
+        color: $font-color-second !important;
+      }
+    }
+  }
+
+  &.table__chart-6 {
+    .head {
+      .title {
+        width: 14%;
+      }
+
+      .title:nth-child(1),
+      .title:nth-last-child(1) {
+        width: 20%;
+      }
+
+      //.title__chart {
+      //  width: 20%;
+      //}
+    }
+
+    .rows__container {
+      .rows {
+        .data {
+          width: 14%;
+        }
+
+        .data:nth-child(1),
+        .data:nth-last-child(1) {
+          width: 20%;
+        }
+      }
+    }
+  }
+
+  &.table__chart-5 {
+    .head {
+      .title {
+        width: 19%;
+      }
+
+      .title__chart {
+        width: 20%;
+      }
+    }
+
+    .rows__container {
+      .rows {
+        .data {
+          width: 19%;
+        }
+
+        .data__charts {
+          width: 20%;
+        }
+      }
+    }
+
+  }
+
+  &.table__chart-4 {
+    .head {
+      .title {
+        width: 23%;
+      }
+
+      .title__chart {
+        width: 23%;
+      }
+    }
+
+    .rows__container {
+      .rows {
+        .data {
+          width: 23%;
+
+          .company__name {
+            font-size: 1rem;
+          }
+        }
+
+        .data__charts {
+          width: 23%;
+        }
+      }
+    }
+
+  }
+
+  &.table__chart-3 {
+    .head {
+      .title {
+        width: 30%;
+      }
+
+      .title__chart {
+        width: 30%;
+      }
+    }
+
+    .rows__container {
+      .rows {
+        .data {
+          width: 30%;
+
+          .company__name {
+            font-size: 1rem;
+          }
+        }
+
+        .data__charts {
+          width: 30%;
+        }
+      }
+    }
+
+  }
+
+  &.table__chart-2 {
+    @include table__chart-2(48%, 1.2rem);
+  }
+}
+
+.table__header__filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .head {
+    width: 48%;
+
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .card {
+      border: 0;
+      padding: 0;
+
+      .card-header {
+        padding: 0;
+        margin-bottom: 0;
+        background-color: #FFFFFF;
+        border-radius: 12px;
+        border: 0;
+
+        .card__button {
+          padding: 0.5rem 1rem;
+          width: 100%;
+          height: 100%;
+          background: #FFF;
+          text-align: start;
+          font-size: 20px;
+          color: $color-main;
+          outline: none !important;
+          border: 1px solid $color-main;
+          border-radius: 6px;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            background: $color-main;
+            color: $bg-color-main;
+          }
+
+          &:after {
+            height: 10px;
+            width: 10px;
+            border-bottom: 2px solid #FFAA00;
+            border-right: 2px solid #FFAA00;
+            left: 0;
+            margin-top: 3px;
+            right: 95%;
+            top: 16px;
+            content: '';
+            display: block;
+            pointer-events: none;
+            position: absolute;
+            -webkit-transform-origin: 66% 66%;
+            -ms-transform-origin: 66% 66%;
+            transform-origin: 66% 66%;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            -webkit-transition: all 0.15s ease-in-out;
+            transition: all 0.15s ease-in-out;
+
+            @media (max-width: 767px) {
+              right: 90%;
+            }
+          }
+        }
+      }
+
+      .card-body {
+        height: auto;
+        max-height: 300px !important;
+        overflow: auto;
+        border: 1px solid green;
+        border-radius: 8px;
+        margin: 0.2rem 0;
+        padding: 0;
+
+        ul {
+          li {
+            i {
+
+            }
+          }
+        }
+      }
+    }
+
+    .company__search {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #FFF;
+      z-index: 55;
+
+      label {
+        padding: 0.2rem 0 0.2rem 0.2rem;
+        padding-right: 0 !important;
+
+        &:hover {
+          background-color: transparent !important;
+          border-radius: 0 !important;
+        }
+      }
+
+      input {
+        width: 100%;
+        border-radius: 4px;
+        border: 2px solid #EEE;
+        color: $bg-color-main-hover;
+
+        &:hover {
+          border: 2px solid $bg-color-second;
+
+        }
+
+        &:focus-visible {
+          outline: none !important;
+        }
+      }
+
+      .searchInput::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        height: 1em;
+        width: 1em;
+        border-radius: 50em;
+        background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+        background-size: contain;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .searchInput:focus::-webkit-search-cancel-button {
+        opacity: .3;
+        pointer-events: all;
+      }
+    }
+
+    .all__labels {
+    }
+
+    // Start MultisSelect for search Box //
+    .multiselect {
+      position: relative;
+      width: 200px;
+      margin: 0 auto;
+      cursor: pointer;
+
+      .selectBox {
+        position: relative;
+
+        select {
+          width: 100%;
+          font-weight: bold;
+        }
+
+        .warning {
+          color: gray;
+        }
+
+        .companies-error {
+          display: none;
+          color: red;
+        }
+
+        .overSelect {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+        }
+
+        &:hover {
+          select {
+            color: $font-color-main;
+          }
+        }
+      }
+
+      .checkboxes {
+        display: none;
+        border: 1px $bg-color-second solid;
+        position: absolute;
+        background-color: white;
+        z-index: 5;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        height: 250px;
+        max-height: 300px;
+        overflow-y: auto;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        left: 0;
+        padding-top: 0;
+
+        label {
+          display: flex;
+          font-weight: bold;
+          padding: 5px 10px;
+          margin: 0;
+          cursor: pointer;
+          user-select: none;
+
+          .checks {
+            margin: 3px 0 0 5px;
+            height: 15px;
+            width: 15px;
+          }
+
+          &:hover {
+            background-color: $bg-color-main;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+
+    // End MultisSelect for search Box //
+
+    // Start multiselect for accordion //
+    .multiselect-accordion {
+      margin: 0;
+      width: 100%;
+
+      .checkboxes {
+        display: block;
+        position: relative;
+        border: none;
+        background-color: transparent;
+      }
+    }
+
+    // End multiselect for accordion //
+  }
+
+}
+
+@media (max-width: 991px) {
+  .table {
+    .rows__container {
+      .rows {
+        min-height: 80px;
+        height: 100%;
+        max-height: 140px;
+      }
+    }
+
+    &.table__chart-6 {
+      .head {
+        .title {
+          width: 19%;
+          font-size: 1.1rem;
+        }
+      }
+
+      .rows__container {
+        .rows {
+          .data {
+            width: 20%;
+
+            .companies__logo {
+              width: 50px;
+              height: 50px;
+            }
+
+            .company__name {
+              font-size: $fs-12;
+              -webkit-line-clamp: 4;
+
+              &.name__big {
+                font-size: $fs-14;
+              }
+            }
+
+            .data__content, .date {
+              font-size: 1.1rem;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+
+    &.table__chart-5 {
+      .head {
+        .title {
+          width: 24%;
+          font-size: 1rem;
+        }
+      }
+
+      .rows__container {
+        .rows {
+          .data {
+            width: 25%;
+
+            .data__content {
+              font-size: 1.1rem;
+            }
+
+            .companies__logo {
+              width: 50px;
+              height: 50px;
+            }
+
+            .company__name {
+              font-size: $fs-14;
+              -webkit-line-clamp: 3;
+
+              &.name__big {
+                font-size: $fs-16;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.table__chart-4 {
+      .head {
+        .title {
+          width: 32%;
+          font-size: 1.2rem;
+        }
+      }
+
+      .rows__container {
+        .rows {
+          .data {
+            width: 33%;
+
+            .companies__logo {
+              width: 60px;
+              height: 60px;
+            }
+
+            .company__name {
+              font-size: $fs-14;
+              -webkit-line-clamp: 3;
+
+              &.name__big {
+                font-size: $fs-16;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
+    &.table__chart-3 {
+      .head {
+        .title {
+          width: 48%;
+          font-size: 1.2rem;
+        }
+      }
+
+      .rows__container {
+        .rows {
+          .data {
+            width: 50%;
+
+            .company__name {
+              font-size: 1rem;
+            }
+
+            .data__content, .date {
+              font-size: 1.2rem;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+}
+
+@media (max-width: 690px) {
+  .table {
+    &.table__chart-6 {
+      .head {
+        .title {
+          width: 19%;
+          font-size: 0.9rem;
+        }
+      }
+
+      .rows__container {
+        .rows {
+          .data {
+            width: 20%;
+
+            .companies__logo {
+              width: 50px;
+              height: 50px;
+            }
+
+            .company__name {
+              font-size: 10px;
+              -webkit-line-clamp: 4;
+
+              &.name__big {
+                font-size: $fs-14;
+              }
+            }
+
+            .data__content, .date {
+              font-size: 0.7rem;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+
+    &.table__chart-5 {
+      .head {
+        .title {
+          width: 24%;
+          font-size: 1rem;
+        }
+      }
+
+      .rows__container {
+        .rows {
+          .data {
+            width: 25%;
+
+            .data__content {
+              font-size: 0.9rem;
+            }
+
+            .companies__logo {
+              width: 50px;
+              height: 50px;
+            }
+
+            .company__name {
+              font-size: 10px;
+              -webkit-line-clamp: 3;
+
+              &.name__big {
+                font-size: $fs-14;
+              }
+            }
+
+            .data__content, .date {
+              font-size: 0.9rem;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+
+    &.table__chart-4 {
+      .head {
+        .title {
+          width: 32%;
+          font-size: 1.2rem;
+        }
+      }
+
+      .rows__container {
+        .rows {
+          .data {
+            width: 33%;
+
+            .companies__logo {
+              width: 60px;
+              height: 60px;
+            }
+
+            .company__name {
+              font-size: 12px;
+              -webkit-line-clamp: 3;
+
+              &.name__big {
+                font-size: $fs-14;
+              }
+            }
+
+            .data__content, .date {
+              font-size: 1rem;
+              font-weight: 400;
+            }
+          }
+
+        }
+      }
+
+    }
+
+    &.table__chart-3 {
+      .head {
+        .title {
+          width: 48%;
+          font-size: 1.2rem;
+        }
+      }
+
+      .rows__container {
+        .rows {
+          .data {
+            width: 50%;
+
+            .company__name {
+              font-size: 1rem;
+
+            }
+
+            .data__content, .date {
+              font-size: 1rem;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .table {
+    .rows__container {
+      .rows {
+        min-height: 80px;
+        height: 100%;
+        max-height: 140px;
+
+      }
+    }
+
+    &.table__chart-6 {
+      .head {
+        .title {
+          width: 19%;
+          font-size: 0.9rem;
+        }
+      }
+
+      .rows__container {
+        .rows {
+          .data {
+            width: 20%;
+
+            .companies__logo {
+              width: 50px;
+              height: 50px;
+            }
+
+            .company__name {
+              font-size: 10px;
+              -webkit-line-clamp: 4;
+
+              &.name__big {
+                font-size: $fs-14;
+              }
+            }
+
+            .data__content, .date {
+              font-size: 0.7rem;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+
+    &.table__chart-5 {
+      .head {
+        .title {
+          width: 24%;
+          font-size: 1rem;
+        }
+      }
+
+      .rows__container {
+        .rows {
+          .data {
+            width: 25%;
+
+            .data__content {
+              font-size: 0.9rem;
+            }
+
+            .companies__logo {
+              width: 50px;
+              height: 50px;
+            }
+
+            .company__name {
+              font-size: 10px;
+              -webkit-line-clamp: 3;
+
+              &.name__big {
+                font-size: $fs-14;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.table__chart-4 {
+      .head {
+        .title {
+          width: 32%;
+          font-size: 1.2rem;
+        }
+      }
+
+      .rows__container {
+        .rows {
+          .data {
+            width: 33%;
+
+            .companies__logo {
+              width: 60px;
+              height: 60px;
+            }
+
+            .company__name {
+              font-size: 12px;
+              -webkit-line-clamp: 3;
+
+              &.name__big {
+                font-size: $fs-14;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
+    &.table__chart-3 {
+      .head {
+        .title {
+          width: 48%;
+          font-size: 1.2rem;
+        }
+      }
+
+      .rows__container {
+        .rows {
+          .data {
+            width: 50%;
+
+            .company__name {
+              font-size: 1rem;
+            }
+
+            .data__content, .date {
+              font-size: 1.2rem;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+
+    &.table__chart-2 {
+      @include table__chart-2(48%, 1rem, 0.7rem);
+    }
+  }
+}
+

@@ -1,0 +1,337 @@
+﻿@import "variables";
+@import "placeholders";
+@import "inner_pages_navbar";
+@import "footer";
+@import "accordion";
+@import "logos_slider";
+@import "inner-search-box";
+@import "nice_select";
+
+.content__select__container {
+  height: 60px;
+
+  .content__select {
+    margin: 0.5rem auto;
+  }
+}
+
+// Start Header //
+header {
+  direction: ltr;
+  margin-top: 1em;
+
+  .banner {
+    width: 100%;
+  }
+}
+
+// End Header //
+
+// Start Search BOX //
+.box-tabs {
+  .tabs {
+    position: relative;
+    z-index: 4;
+    width: 25% !important;
+  }
+
+  .tabs:last-of-type {
+    border-left: none;
+    border-right: 0;
+    width: 50%;
+    margin: 0;
+    background-color: #FFF !important;
+    transition: all 0s;
+    border-top-left-radius: 12px !important;
+    border-bottom-left-radius: 12px !important;
+
+    &:hover {
+      background-color: #FFF !important;
+    }
+  }
+}
+
+// Start Search BOX //
+
+// Start Slider //
+.slider {
+  padding: 3em 0 0;
+
+  .slick-dots {
+    display: none !important;
+  }
+}
+
+// End Slider //
+
+// Start Cards Box //
+.global-content {
+  margin: 3em 0;
+
+  .holder {
+    .right {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .left {
+      margin: 0 auto;
+
+      .title-box {
+        display: flex;
+        flex-flow: row nowrap;
+
+        .title {
+          font-size: 25px;
+          font-weight: bold;
+        }
+
+        .sections-number {
+          margin: 4px 8px 0 0;
+          font-size: 18px;
+        }
+      }
+
+      .all-cards {
+        .cards {
+          border: 2px solid $bg-color-main;
+          border-radius: 40px 40px 0 0;
+          box-shadow: $fixed-box-shadow-regular;
+          margin: 1em 0 2em;
+          transition: all .5s;
+        }
+
+        .ads__cards {
+          padding: 3.5rem 1.5rem 1.5rem 1.5rem;
+        }
+
+        .regulars__cards {
+          padding: 2.5rem 1.5rem;
+        }
+
+        .one-card {
+          display: block;
+          color: $font-color-second;
+          position: relative;
+
+          .top {
+            display: flex;
+            flex-flow: row wrap;
+
+            img {
+              width: 100px;
+            }
+
+            .right-logo {
+              width: 20%;
+              text-align: center;
+            }
+
+            .left-content {
+              width: 80%;
+              display: flex;
+              flex-flow: row wrap;
+              justify-content: center;
+
+              .main-title {
+                background-color: $bg-color-main;
+                border-radius: 20px 0 20px 0;
+                display: inline-block;
+                padding: 10px 35px;
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin: 0;
+              }
+
+              .logo-holder {
+                width: 100%;
+                text-align: center;
+                margin-top: 1em;
+              }
+
+              .rate-box {
+                width: 100%;
+
+                .rating-readonly {
+                  direction: ltr;
+                  font-size: 35px;
+                  margin: 0 auto;
+
+                  span {
+                    color: $font-color-main;
+                    cursor: pointer;
+                  }
+                }
+              }
+
+              p {
+                width: 90%;
+                font-size: 1.2rem;
+                text-align: center;
+                margin-bottom: 0;
+              }
+            }
+          }
+
+          .bottom {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: right;
+            margin-top: .5em;
+
+            .address-box {
+              i {
+                font-size: 20px;
+                margin-left: 10px;
+              }
+
+              .address {
+                font-size: 22px;
+              }
+            }
+
+            .more-details {
+              margin: 0 auto 0 0;
+              font-size: 1.2rem;
+              font-weight: bold;
+              color: $font-color-main;
+              background-color: $bg-color-second;
+              border-radius: 20px;
+              padding: 5px 30px;
+              transition: all 0.3s ease-in-out;
+
+              &:hover {
+                color: $bg-color-second;
+                background-color: $font-color-main;
+                border-radius: 20px 0 20px 0;
+              }
+            }
+          }
+
+          .advertisements-top {
+            background-color: $bg-color-second;
+            color: $font-color-main;
+            border-radius: 40px 40px 0 0;
+            width: 100%;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+            position: absolute;
+            top: .5px;
+            left: 0;
+            right: 0;
+          }
+
+          .advertisement {
+            position: absolute;
+            top: 5px;
+            right: -5%;
+            background-color: $bg-color-second;
+            color: $font-color-main;
+            padding: 1px 25px;
+            border-radius: 5px 5px 0 0;
+            display: inline-block;
+            font-size: 22px;
+            font-weight: bold;
+          }
+
+          &:hover {
+            box-shadow: $fixed-box-shadow-regular2;
+            border: 2px solid $bg-color-main-hover;
+          }
+        }
+      }
+    }
+  }
+}
+
+// End Cards Box //
+
+// Start Media Query //
+@media (max-width: 991px) {
+  .all-cards {
+    .one-card {
+      .top {
+        .left-content {
+          width: 100% !important;
+        }
+      }
+
+      .bottom {
+        justify-content: center !important;
+
+        .address-box {
+          width: 100%;
+          text-align: center;
+        }
+
+        .more-details {
+          margin: 10px 0 0 !important;
+        }
+      }
+    }
+  }
+
+  .global-content {
+    .holder {
+      padding: 0 1em;
+
+      .row {
+        justify-content: center;
+
+        .left {
+          padding: 0 1em;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1400px) {
+  .global-content {
+    margin: 3em 0;
+
+    .holder {
+      padding: 0 2em;
+
+      .left {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .global-content {
+    .all-cards {
+      .one-card {
+        .advertisements-top {
+          display: block;
+        }
+
+        .advertisement {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .global-content {
+    .all-cards {
+      .one-card {
+        .advertisements-top {
+          display: none !important;
+        }
+
+        .advertisement {
+          display: block !important;
+        }
+      }
+    }
+  }
+}
+
+// End Media Query //

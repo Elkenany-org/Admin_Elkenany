@@ -1,0 +1,108 @@
+@import "variables";
+@import "placeholders";
+@import "inner_pages_navbar";
+@import "footer";
+
+// Strat Payment //
+.payment
+{
+    width: 40%;
+    background-color: #f5f5f5;
+    padding: 2em;
+    margin: 2em auto 0;
+    border-radius: 10px;
+    .holder
+    {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        .title
+        {
+            font-weight: bold;
+            padding-bottom: 1em;
+        }
+        .payment-box
+        {
+            .payment-icons
+            {
+                display: flex;
+                flex-flow: row nowrap;
+                direction: ltr;
+                justify-content: center;
+                .icons
+                {
+                    width: 50px;
+                    &:first-of-type
+                    {
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .submit
+            {
+                width: 100%;
+                border-radius: 5px;
+                padding: 9px 10px 0;
+                height: 48px;
+                margin-top: 5em;
+                background-color: $font-color-main;
+                color: $font-color-second;
+                font-size: 20px;
+                font-weight: bold;
+                border: none;
+                box-shadow: 0px 4px 5px #ddd;
+                display: block;
+                transition: all .5s;
+                &:hover 
+                {
+                    background-color: $bg-color-main-hover;
+                }
+            }
+        }
+    }
+}
+// End Payment //
+
+
+// Start Media Query //
+@media (max-width: 1100px)
+{
+    .payment
+    {
+        width: 50%;
+    }
+}
+@media (max-width: 950px)
+{
+    .payment
+    {
+        width: 60%;
+    }
+}
+@media (max-width: 800px)
+{
+    .payment
+    {
+        width: 70%;
+    }
+}
+@media (max-width: 650px)
+{
+    .payment
+    {
+        width: 80%;
+    }
+}
+@media (max-width: 550px)
+{
+    .payment
+    {
+        width: 90%;
+        padding: 2em 1em;
+        .holder
+        {
+            width: 90%;
+        }
+    }
+}
+// End Media Query //

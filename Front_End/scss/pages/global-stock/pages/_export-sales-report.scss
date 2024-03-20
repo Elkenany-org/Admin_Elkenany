@@ -1,0 +1,29 @@
+
+.export__sales__report-container {
+  text-align: center;
+
+  .title {
+    font-size: 1.8rem;
+    color: $color-main;
+    font-weight: 700;
+  }
+
+  .table {
+    .head, .rows {
+      .title, .data {
+        width: 23%;
+      }
+    }
+  }
+
+  .table2 {
+    .table {
+
+      .head, .rows {
+        .title, .data {
+          width: 18%;
+        }
+      }
+    }
+  }
+}

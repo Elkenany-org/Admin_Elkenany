@@ -1,0 +1,107 @@
+.tv__main__container {
+  margin: 1.5rem auto;
+
+  .single__episode__container {
+    margin: 1rem auto;
+
+    .single__episode {
+      .main__video {
+        iframe {
+          width: 100%;
+          height: 350px;
+          border-radius: 0.8rem;
+        }
+      }
+
+      .main__content {
+        .main__content-title {
+          margin: 1rem auto;
+          color: $color-main;
+          font-weight: 700;
+          font-size: 1.8rem;
+        }
+
+        .main__content-body {
+          color: $bg-color-fourth;
+          font-weight: 500;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .other__episodes__container {
+    .main__title {
+      color: $color-main;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+
+    .other__episodes {
+      height: 350px;
+      overflow: auto;
+      padding: 0.2rem 0.5rem;
+      direction: ltr;
+
+
+      .episode {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid $color-main;
+        border-radius: 0.8rem;
+        direction: rtl;
+        padding: 0.2rem 0.5rem;
+        margin: 0.5rem auto;
+        transition: all ease-in-out 0.2s;
+
+        .episode__video-mask {
+          border-radius: 0.8rem;
+          height: 100%;
+          max-height: 125px;
+          width: 25%;
+          max-width: 125px;
+        }
+
+        .episode__content {
+          width: 73%;
+          text-align: right;
+          margin-bottom: 0;
+
+          &-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: $color-main;
+            display: block;
+            width: 100%;
+          }
+
+          &-body {
+            font-weight: 500;
+            font-size: 1rem;
+            color: $bg-color-fourth;
+            display: block;
+            width: 100%;
+          }
+        }
+
+        &:hover {
+          border: 1px solid $bg-color-main;
+          background: $color-main;
+
+          .episode__content {
+            &-title {
+              color: $bg-color-main;
+            }
+
+            &-body {
+              color: $bg-color-main;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

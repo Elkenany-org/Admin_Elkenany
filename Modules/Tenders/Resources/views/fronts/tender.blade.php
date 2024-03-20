@@ -1,0 +1,102 @@
+
+@extends('layouts.front')
+@section('style')
+<title>  {{$tender->title}}</title>
+<link rel="stylesheet" href="{{asset('Front_End/css/companies_details.css')}}">
+<link rel="stylesheet" href="{{asset('Front_End/css/nice-select.css')}}">
+@endsection
+@section('content')
+
+
+
+<!-- Start Header -->
+<header class="banner__header">       
+    <div class="container-fluid one-full-slider">
+        @foreach($adss as $ad)
+            <a href="{{$ad->link}}" target="_blank"><img alt="banner" class="banner" src="{{asset('uploads/ads/'.$ad->image)}}"></a>
+        @endforeach 
+    </div>
+</header>
+<article class="partners slider my-2">
+    <div class="container-fluid logos__holder">
+     <section class="partners-slider">
+        @foreach($logos as $logo)
+            <div class="item">
+            <a href="{{$logo->link}}" class="logo-holder"><img alt="partner logo" src="{{asset('uploads/ads/'.$logo->image)}}"></a>
+            <div class="item">
+            </div>
+        @endforeach 
+     </section>
+    </div>
+</article>
+    <!-- End Partners -->
+
+<section class="global__container news__container container">
+    <div class="row">
+     
+        {{csrf_field()}}
+
+        <div class="col-12">
+                <div class="news__container-content">
+                    <div class="news__header">
+                    <img alt="" src="{{asset('uploads/tenders/avatar/'.$tender->image)}}"/>
+                    </div>
+                    <div class="content">
+                        <h1 class="content__title">{{$tender->title}}</h1>
+                        <div class="content__description">
+                        
+                           
+                            {!!$tender->desc!!}
+                          
+                        </div>
+                    </div>
+                </div>
+                <div class="read__more">
+                    <h2 class="read__more-title">إقرا أيضا :</h2>
+                    <div class="new__cards row">
+                        @foreach($tenders as $value)
+                            <div class="col-12 col-lg-6">
+                                <div class="product__card min-sm-0  regular__hover">
+                                    <div class="image__card semi__image">
+                                        <img alt='product-image'
+                                            src="{{asset('uploads/tenders/avatar/'.$value->image)}}"/>
+                                    </div>
+                                    <div class="product__content">
+                                        <header class="product__title semi__title">
+                                            <a href="{{ route('front_one_tenders',$value->id) }}">
+                                            {{$value->title}}
+                                            </a>
+                                        </header>
+                                        <section class="product__bottom justify-content-end">
+                                            <section class="date__box">
+                                                <span class="date">{{$value->created_at}}</span>
+                                            </section>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</section>
+
+@endsection
+
+@section('script')
+
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>tinymce.init({
+  selector: '#mydata',
+  height: 500,
+  plugins: [
+    'advlist autolink lists link image charmap print preview anchor',
+    'searchreplace visualblocks code fullscreen',
+    'insertdatetime media table paste imagetools wordcount'
+  ],
+  toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+});</script>
+@endsection

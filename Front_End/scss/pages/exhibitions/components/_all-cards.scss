@@ -1,0 +1,142 @@
+.all__cards {
+  .card__container {
+    border: 2px solid $bg-color-second;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: block;
+    transition: all ease-in-out 0.2s;
+    margin: 0.5rem auto;
+
+    .card__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+
+      .title__content {
+        padding: 0.5rem 1rem;
+
+        .date {
+          .date__content {
+            color: $font-color-second;
+            font-size: 1.5rem;
+            font-weight: 500;
+            opacity: 0.8;
+            margin-bottom: 0.2rem;
+          }
+
+          .title {
+            color: $color-main;
+            font-size: 1.5rem;
+            font-weight: 700;
+          }
+
+          .location {
+            color: $font-color-second;
+            font-size: 1.2rem;
+            font-weight: 500;
+            opacity: 0.8;
+            margin-bottom: 0.2rem;
+          }
+        }
+      }
+
+      .image__container {
+        .card__image {
+          width: 95px;
+          height: 95px;
+          border-radius: 10px;
+          border: 2px solid $bg-color-second;
+        }
+      }
+    }
+
+    .card__body {
+      text-align: center;
+      padding: 0.5rem 1rem;
+
+      p {
+        color: $font-color-second;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 0.2rem;
+      }
+    }
+
+    hr {
+      border-top-color: $color-main;
+    }
+
+    .card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+
+      .interest {
+        background: $color-main;
+        color: $bg-color-main;
+        border-radius: 12px;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          margin-bottom: 0;
+          font-size: 1.2rem;
+        }
+      }
+
+      .followers {
+        color: $color-main;
+        font-size: 1.2rem;
+        font-weight: 500;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      .rate {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+
+        i {
+          font-size: .9rem;
+          color: $bg-color-main;
+          @media (max-width: 767px) {
+            font-size: .8rem;
+          }
+        }
+      }
+
+      .fees {
+        color: $color-main;
+        font-size: 1.2rem;
+        font-weight: 500;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: $fixed-box-shadow-regular2;
+      border: 2px solid $bg-color-main-hover;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .card__header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column-reverse;
+      text-align: center;
+    }
+  }
+}

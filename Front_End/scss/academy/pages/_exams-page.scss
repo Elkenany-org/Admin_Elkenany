@@ -1,0 +1,93 @@
+.exams, .certificates {
+    padding: 3rem 0;
+
+    h3 {
+        color: $font-color-second;
+        font-weight: bold;
+        margin-bottom: 1.4rem;
+        font-size: 1.4rem;
+
+       @media (max-width: 767px) {
+           font-size: 1.2rem;
+       }
+    }
+
+    .exam-card {
+        background-color: #eee;
+        padding: 1rem;
+        border-radius: 13px;
+        margin-bottom: 1.2rem;
+
+
+        h5 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: .8rem;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: .7rem;
+
+            @media (max-width: 767px) {
+                font-size: 1.1rem;
+            }
+        }
+
+        ul {
+            padding: 0;
+
+            li {
+                margin-bottom: .8rem;
+
+                a {
+                    border-radius: 8px;
+                    padding: .3rem .6rem;
+                    text-decoration: none;
+                    display: block;
+                    width: 100%;
+                    color: $font-color-second;
+                    background-color: $font-color-main;
+                    font-weight: 600;
+
+                    @media (max-width: 767px) {
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    .not-found-card  {
+        background-color: #eee;
+        padding: 1rem;
+        border-radius: 13px;
+        margin-bottom: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 100px;
+            height: 100px;
+
+            @media (max-width: 767px) {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 0;
+            font-weight: 600;
+
+            @media (max-width: 767px) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+
+}

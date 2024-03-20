@@ -1,0 +1,26 @@
+.toasts {
+  position: fixed;
+  top: 12%;
+  right: 1%;
+  max-width: 350px;
+  z-index: 1000;
+  background-color: #FFAA00;
+  border-radius: 5px; }
+  .toasts .toast-body {
+    display: flex;
+    flex-flow: row nowrap; }
+    .toasts .toast-body .toast-close {
+      font-weight: bold;
+      font-size: 20px;
+      margin-left: 10px;
+      cursor: pointer;
+      opacity: .5;
+      transition: all .2s; }
+      .toasts .toast-body .toast-close:hover {
+        opacity: 1; }
+    .toasts .toast-body .toast-title {
+      font-weight: bold;
+      font-size: 20px;
+      margin-left: 5px; }
+    .toasts .toast-body .toast-description {
+      font-size: 20px; }

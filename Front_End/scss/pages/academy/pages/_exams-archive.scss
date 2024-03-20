@@ -1,0 +1,45 @@
+.exam__card__archive {
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 13px;
+  margin-bottom: 0.2rem;
+
+  h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: .8rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: .7rem;
+
+    @media (max-width: 767px) {
+      font-size: 1.1rem;
+    }
+  }
+
+
+  .exam__archive {
+    padding: 0;
+
+    li {
+      margin-bottom: 1rem;
+      background: $font-color-main;
+      color: $font-color-second;
+      padding: 0.4rem 0.6rem;
+      border-radius: 12px;
+
+      p {
+        margin-bottom: 0.2rem;
+      }
+
+      .question__data {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .answer__data {
+        font-size: 1.1rem;
+      }
+    }
+
+  }
+}

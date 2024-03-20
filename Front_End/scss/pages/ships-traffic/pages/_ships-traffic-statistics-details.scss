@@ -1,0 +1,41 @@
+.multi__selectContainer {
+  padding: 1rem 0;
+}
+
+
+.stats__details {
+  .title__page {
+    font-size: 1.5rem;
+    margin: 2rem auto 0 auto;
+    text-align: center;
+  }
+
+  .chart__container {
+    text-align: center;
+  }
+
+  //// End Slider //
+  .statistics__main {
+
+    .table {
+
+      .head {
+        .title {
+          width: 23% !important;
+          height: 55px;
+        }
+      }
+
+      .rows__container {
+
+        .rows {
+          .data {
+            width: 23% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+

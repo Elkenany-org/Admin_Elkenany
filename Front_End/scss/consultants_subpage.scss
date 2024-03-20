@@ -1,0 +1,475 @@
+@import "variables";
+@import "placeholders";
+@import "inner_pages_navbar";
+@import "logos_slider";
+@import "footer";
+@import "accordion";
+@import "inner-search-box";
+@import "nice_select";
+
+// Start Header //
+header {
+  direction: ltr;
+  margin-top: 1em;
+
+  .banner {
+    width: 100%;
+  }
+}
+
+// End Header //
+
+// Start Search Box //
+.inner-search-box {
+  .holder {
+    .box-tabs {
+      margin: 0 auto;
+      width: 60%;
+      border-radius: 35px;
+
+      .tabs {
+        width: 40%;
+
+        &:nth-of-type(2) {
+          border: none;
+        }
+
+        &:last-of-type {
+          width: 20%;
+        }
+
+        select {
+          width: 150px;
+        }
+      }
+
+      .tabs-especial {
+        border-radius: 35px 0 0 35px;
+        cursor: pointer;
+        position: relative;
+
+        .submit {
+          background-image: none;
+          font-weight: bold;
+          font-size: 33px;
+          color: $font-color-second;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}
+
+// End Search Box //
+
+// Start Accordion Section //
+.right {
+  display: none;
+  margin: 3em auto 1em;
+}
+
+// End Accordion Section //
+
+// Start Slider //
+.slider {
+  padding: 3em 0 0;
+
+  .slick-dots {
+    display: none !important;
+  }
+}
+
+// End Slider //
+
+// Start Global Sections //
+.global-sections {
+  padding: 3em 0 1em;
+
+  .holder {
+    .tabs {
+      .nav {
+        justify-content: center;
+        flex-wrap: nowrap;
+
+        .nav-item {
+          margin: 0 10px;
+
+          .nav-link {
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            width: 250px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            border-bottom: none;
+            background-color: #eee;
+            color: $font-color-fifth;
+          }
+
+          .active {
+            background-color: $bg-color-main;
+            color: $font-color-second;
+          }
+        }
+      }
+    }
+
+    .content {
+      .tab-content {
+        .tab-pane {
+          .all-cards, .all-cards-dates {
+            margin-top: 2em;
+
+            .one-card {
+              display: block;
+              color: $font-color-second;
+              position: relative;
+              border-radius: 10px;
+              padding: 1.5em 1em;
+              margin: 1em auto 2em;
+              transition: all .5s;
+              width: 70%;
+              background-color: #F3F3F3;
+              border: 2px solid transparent;
+
+              .top {
+                display: flex;
+                flex-flow: row nowrap;
+
+                .right-ppic {
+                  text-align: center;
+                  padding: 0 .5em 0 1.5em;
+
+                  img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    padding: 5px;
+                    border: 2px solid $bg-color-second;
+                  }
+                }
+
+                .left-content {
+                  display: flex;
+                  flex-flow: row wrap;
+                  justify-content: right;
+
+                  .main-title {
+                    display: inline-block;
+                    font-size: 30px;
+                    font-weight: bold;
+                    margin: 0;
+                  }
+
+                  p {
+                    width: 100%;
+                    font-size: 20px;
+                    text-align: right;
+                    margin: 2px 0 0 0;
+                    line-height: 1.2;
+                  }
+
+                  .rate-box {
+                    width: 100%;
+
+                    .rating-readonly {
+                      direction: ltr;
+                      font-size: 25px;
+
+                      span {
+                        color: $font-color-main;
+                        cursor: pointer;
+                      }
+                    }
+                  }
+
+                  .address-box {
+                    display: flex;
+                    line-height: 1;
+
+                    i {
+                      font-size: 17px;
+                      margin-left: 10px;
+                      color: $font-color-main;
+                    }
+
+                    .address {
+                      font-size: 20px;
+                    }
+                  }
+                }
+              }
+
+              .bottom {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: right;
+                margin-top: 1em;
+
+                .availability-box {
+                  margin-top: 8px;
+
+                  .availability {
+                    font-size: 25px;
+                  }
+
+                  .available {
+                    color: #04b604;
+                  }
+
+                  .unavailable {
+                    color: red;
+                  }
+                }
+
+                .more-details {
+                  margin: 0 auto 0 0;
+                  font-size: 22px;
+                  font-weight: bold;
+                  color: $font-color-second;
+                  background-color: $bg-color-main;
+                  border-radius: 5px;
+                  padding: 5px 30px;
+                  transition: all 0.3s ease-in-out;
+
+                  &:hover {
+                    border-radius: 20px 0 20px 0;
+                    background-color: $font-color-second;
+                    color: $bg-color-main;
+                  }
+                }
+              }
+
+              &:hover {
+                border: 2px solid $bg-color-main-hover;
+                box-shadow: $fixed-box-shadow-regular2;
+              }
+            }
+          }
+
+          .all-cards-dates {
+            .one-card {
+              .top {
+                .left-content {
+                  justify-content: center;
+
+                  .status {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    margin: 0;
+                    font-weight: bold;
+                    font-size: 45px;
+                    color: $bg-color-main;
+                  }
+
+                  .main-title {
+                    margin: .5em 0;
+                  }
+
+                  p {
+                    display: block;
+                    text-align: center;
+                    font-weight: bold;
+                  }
+
+                  .address-box {
+                    margin-top: 1em;
+                    font-weight: bold;
+                  }
+                }
+              }
+
+              &:hover {
+                border: 2px solid transparent;
+                box-shadow: none;
+              }
+            }
+
+            .no-dates {
+              .top {
+                .left-content {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// End Global Sections //
+
+// Start Media Query //
+@media (max-width: 991px) {
+  .content {
+    .tab-content {
+      .tab-pane {
+        .all-cards, .all-cards-dates {
+          .one-card {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .global-sections {
+    .holder {
+      .tabs {
+        .nav {
+          .nav-item {
+            .nav-link {
+              width: 150px;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+
+      .content {
+        .tab-content {
+          .tab-pane {
+            .all-cards, .all-cards-dates {
+              .one-card {
+                padding: 1em;
+
+                .top {
+                  .right-ppic {
+                    padding: 0 0 0 .5em;
+
+                    img {
+                      width: 70px;
+                      height: 70px;
+                    }
+                  }
+
+                  .left-content {
+                    .main-title {
+                      font-size: 25px;
+                    }
+
+                    p {
+                      font-size: 16px;
+                    }
+
+                    .rate-box {
+                      .rating-readonly {
+                        font-size: 20px;
+                      }
+                    }
+
+                    .address-box {
+                      i {
+                        font-size: 15px;
+                      }
+
+                      .address {
+                        font-size: 16px;
+                      }
+                    }
+                  }
+                }
+
+                .bottom {
+                  .availability-box {
+                    .availability {
+                      font-size: 20px;
+                    }
+                  }
+
+                  .more-details {
+                    font-size: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .global-sections {
+    .holder {
+      .tabs {
+        .nav {
+          .nav-item {
+            .nav-link {
+              width: 120px;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+
+      .content {
+        .tab-content {
+          .tab-pane {
+            .all-cards, .all-cards-dates {
+              .one-card {
+                .top {
+                  .right-ppic {
+                    img {
+                      width: 50px;
+                      height: 50px;
+                    }
+                  }
+
+                  .left-content {
+                    .main-title {
+                      font-size: 22px;
+                    }
+
+                    p {
+                      font-size: 14px;
+                    }
+
+                    .rate-box {
+                      .rating-readonly {
+                        font-size: 18px;
+                      }
+                    }
+
+                    .address-box {
+                      i {
+                        font-size: 14px;
+                      }
+
+                      .address {
+                        font-size: 14px;
+                      }
+                    }
+                  }
+                }
+
+                .bottom {
+                  .availability-box {
+                    .availability {
+                      font-size: 16px;
+                    }
+                  }
+
+                  .more-details {
+                    font-size: 18px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// End Media Query //

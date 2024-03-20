@@ -1,0 +1,42 @@
+@import "variables";
+
+// Start Toast POPUP //
+.toasts
+{
+    position: fixed;
+    top: 12%;
+    right: 1%;
+    max-width: 350px;
+    z-index: 1000;
+    background-color: $bg-color-main;
+    border-radius: 5px;
+    .toast-body
+    {
+        display: flex;
+        flex-flow: row nowrap;
+        .toast-close
+        {
+            font-weight: bold;
+            font-size: 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            opacity: .5;
+            transition: all .2s;
+            &:hover
+            {
+                opacity: 1;
+            }
+        }
+        .toast-title
+        {
+            font-weight: bold;
+            font-size: 20px;
+            margin-left: 5px;
+        }
+        .toast-description
+        {
+            font-size: 20px;
+        }
+    }
+}
+// End Toast POPUP //

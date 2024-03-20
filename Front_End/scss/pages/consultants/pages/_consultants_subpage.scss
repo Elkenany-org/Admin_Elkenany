@@ -1,0 +1,308 @@
+
+.all-cards, .all-cards-dates {
+  margin-top: 2em;
+
+  .one-card {
+    display: block;
+    color: $font-color-second;
+    position: relative;
+    border-radius: 10px;
+    padding: 1.5em 1em;
+    margin: 1em auto 2em;
+    transition: all .5s;
+    width: 100%;
+    background-color: #F3F3F3;
+    border: 2px solid transparent;
+
+    .top {
+      display: flex;
+      flex-flow: row nowrap;
+
+      .right-ppic {
+        text-align: center;
+        padding: 0 .5em 0 1.5em;
+
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          padding: 5px;
+          border: 2px solid $bg-color-second;
+        }
+      }
+
+      .left-content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: right;
+
+        .consultant__title {
+          display: inline-block;
+          font-size: 30px;
+          font-weight: bold;
+          margin: 0;
+        }
+
+        p {
+          width: 100%;
+          font-size: 20px;
+          text-align: right;
+          margin: 2px 0 0 0;
+          line-height: 1.2;
+        }
+
+        .rate-box {
+          width: 100%;
+
+          .rating-readonly {
+            direction: ltr;
+            font-size: 25px;
+
+            span {
+              color: $font-color-main;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .address-box {
+          display: flex;
+          line-height: 1;
+
+          i {
+            font-size: 17px;
+            margin-left: 10px;
+            color: $font-color-main;
+          }
+
+          .address {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: right;
+      margin-top: 1em;
+
+      .availability-box {
+        margin-top: 8px;
+
+        .availability {
+          font-size: 25px;
+        }
+
+        .available {
+          color: $color-main;
+        }
+
+        .unavailable {
+          color: red;
+        }
+      }
+
+      .more-details {
+        margin: 0 auto 0 0;
+        font-size: 22px;
+        font-weight: bold;
+        color: $font-color-second;
+        background-color: $bg-color-main;
+        border-radius: 5px;
+        padding: 5px 30px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          border-radius: 20px 0 20px 0;
+          background-color: $font-color-second;
+          color: $bg-color-main;
+        }
+      }
+    }
+
+    &:hover {
+      border: 2px solid $bg-color-main-hover;
+      box-shadow: $fixed-box-shadow-regular2;
+    }
+  }
+}
+
+.all-cards-dates {
+  .one-card {
+    .top {
+      .left-content {
+        justify-content: center;
+
+        .status {
+          display: block;
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          font-weight: bold;
+          font-size: 45px;
+          color: $bg-color-main;
+        }
+
+        .consultant__title {
+          margin: .5em 0;
+        }
+
+        p {
+          display: block;
+          text-align: center;
+          font-weight: bold;
+        }
+
+        .address-box {
+          margin-top: 1em;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &:hover {
+      border: 2px solid transparent;
+      box-shadow: none;
+    }
+  }
+
+  .no-dates {
+    .top {
+      .left-content {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 991px) {
+  .all-cards, .all-cards-dates {
+    .one-card {
+      width: 100% !important;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .all-cards, .all-cards-dates {
+    .one-card {
+      padding: 1em;
+
+      .top {
+        .right-ppic {
+          padding: 0 0 0 .5em;
+
+          img {
+            width: 70px;
+            height: 70px;
+          }
+        }
+
+        .left-content {
+          .consultant__title {
+            font-size: 25px;
+          }
+
+          p {
+            font-size: $fs-16;
+
+          }
+
+          .rate-box {
+            .rating-readonly {
+              font-size: 20px;
+            }
+          }
+
+          .address-box {
+            i {
+              font-size: 15px;
+            }
+
+            .address {
+              font-size: $fs-16;
+
+            }
+          }
+        }
+      }
+
+      .bottom {
+        .availability-box {
+          .availability {
+            font-size: 20px;
+          }
+        }
+
+        .more-details {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .all-cards, .all-cards-dates {
+    .one-card {
+      .top {
+        .right-ppic {
+          img {
+            width: 50px;
+            height: 50px;
+          }
+        }
+
+        .left-content {
+          .consultant__title {
+            font-size: 22px;
+          }
+
+          p {
+            font-size: $fs-14;
+
+          }
+
+          .rate-box {
+            .rating-readonly {
+              font-size: $fs-18;
+
+            }
+          }
+
+          .address-box {
+            i {
+              font-size: $fs-14;
+
+            }
+
+            .address {
+              font-size: $fs-14;
+
+            }
+          }
+        }
+      }
+
+      .bottom {
+        .availability-box {
+          .availability {
+            font-size: $fs-16;
+
+          }
+        }
+
+        .more-details {
+          font-size: $fs-18;
+
+        }
+      }
+    }
+  }
+}
+

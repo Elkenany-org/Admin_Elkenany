@@ -1,0 +1,13 @@
+{
+    "name": "LocalStock",
+    "alias": "localstock",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\LocalStock\\Providers\\LocalStockServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

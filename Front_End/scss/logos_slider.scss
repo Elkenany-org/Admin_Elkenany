@@ -1,0 +1,117 @@
+@import "variables";
+
+.slider {
+  padding: 0 0 3em;
+
+  .holder {
+    text-align: center;
+
+    .main-title {
+      font-size: 2.1rem;
+      font-weight: bold;
+      margin-bottom: 1em;
+      color: $bg-color-main;
+
+      @media (max-width: 767px) {
+        font-size: 1.9rem;
+      }
+    }
+
+    .partners-slider, .products-slider, .market-slider, .gallery-slider {
+      direction: ltr;
+      width: 100%;
+      padding: 0 50px;
+
+      .item {
+        outline: none;
+        position: relative;
+
+        .logo-holder {
+          width: 150px;
+          border: 1px solid $bg-color-main;
+          padding: 30px 20px;
+          border-radius: 40px;
+          margin: 0 auto;
+          display: block;
+          outline: none;
+
+          img {
+            width: 100%;
+            transition: all .5s;
+          }
+
+          &:hover img {
+            transform: scale(1.09, 1.09);
+          }
+        }
+
+        .wall {
+          height: 90px;
+          width: 10px;
+          background-color: $bg-color-main;
+          position: absolute;
+          top: 25%;
+          right: 0%;
+        }
+      }
+
+      .slick-dots {
+        bottom: -50px;
+        left: 0;
+
+        li {
+          button {
+            &::before {
+              color: $bg-color-main !important;
+            }
+          }
+        }
+      }
+
+      .slick-arrow {
+        top: 45%;
+
+        &::before {
+          color: $bg-color-main;
+          font-size: 2.6rem;
+        }
+      }
+
+      .slick-prev {
+        left: 1%;
+      }
+
+      .slick-next {
+        right: 3%;
+      }
+    }
+  }
+
+}
+
+// Start Media Query //
+@media (max-width: 576px) {
+  .slider {
+    .holder {
+      .partners-slider {
+        .item {
+          .wall {
+            display: none;
+          }
+        }
+
+        .slick-dots {
+          li {
+            margin: 0;
+          }
+        }
+
+        .slick-next {
+          right: 7%;
+        }
+      }
+    }
+  }
+}
+
+// End Media Query //

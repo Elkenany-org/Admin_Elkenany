@@ -1,0 +1,104 @@
+.green__overlay {
+  background: $color-main;
+  padding: 2rem 0;
+}
+
+.person__card {
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  min-height: 180px;
+  height: 180px;
+  max-height: 300px;
+  max-width: 300px;
+  width: 100%;
+  position: relative;
+  margin: 2.5rem auto;
+
+
+  &:hover {
+    .person__image {
+      top: 12px;
+    }
+  }
+
+  .person__image {
+    transition: $transition-300ms;
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .image {
+      background-color: #fff;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 100px;
+      height: 100px;
+      margin: -85px auto 20px;
+      box-shadow: 0 2px 8px 0 rgba(73, 73, 73, 0.6);
+    }
+
+  }
+
+  .person__card__body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 75%;
+    height: 100%;
+    padding: 50px 1rem 0.5rem 1rem;
+
+    .name, .role, .comment {
+      text-overflow: ellipsis;
+    }
+
+    .name {
+      margin: 0 auto;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      color: $color-main;
+
+    }
+
+    .role {
+      opacity: .6;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center;
+      color: $bg-color-main;
+      margin-bottom: 5px;
+    }
+
+    .comment {
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 0;
+      color: #000;
+      margin-bottom: 10px;
+      height: 32px;
+      opacity: .6;
+      text-align: center;
+    }
+  }
+
+}
+
+@media (max-width: 991px) {
+
+  .person__card {
+
+    min-height: 180px;
+    height: auto;
+    max-height: none;
+    max-width: none;
+    width: 100%;
+
+    .person__card__body {
+      padding: 50px 0.5rem 0.5rem 0.5rem;
+    }
+  }
+}

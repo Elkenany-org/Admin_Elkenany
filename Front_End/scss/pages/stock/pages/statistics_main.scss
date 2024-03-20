@@ -1,0 +1,152 @@
+﻿
+.multi__selectContainer {
+  padding: 1rem 0;
+}
+
+.chart__container {
+  #chart, .chart-box {
+    padding: 1.5rem 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 22px 35px -16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+
+  select.flat-select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: $bg-color-main url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'60px\' height=\'60px\'><polyline fill=\'white\' points=\'46.139,15.518 25.166,36.49 4.193,15.519\'/></svg>") no-repeat scroll right 2px top 9px / 16px 16px;
+    border: 0 none;
+    border-radius: 3px;
+    color: #fff;
+    font-family: arial, tahoma;
+    font-size: $fs-16;
+
+    font-weight: bold;
+    outline: 0 none;
+    height: 33px;
+    padding: 5px 20px 5px 10px;
+    text-align: center;
+    text-indent: 0.01px;
+    text-overflow: "";
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease 0s;
+    width: auto;
+    -webkit-transition: 0.3s ease all;
+    -moz-transition: 0.3s ease all;
+    -ms-transition: 0.3s ease all;
+    -o-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+  }
+
+  select.flat-select:focus, select.flat-select:hover {
+    border: 0;
+    outline: 0;
+  }
+
+
+  .apexcharts-canvas {
+    margin: 0 auto;
+  }
+
+  #chart {
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+
+  .toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    background: #fff;
+    color: #222;
+    border: 1px solid #e7e7e7;
+    border-bottom: 2px solid #ddd;
+    border-radius: 2px;
+    padding: 4px 17px;
+    margin: 0 0.2rem;
+  }
+
+  button.active {
+    color: $bg-color-main;
+    background: $bg-color-second;
+    border: 1px solid $bg-color-second;
+    border-bottom: 2px solid $bg-color-second;
+  }
+
+  button:focus {
+    outline: 0;
+  }
+
+}
+
+/* Table */
+.table__main {
+  font-size: 1rem;
+  font-weight: 600;
+
+  table {
+    border-collapse: separate !important;
+    border-spacing: 0;
+  }
+
+  .table {
+    color: $bg-color-second;
+    text-align: center;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border: 1px solid #EEE;
+    display: table !important;
+
+    thead {
+      tr {
+        font-size: 1.2rem;
+      }
+
+      th {
+        border-top: 0 !important;
+        border-bottom: 0 !important;
+      }
+
+      th:last-child {
+        border-left: 0 !important;
+      }
+    }
+
+    tr {
+      td:last-child {
+        border-left: 0 !important;
+      }
+    }
+  }
+
+  .company__link__container {
+    cursor: pointer;
+    padding: 0;
+
+    .company__link {
+      color: $bg-color-second;
+      font-size: 1.2rem;
+      transition: all 0.2s ease-in-out;
+      padding: 0.6rem 1rem;
+      width: 100%;
+      display: block;
+    }
+
+    &:hover {
+      .company__link {
+        color: #FFF;
+      }
+    }
+  }
+
+  .table-hover tbody tr:hover {
+    background: $bg-color-main;
+  }
+}

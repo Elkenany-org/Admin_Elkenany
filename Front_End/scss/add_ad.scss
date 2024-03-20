@@ -1,0 +1,143 @@
+@import "variables";
+@import "placeholders";
+@import "inner_pages_navbar";
+@import "footer";
+
+// Strat Add Ads Form //
+.add-ads
+{
+    padding: 2.5em 0 1em;
+    .holder
+    {
+        width: 35%;
+        margin: 0 auto;
+        .main-title
+        {
+            font-weight: bold;
+            text-align: center;
+            color: $font-color-second;
+            margin-bottom: .6em;
+        }
+        .form-box
+        {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            color: $font-color-second;
+            .inputs
+            {
+                width: 100%;
+                padding: 0 10px;
+                outline: none;
+                border-radius: 5px;
+                border: 1px solid #707070;
+                height: 48px;
+                margin-bottom: 10px;
+                transition: all .5s;
+            }
+            .contact-me
+            {
+                margin-top: 15px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .radio-box
+            {
+                width: 100%;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                font-weight: bold;
+                margin: 1em 0 2.5em;
+                .box
+                {
+                    display: flex;
+                    label
+                    {
+                        margin: 0;
+                        line-height: 1;
+                        margin-right: 5px;
+                        font-size: 18px;
+                    }
+                }
+                .center-box
+                {
+                    margin: 0 1em;
+                }
+            }
+            .submit
+            {
+                background-color: $font-color-main;
+                color: $font-color-second;
+                font-size: 20px;
+                font-weight: bold;
+                border: none;
+                box-shadow: 0px 4px 5px #ddd;
+                transition: all .5s;
+                width: 100%;
+                display: block;
+                text-align: center;
+                border-radius: 5px;
+                padding: 10px 0;
+                &:hover 
+                {
+                    background-color: $bg-color-main-hover;
+                }
+            }
+        }
+    }
+}
+// End Add Ads Form //
+
+// Start Media Query //
+@media (max-width: 1200px)
+{
+    .add-ads
+    {
+        .holder
+        {
+            width: 40%;
+        }
+    }
+}
+@media (max-width: 991px)
+{
+    .add-ads
+    {
+        .holder
+        {
+            width: 50%;
+        }
+    }
+}
+@media (max-width: 700px)
+{
+    .add-ads
+    {
+        .holder
+        {
+            width: 60%;
+        }
+    }
+}
+@media (max-width: 600px)
+{
+    .add-ads
+    {
+        .holder
+        {
+            width: 70%;
+        }
+    }
+}
+@media (max-width: 500px)
+{
+    .add-ads
+    {
+        .holder
+        {
+            width: 90%;
+        }
+    }
+}
+// End Media Query //

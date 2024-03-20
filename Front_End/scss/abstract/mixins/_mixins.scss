@@ -1,0 +1,7 @@
+@mixin semi-flex($align, $justify, $flow,$wrap:wrap) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-flow: $flow;
+  flex-wrap: $wrap;
+}

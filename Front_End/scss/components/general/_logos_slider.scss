@@ -1,0 +1,114 @@
+.slider {
+  padding: 0;
+
+  .logos__holder {
+    text-align: center;
+
+    .main-title {
+      font-size: $fs-32;
+      font-weight: $fw-bold;
+      margin-bottom: 1rem;
+      color: $bg-color-main;
+      background: $color-white;
+      @media (max-width: 767px) {
+        font-size: $fs-28;
+      }
+    }
+
+    .partners-slider, .products-slider, .market-slider, .gallery-slider, .add-slider {
+      direction: ltr;
+      width: 100%;
+      padding: 0 50px;
+
+      .item {
+        outline: none;
+        position: relative;
+
+        .logo-holder {
+          width: 100px;
+          border: 1px solid $bg-color-main;
+          padding: 1.5rem 1rem;
+          border-radius: 24px;
+          margin: 0 auto;
+          display: block;
+          outline: none;
+
+          img {
+            width: 100%;
+            transition: all .5s;
+          }
+
+          &:hover img {
+            transform: scale(1.09, 1.09);
+          }
+        }
+
+        .wall {
+          height: 90px;
+          width: 10px;
+          background-color: $bg-color-main;
+          position: absolute;
+          top: 15%;
+          right: 0;
+        }
+      }
+
+      .slick-dots {
+        bottom: -50px;
+        left: 0;
+
+        li {
+          button {
+            &::before {
+              color: $bg-color-main !important;
+            }
+          }
+        }
+      }
+
+      .slick-arrow {
+        top: 45%;
+
+        &::before {
+          color: $bg-color-main;
+          font-size: 2.6rem;
+        }
+      }
+
+      .slick-prev {
+        left: 1%;
+      }
+
+      .slick-next {
+        right: 3%;
+      }
+    }
+  }
+}
+
+// Start Media Query //
+@media (max-width: 576px) {
+  .slider {
+    .logos__holder {
+      .partners-slider {
+        .item {
+          .wall {
+            display: none;
+          }
+        }
+
+        .slick-dots {
+          li {
+            margin: 0;
+          }
+        }
+
+        .slick-next {
+          right: 7%;
+        }
+      }
+    }
+  }
+}
+
+// End Media Query //

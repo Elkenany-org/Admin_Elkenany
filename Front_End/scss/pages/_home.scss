@@ -1,0 +1,472 @@
+﻿// Start Header //
+#homeHeader {
+  direction: rtl;
+  position: relative;
+  height: 400px;
+  z-index: 1;
+  transition: $transition-200ms;
+  margin-top: 0;
+  @media (min-width: 768px) and (max-width: 990px) {
+    height: 300px;
+  }
+
+  @media (max-width: 767px) {
+    height: 480px;
+  }
+
+  .home__overlay {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+  }
+
+  .home__holder {
+    height: 100%;
+    position: relative;
+  }
+
+  .elknany__title {
+    position: relative;
+    //z-index: 2.9;
+    text-align: right;
+    font-size: 2.7rem;
+    //margin: 0;
+    font-weight: bold;
+    color: $color-main;
+    //margin-top: 1.4rem;
+    top: 3rem;
+    z-index: 2;
+    //padding: 1.5em 0 0;
+
+    @media (max-width: 767px) {
+      font-size: 2rem;
+      //margin-top: 1.3rem;
+    }
+  }
+
+  .content__holder {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+
+    @media (max-width: 767px) {
+      bottom: 0;
+    }
+
+    &-holder {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      @media (max-width: 767px) {
+        width: 95%;
+        margin: auto;
+      }
+    }
+  }
+
+  .two-way-search-box {
+    border-radius: $rd-30;
+    background-color: $bg-color-third;
+    box-shadow: $fixed-box-shadow-regular2;
+
+    .head {
+      @include semi-flex(center, center, row, nowrap);
+
+      .head__title {
+        width: 50%;
+        color: $font-color-second;
+        font-weight: $fw-bold;
+        transition: $transition-200ms;
+        border-bottom: 4px solid $bg-color-fourth;
+        text-align: center;
+        cursor: pointer;
+        padding: 0.625rem 0;
+        font-size: $fs-20;
+        margin: 0;
+
+        &:hover {
+          background-color: $semi-gray;
+          border-bottom: 4px solid $bg-color-main !important;
+          color: $bg-color-main !important;
+        }
+
+        @media (max-width: 767px) {
+          font-size: $fs-18;
+        }
+      }
+
+      .active {
+        border-bottom: 4px solid $bg-color-main;
+
+        &:hover {
+          background-color: #dcdcdc;
+          border-bottom: 4px solid $bg-color-main !important;
+          color: $bg-color-main !important;
+        }
+      }
+
+      .title-right {
+        border-radius: 0 30px 0 0;
+        color: $bg-color-main;
+
+        &:hover {
+          border-radius: 0 30px 0 0;
+        }
+      }
+
+      .title-left {
+        border-radius: 30px 0 0 0;
+
+        &:hover {
+          border-radius: 30px 0 0 0;
+        }
+      }
+    }
+
+    .body {
+      padding: .5em;
+
+      .tabs {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+
+        @media (max-width: 767px) {
+          display: block;
+        }
+
+        .nav-item, .nav-item-2 {
+          position: relative;
+
+          @media (max-width: 767px) {
+            display: flex;
+            justify-content: flex-start !important;
+            align-items: center;
+          }
+
+          .nav-link {
+            display: flex;
+            flex-flow: row wrap;
+            text-align: right !important;
+            justify-content: flex-start !important;
+            align-items: center;
+            //position: relative;
+
+
+            padding: 0.5rem 0rem;
+
+            @media (min-width: 768px) {
+              text-align: center;
+              display: flex;
+              flex-flow: row wrap;
+              justify-content: center !important;
+            }
+
+            .icon-holder {
+              //width: 100%;
+
+              @media (max-width: 991px) {
+                //display: none;
+              }
+
+              .icon {
+                height: 35px;
+                width: 35px;
+                display: inline-block;
+                margin-left: .3rem;
+
+                @media (max-width: 991px) {
+                  height: 28px;
+                  width: 35px;
+                }
+              }
+            }
+
+            .title {
+              font-size: 1rem;
+              color: $font-color-second;
+              font-weight: bold;
+              transition: all .3s;
+              margin: 0;
+
+              @media (max-width: 767px) {
+                font-size: .9rem;
+
+              }
+            }
+
+            &::after {
+              color: $font-color-second;
+              //margin: 15px 5px 0 0;
+              transition: all .3s;
+              position: relative;
+              top: 0;
+              //left: 0;
+
+              @media (max-width: 767px) {
+                position: absolute;
+                top: 10px;
+                left: 0;
+              }
+            }
+
+            &:hover .title {
+              color: $bg-color-main-hover;
+            }
+
+            &:hover::after {
+              color: $bg-color-main-hover;
+            }
+
+            &:focus .title {
+              color: $bg-color-main-hover;
+            }
+
+            &:focus::after {
+              color: $bg-color-main-hover;
+            }
+          }
+
+          .dropdown-menu {
+            width: 100% !important;
+            font-size: 1rem;
+            border-color: $bg-color-second;
+            box-shadow: $fixed-box-shadow-regular;
+
+            @media (max-width: 767px) {
+              font-size: .9rem;
+            }
+
+            .dropdown-item {
+              color: $font-color-second;
+              padding: 6px 0;
+
+              &:active {
+                color: $font-color-third;
+              }
+            }
+          }
+
+          &:not(:nth-of-type(5)):not(:nth-of-type(10)) {
+            border-left: 1px solid $bg-color-second;
+
+            @media (max-width: 991px) {
+              border: 0;
+            }
+          }
+        }
+
+        .nav-item-2 {
+          display: none;
+
+          .dropdown-menu {
+            width: inherit;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// End Header //
+
+// Start How to Buy //
+.how-to-buy {
+  padding: 5em 0 1em;
+
+  .holder {
+    text-align: center;
+
+    .main-title {
+      font-size: 2.1rem;
+      font-weight: bold;
+      margin-bottom: 1em;
+      color: $color-main;
+      @media (max-width: 767px) {
+        font-size: 1.9rem;
+      }
+    }
+
+
+    i, h2, h4 {
+      color: $color-main;
+    }
+
+    h5 {
+      color: $bg-color-main
+    }
+
+    .full-cards {
+      i {
+        font-size: 30px;
+      }
+
+      h4 {
+        font-weight: bold;
+        margin: 10px 0;
+        font-size: 1.6rem;
+        height: 60px;
+        max-height: 60px;
+
+        @media (max-width: 767px) {
+          font-size: 1.4rem;
+          height: auto;
+        }
+      }
+
+      h5 {
+        font-size: 1.2rem;
+
+        @media (max-width: 767px) {
+          font-size: 1.2rem;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .full-cards {
+          margin-bottom: 1rem !important;
+        }
+      }
+    }
+
+
+  }
+
+  @media (max-width: 576px) {
+    padding: 2rem 0 1rem;
+  }
+}
+
+// End How to Buy //
+
+
+// Start Media Query //
+@media (max-width: 991px) {
+  #homeHeader {
+    .elknany__title {
+      text-align: center !important;
+
+      br {
+        display: none;
+      }
+    }
+
+    .holder {
+      position: relative !important;
+    }
+
+    .two-way-search-box {
+      border-radius: 20px !important;
+
+      .head {
+        .title-right {
+          border-radius: 0 20px 0 0 !important;
+        }
+
+        .title-left {
+          border-radius: 20px 0 0 0 !important;
+        }
+      }
+
+      .body {
+        .nav-item {
+          width: 100% !important;
+
+          .nav-link {
+            display: flex;
+            flex-flow: row wrap;
+            text-align: right !important;
+            justify-content: right !important;
+            align-items: center;
+
+            .icon-holder {
+              width: auto !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #homeHeader {
+    .holder {
+      padding: 0 1em 2em !important;
+    }
+
+    .two-way-search-box {
+      border-radius: $rd-15 !important;
+
+      .head {
+        .title-right {
+          border-radius: 0 $rd-15 0 0 !important;
+        }
+
+        .title-left {
+          border-radius: $rd-15 0 0 0 !important;
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 576px) {
+  #homeHeader {
+    .elknany__title {
+      text-align: center;
+
+      br {
+        display: none;
+      }
+    }
+
+    .holder {
+      position: relative !important;
+      padding: 0 1em;
+    }
+
+    .two-way-search-box {
+      margin-top: 1em;
+      border-radius: 10px !important;
+
+      .head {
+        .title-right {
+          border-radius: 0 $rd-10 0 0 !important;
+        }
+
+        .title-left {
+          border-radius: $rd-10 0 0 0 !important;
+        }
+      }
+
+      .body {
+        .nav-item {
+          width: 100% !important;
+
+          .nav-link {
+            .icon-holder {
+              .icon {
+                height: 30px !important;
+                width: 30px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// End Media Query //

@@ -1,0 +1,96 @@
+/* ----------- Start Loading Screen ----------- */
+.loading-screen {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #FFF;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .loading-screen .chicken-loader {
+    background: url("../images/loader.gif");
+    height: 300px;
+    width: 300px;
+    /* Bird Wattle */ }
+
+/* ----------- End Loading Screen ----------- */
+/* ---------- Start Button to top ----------- */
+.btn_top {
+  position: fixed;
+  bottom: 10px;
+  right: -60px;
+  z-index: 99;
+  border: none !important;
+  outline: none !important;
+  background-color: #FFAA00;
+  cursor: pointer;
+  padding: 20px 25px 20px;
+  opacity: .9;
+  transition: all .3s ease-in-out; }
+  .btn_top .arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg); }
+  .btn_top:hover {
+    background-color: #d48f04;
+    opacity: 1;
+    transform: translate(0, -5px); }
+
+/* ---------- End Button to top ----------- */
+/* ---------- Start Global ----------- */
+html {
+  scroll-behavior: smooth; }
+
+body {
+  background-color: #ffffff;
+  font-family: "bein", sans-serif;
+  direction: rtl;
+  color: #1f6b00; }
+
+a {
+  text-decoration: none !important;
+  line-height: 1.5 !important; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.regular-cards {
+  border: 2px solid #FFAA00;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  padding: 2em 1em;
+  margin: 1em 0 1rem;
+  transition: all .5s;
+  display: flex;
+  flex-flow: row nowrap; }
+  .regular-cards .content-box {
+    margin: 0 auto; }
+
+.cards {
+  border: 2px solid #FFAA00;
+  border-radius: 40px 40px 0 0;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  padding: 3.5em 1em;
+  margin: 1em 0 2em;
+  transition: all .5s; }
+
+/* ---------- Start Global Media Query ----------- */
+@media (max-width: 991px) {
+  .regular-cards {
+    justify-content: center;
+    flex-flow: column wrap;
+    padding: 1em 0; } }
+
+@media (min-width: 991px) {
+  .container {
+    max-width: 960px; } }
+
+/* ---------- End Global Media Query ----------- */
+/* ---------- End Global ----------- */

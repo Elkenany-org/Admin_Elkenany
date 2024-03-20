@@ -1,0 +1,46 @@
+@import "../variables";
+@import "../placeholders";
+@import "../inner_pages_navbar";
+@import "../footer";
+
+// academy components
+
+// course card
+@import "componnets/course-card";
+// academy components
+
+
+body {
+  direction: rtl;
+  text-align: right;
+}
+
+
+// all categories
+@import "pages/all-categories";
+// all categories
+
+// course details
+@import "pages/course-details";
+// course details
+
+// offline course
+@import "pages/offline-course";
+// offline course
+
+// lecture page
+@import "pages/lecture-page";
+// lecture page
+
+// questions page
+@import "pages/questions";
+// questions page
+
+// exams page
+@import "pages/exams-page";
+// exams page
+
+
+
+
+

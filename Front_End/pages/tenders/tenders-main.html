@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="This is Description Area" name="description">
+    <!-- Icon -->
+    <link href="../../images/favicon.png" rel="icon">
+    <!-- Title -->
+    <title>المناقصات</title>
+    <!-- Bootstrap CSS -->
+    <link href="../../css/vendors/bootstrap.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../../css/vendors/all.min.css" rel="stylesheet">
+    <!-- slick -->
+    <link href="../../vendors/slick/slick.css" rel="stylesheet" type="text/css"/>
+    <link href="../../vendors/slick/slick-theme.css" rel="stylesheet" type="text/css"/>
+
+    <!-- My CSS -->
+    <link href="../../css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="main__content__body">
+    <!-- Start Loading Screen -->
+    <article class="loading-screen">
+        <div class="chicken-loader">
+            <span></span>
+        </div>
+    </article>
+    <!-- End Loading Screen -->
+
+    <!-- Start button to top -->
+    <button class="btn_top" id="myBtn">
+        <span class="arrow"></span>
+    </button>
+    <!-- End button to top -->
+
+    <!-- Start Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../../index.html">
+            <img alt="main logo" src="../../images/logo.png">
+        </a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="daily_stock_exchange.html">البورصة اليومية <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#" id="navbarDropdown" role="button">
+                        البورصة العالمية
+                    </a>
+                    <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                        <a class="dropdown-item" href="#">البورصة العالمية</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">البورصة العالمية</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">البورصة العالمية</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="companies_guide.html">دليل الشركات</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consultants/consultants.html">الاستشاريين</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="market/market_home.html">سوق الكناني</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">الاخبار</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="search-area" placeholder="بحث" type="search">
+                <button class="submit" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <section class="sign-box">
+                <a class="log-in" href="../auth-pages/login.html">الدخول</a>
+                <a class="sign-up" href="../auth-pages/sign_up.html">انضم الان</a>
+            </section>
+        </div>
+        <section class="profile-box dropdown d-lg-block d-none">
+            <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown"
+               href="#"
+               id="navbarDropdown" role="button">
+                <img alt="profile pic" class="profile-photo" src="../../images/avatar.svg">
+                <h6>حسين كمال</h6>
+                <div class="arrow">
+                    <img alt="arrow down" class="arrow-down" src="../../images/down_arrow.svg">
+                </div>
+            </a>
+            <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                <a class="dropdown-item dropdown-item-especial" href="#">
+                    <img alt="profile pic" class="profile-photo" src="../../images/avatar.svg">
+                    <h6>حسين كمال الدين حسين</h6>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../auth-pages/settings.html">الإعدادات</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">تسجيل الخروج</a>
+            </div>
+        </section>
+    </nav>
+    <!-- End Navigation Bar -->
+
+    <!-- Start Header -->
+    <header class="banner__header">
+        <div class="container-fluid one-full-slider">
+            <a href="#" target="_blank"><img alt="banner" class="banner" src="../../images/banner.png"></a>
+            <a href="#" target="_blank"><img alt="banner" class="banner" src="../../images/banner.png"></a>
+            <a href="#" target="_blank"><img alt="banner" class="banner" src="../../images/banner.png"></a>
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Start breadcrumb -->
+    <div class="breadcrumb__container container">
+        <div class="custom__breadcrumb">
+            <h1 class="page__title">المناقصات</h1>
+        </div>
+    </div>
+    <!-- End breadcrumb -->
+
+
+    <!-- Start Partners -->
+    <article class="partners slider my-2">
+        <div class="container-fluid logos__holder">
+            <section class="partners-slider">
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_1.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_2.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_3.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_4.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_5.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_6.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_7.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_8.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_9.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_10.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+            </section>
+        </div>
+    </article>
+    <!-- End Partners -->
+
+
+    <!-- Start Search Box -->
+    <article class="inner-search-box d-lg-block d-none">
+        <div class="container">
+            <form class="box-tabs">
+                <div class="search-box-overlay"></div>
+                <div class="edge"></div>
+                <section class="tabs tabs-4">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h4 class="title">القطاع:</h4>
+                    <select class="form-control">
+                        <option value="الداجني">الداجني</option>
+                        <option value="الحيواني">الحيواني</option>
+                        <option value="الزراعي">الزراعي</option>
+                        <option value="السمكي">السمكي</option>
+                        <option value="الخيول العربية">الخيول العربية</option>
+                    </select>
+                </section>
+                <section class="tabs tabs-4">
+                    <i class="fas fa-list-ul"></i>
+                    <h4 class="title">القسم:</h4>
+                    <select>
+                        <option value="daily-market">شركات كارتون البيض المبستر</option>
+                        <option value="daily-market">شركات كارتون البيض المبستر</option>
+                        <option value="daily-market">شركات كارتون البيض المبستر</option>
+                        <option value="daily-market">شركات كارتون البيض المبستر</option>
+                    </select>
+                </section>
+                <section class="tabs tabs-4">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4 class="title">المحافظة:</h4>
+                    <select class="select2">
+                        <option selected value="القاهرة">القاهرة</option>
+                        <option value="الإسكندرية">الاسكندرية</option>
+                        <option value="الإسماعيلية">الإسماعيلية</option>
+                        <option value="أسوان">أسوان</option>
+                        <option value="أسيوط">أسيوط</option>
+                        <option value="الأقصر">الأقصر</option>
+                        <option value="البحر الأحمر">البحر الأحمر</option>
+                        <option value="البحيرة">البحيرة</option>
+                        <option value="بني سويف">بني سويف</option>
+                        <option value="بورسعيد">بورسعيد</option>
+                        <option value="جنوب سيناء">جنوب سيناء</option>
+                        <option value="الجيزة">الجيزة</option>
+                        <option value="الدقهلية">الدقهلية</option>
+                        <option value="دمياط">دمياط</option>
+                        <option value="سوهاج">سوهاج</option>
+                        <option value="السويس">السويس</option>
+                        <option value="الشرقية">الشرقية</option>
+                        <option value="شمال سيناء">شمال سيناء</option>
+                        <option value="الغربية">الغربية</option>
+                        <option value="الفيوم">الفيوم</option>
+                        <option value="القليوبية">القليوبية</option>
+                        <option value="قنا">قنا</option>
+                        <option value="كفر الشيخ">كفر الشيخ</option>
+                        <option value="مطروح">مطروح</option>
+                        <option value="المنيا">المنيا</option>
+                        <option value="المنوفية">المنوفية</option>
+                        <option value="الوادي الجديد">الوادي الجديد</option>
+                    </select>
+                </section>
+                <section class="tabs tabs-4">
+                    <i class="fas fa-sort-amount-down"></i>
+                    <h4 class="title">الترتيب:</h4>
+                    <select>
+                        <option value="daily-market">ابجديا</option>
+                        <option value="daily-market">اكثر تداول</option>
+                    </select>
+                </section>
+            </form>
+        </div>
+    </article>
+    <!-- End Search Box -->
+
+    <!-- Start Global Content -->
+    <article class="container global__container">
+        <div class="row">
+
+            <!-- Start Right Section -->
+            <section class="right main__right__container col-lg-4 col-md-12 col-sm-12">
+                <section class="sidebar__sticky">
+                    <h2 class="main-title" id="show-hide-accordion">
+                        حدد بحثك
+                        <i class="icon-s fas fa-search"></i>
+                    </h2>
+                    <div class="accordion" id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button aria-controls="collapseOne" aria-expanded="true" class="btn btn-link"
+                                            data-target="#collapseOne" data-toggle="collapse">
+                                        <i class="fas fa-align-justify"></i>
+                                        القطاع
+                                    </button>
+                                </h5>
+                            </div>
+                            <div aria-labelledby="headingOne" class="collapse show" data-parent="#accordion"
+                                 id="collapseOne">
+                                <div class="card-body">
+                                    <ul>
+                                        <li>
+                                            <a>
+                                                <input checked id="tab-1-val-1" name="tab-1-values" type="radio"
+                                                       value="">
+                                                <label for="tab-1-val-1">الداجني</label>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <input id="tab-1-val-2" name="tab-1-values" type="radio" value="">
+                                                <label for="tab-1-val-2">الحيواني</label>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <input id="tab-1-val-3" name="tab-1-values" type="radio" value="">
+                                                <label for="tab-1-val-3">الزراعي</label>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <input id="tab-1-val-4" name="tab-1-values" type="radio" value="">
+                                                <label for="tab-1-val-4">السمكي</label>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <input id="tab-1-val-5" name="tab-1-values" type="radio" value="">
+                                                <label for="tab-1-val-5">الخيول العربية</label>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button aria-controls="collapseThree" aria-expanded="false"
+                                            class="btn btn-link collapsed" data-target="#collapseThree"
+                                            data-toggle="collapse">
+                                        <i class="fas fa-list-ul"></i>
+                                        القسم
+                                    </button>
+                                </h5>
+                            </div>
+                            <div aria-labelledby="headingThree" class="collapse" data-parent="#accordion"
+                                 id="collapseThree">
+                                <div class="card-body">
+                                    <ul>
+                                        <li>
+                                            <a>
+                                                <input checked id="tab-3-val-1" name="tab-3-values" type="radio"
+                                                       value="">
+                                                <label for="tab-3-val-1">الداجني</label>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <input id="tab-3-val-2" name="tab-3-values" type="radio" value="">
+                                                <label for="tab-3-val-2">الحيواني</label>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <input id="tab-3-val-3" name="tab-3-values" type="radio" value="">
+                                                <label for="tab-3-val-3">الزراعي</label>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <input id="tab-3-val-4" name="tab-3-values" type="radio" value="">
+                                                <label for="tab-3-val-4">السمكي</label>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <input id="tab-3-val-5" name="tab-3-values" type="radio" value="">
+                                                <label for="tab-3-val-5">الخيول العربية</label>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button aria-controls="collapseFour" aria-expanded="false"
+                                            class="btn btn-link collapsed" data-target="#collapseFour"
+                                            data-toggle="collapse">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        المحافظة
+                                    </button>
+                                </h5>
+                            </div>
+                            <div aria-labelledby="headingFour" class="collapse" data-parent="#accordion"
+                                 id="collapseFour">
+                                <div class="card-body">
+                                    <ul class="long__list">
+                                        <li>
+                                            <a>
+                                                <input checked id="tab-4-val-1" name="tab-4-values" type="radio"
+                                                       value="القاهرة">
+                                                <label for="tab-4-val-1">القاهرة</label>
+                                            </a>
+                                        </li>
+                                        <li><a>
+                                            <input id="tab-4-val-2" name="tab-4-values" type="radio" value="الاسكندرية">
+                                            <label for="tab-4-val-2">الاسكندرية</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-3" name="tab-4-values" type="radio"
+                                                   value="الإسماعيلية">
+                                            <label for="tab-4-val-3">الإسماعيلية</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-4" name="tab-4-values" type="radio" value="أسوان">
+                                            <label for="tab-4-val-4">أسوان</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-6" name="tab-4-values" type="radio" value="الأقصر">
+                                            <label for="tab-4-val-6">الأقصر</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-7" name="tab-4-values" type="radio"
+                                                   value="البحر الأحمر">
+                                            <label for="tab-4-val-7">البحر الأحمر</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-8" name="tab-4-values" type="radio" value="البحيرة">
+                                            <label for="tab-4-val-8">البحيرة</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-9" name="tab-4-values" type="radio" value="بني سويف">
+                                            <label for="tab-4-val-9">بني سويف</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-10" name="tab-4-values" type="radio" value="بورسعيد">
+                                            <label for="tab-4-val-10">بورسعيد</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-11" name="tab-4-values" type="radio"
+                                                   value="جنوب سيناء">
+                                            <label for="tab-4-val-11">جنوب سيناء</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-12" name="tab-4-values" type="radio" value="الجيزة">
+                                            <label for="tab-4-val-12">الجيزة</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-13" name="tab-4-values" type="radio" value="الدقهلية">
+                                            <label for="tab-4-val-13">الدقهلية</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-14" name="tab-4-values" type="radio" value="دمياط">
+                                            <label for="tab-4-val-14">دمياط</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-15" name="tab-4-values" type="radio" value="سوهاج">
+                                            <label for="tab-4-val-15">سوهاج</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-16" name="tab-4-values" type="radio" value="السويس">
+                                            <label for="tab-4-val-16">السويس</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-17" name="tab-4-values" type="radio" value="الشرقية">
+                                            <label for="tab-4-val-17">الشرقية</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-18" name="tab-4-values" type="radio"
+                                                   value="شمال سيناء">
+                                            <label for="tab-4-val-18">شمال سيناء</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-19" name="tab-4-values" type="radio" value="الغربية">
+                                            <label for="tab-4-val-19">الغربية</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-20" name="tab-4-values" type="radio" value="الفيوم">
+                                            <label for="tab-4-val-20">الفيوم</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-21" name="tab-4-values" type="radio" value="القليوبية">
+                                            <label for="tab-4-val-21">القليوبية</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-22" name="tab-4-values" type="radio" value="قنا">
+                                            <label for="tab-4-val-22">قنا</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-23" name="tab-4-values" type="radio" value="كفر الشيخ">
+                                            <label for="tab-4-val-23">كفر الشيخ</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-24" name="tab-4-values" type="radio" value="مطروح">
+                                            <label for="tab-4-val-24">مطروح</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-25" name="tab-4-values" type="radio" value="المنيا">
+                                            <label for="tab-4-val-25">المنيا</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-26" name="tab-4-values" type="radio" value="المنوفية">
+                                            <label for="tab-4-val-26">المنوفية</label>
+                                        </a></li>
+                                        <li><a>
+                                            <input id="tab-4-val-27" name="tab-4-values" type="radio"
+                                                   value="الوادي الجديد">
+                                            <label for="tab-4-val-27">الوادي الجديد</label>
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFive">
+                                <h5 class="mb-0">
+                                    <button aria-controls="collapseFive" aria-expanded="false"
+                                            class="btn btn-link collapsed" data-target="#collapseFive"
+                                            data-toggle="collapse">
+                                        <i class="fas fa-sort-amount-down"></i>
+                                        الترتيب
+                                    </button>
+                                </h5>
+                            </div>
+                            <div aria-labelledby="headingFive" class="collapse" data-parent="#accordion"
+                                 id="collapseFive">
+                                <div class="card-body">
+                                    <ul>
+                                        <li>
+                                            <a>
+                                                <input checked id="tab-5-val-1" name="tab-5-values" type="radio"
+                                                       value="">
+                                                <label for="tab-5-val-1">الداجني</label>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <input id="tab-5-val-2" name="tab-5-values" type="radio" value="">
+                                                <label for="tab-5-val-2">الحيواني</label>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <input id="tab-5-val-3" name="tab-5-values" type="radio" value="">
+                                                <label for="tab-5-val-3">الزراعي</label>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <input id="tab-5-val-4" name="tab-5-values" type="radio" value="">
+                                                <label for="tab-5-val-4">السمكي</label>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <input id="tab-5-val-5" name="tab-5-values" type="radio" value="">
+                                                <label for="tab-5-val-5">الخيول العربية</label>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <!-- End Right Section -->
+
+            <!-- Start Left Section -->
+            <section class="main__left__container col-lg-8 col-md-12 col-sm-12">
+                <div class="new__cards row">
+                    <div class="col-12">
+                        <div class="product__card big__card regular__hover">
+                            <div class="image__card">
+                                <img alt='product-image'
+                                     src='http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/sections/sub/23-05-2116217778231802123858.jpg'/>
+                            </div>
+                            <div class="product__content">
+                                <header class="product__title">
+                                    <a href="tenders-content.html">
+                                        بورصة أسعار الكتاكيت
+                                    </a>
+                                </header>
+                                <section class='product__info'>
+                                    <p class="big__note">
+                                        بوينوس إيريس (رويترز) - قالت غرفة سحق فول الصويا
+                                        الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت
+                                        متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء
+                                    </p>
+                                </section>
+                                <section class="product__bottom">
+                                    <section class="date__box">
+                                        <span class="date">21-6-2021</span>
+                                    </section>
+                                    <a class="more__details" href="tenders-content.html">اعرف أكتر</a>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="product__card big__card regular__hover">
+                            <div class="image__card">
+                                <img alt='product-image'
+                                     src='http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/sections/sub/23-05-2116217778231802123858.jpg'/>
+                            </div>
+                            <div class="product__content">
+                                <header class="product__title">
+                                    <a href="tenders-content.html">
+                                        بورصة أسعار الكتاكيت
+                                    </a>
+                                </header>
+                                <section class='product__info'>
+                                    <p class="big__note">
+                                        بوينوس إيريس (رويترز) - قالت غرفة سحق فول الصويا
+                                        الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت
+                                        متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء
+                                    </p>
+                                </section>
+                                <section class="product__bottom">
+                                    <section class="date__box">
+                                        <span class="date">21-6-2021</span>
+                                    </section>
+                                    <a class="more__details" href="tenders-content.html">اعرف أكتر</a>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="product__card big__card regular__hover">
+                            <div class="image__card">
+                                <img alt='product-image'
+                                     src='http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/sections/sub/23-05-2116217778231802123858.jpg'/>
+                            </div>
+                            <div class="product__content">
+                                <header class="product__title">
+                                    <a href="tenders-content.html">
+                                        بورصة أسعار الكتاكيت
+                                    </a>
+                                </header>
+                                <section class='product__info'>
+                                    <p class="big__note">
+                                        بوينوس إيريس (رويترز) - قالت غرفة سحق فول الصويا
+                                        الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت
+                                        متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء
+                                    </p>
+                                </section>
+                                <section class="product__bottom">
+                                    <section class="date__box">
+                                        <span class="date">21-6-2021</span>
+                                    </section>
+                                    <a class="more__details" href="tenders-content.html">اعرف أكتر</a>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="product__card big__card regular__hover">
+                            <div class="image__card">
+                                <img alt='product-image'
+                                     src='http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/sections/sub/23-05-2116217778231802123858.jpg'/>
+                            </div>
+                            <div class="product__content">
+                                <header class="product__title">
+                                    <a href="tenders-content.html">
+                                        بورصة أسعار الكتاكيت
+                                    </a>
+                                </header>
+                                <section class='product__info'>
+                                    <p class="big__note">
+                                        بوينوس إيريس (رويترز) - قالت غرفة سحق فول الصويا
+                                        الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت
+                                        متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء
+                                    </p>
+                                </section>
+                                <section class="product__bottom">
+                                    <section class="date__box">
+                                        <span class="date">21-6-2021</span>
+                                    </section>
+                                    <a class="more__details" href="tenders-content.html">اعرف أكتر</a>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="product__card big__card regular__hover">
+                            <div class="image__card">
+                                <img alt='product-image'
+                                     src='http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/sections/sub/23-05-2116217778231802123858.jpg'/>
+                            </div>
+                            <div class="product__content">
+                                <header class="product__title">
+                                    <a href="tenders-content.html">
+                                        بورصة أسعار الكتاكيت
+                                    </a>
+                                </header>
+                                <section class='product__info'>
+                                    <p class="big__note">
+                                        بوينوس إيريس (رويترز) - قالت غرفة سحق فول الصويا
+                                        الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت
+                                        متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء
+                                    </p>
+                                </section>
+                                <section class="product__bottom">
+                                    <section class="date__box">
+                                        <span class="date">21-6-2021</span>
+                                    </section>
+                                    <a class="more__details" href="tenders-content.html">اعرف أكتر</a>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="product__card big__card regular__hover">
+                            <div class="image__card">
+                                <img alt='product-image'
+                                     src='http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/sections/sub/23-05-2116217778231802123858.jpg'/>
+                            </div>
+                            <div class="product__content">
+                                <header class="product__title">
+                                    <a href="tenders-content.html">
+                                        بورصة أسعار الكتاكيت
+                                    </a>
+                                </header>
+                                <section class='product__info'>
+                                    <p class="big__note">
+                                        بوينوس إيريس (رويترز) - قالت غرفة سحق فول الصويا
+                                        الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت
+                                        متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء
+                                    </p>
+                                </section>
+                                <section class="product__bottom">
+                                    <section class="date__box">
+                                        <span class="date">21-6-2021</span>
+                                    </section>
+                                    <a class="more__details" href="tenders-content.html">اعرف أكتر</a>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="product__card big__card regular__hover">
+                            <div class="image__card">
+                                <img alt='product-image'
+                                     src='http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/sections/sub/23-05-2116217778231802123858.jpg'/>
+                            </div>
+                            <div class="product__content">
+                                <header class="product__title">
+                                    <a href="tenders-content.html">
+                                        بورصة أسعار الكتاكيت
+                                    </a>
+                                </header>
+                                <section class='product__info'>
+                                    <p class="big__note">
+                                        بوينوس إيريس (رويترز) - قالت غرفة سحق فول الصويا
+                                        الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت
+                                        متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء
+                                    </p>
+                                </section>
+                                <section class="product__bottom">
+                                    <section class="date__box">
+                                        <span class="date">21-6-2021</span>
+                                    </section>
+                                    <a class="more__details" href="tenders-content.html">اعرف أكتر</a>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="product__card big__card regular__hover">
+                            <div class="image__card">
+                                <img alt='product-image'
+                                     src='http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/sections/sub/23-05-2116217778231802123858.jpg'/>
+                            </div>
+                            <div class="product__content">
+                                <header class="product__title">
+                                    <a href="tenders-content.html">
+                                        بورصة أسعار الكتاكيت
+                                    </a>
+                                </header>
+                                <section class='product__info'>
+                                    <p class="big__note">
+                                        بوينوس إيريس (رويترز) - قالت غرفة سحق فول الصويا
+                                        الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت
+                                        متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء
+                                    </p>
+                                </section>
+                                <section class="product__bottom">
+                                    <section class="date__box">
+                                        <span class="date">21-6-2021</span>
+                                    </section>
+                                    <a class="more__details" href="tenders-content.html">اعرف أكتر</a>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="product__card big__card regular__hover">
+                            <div class="image__card">
+                                <img alt='product-image'
+                                     src='http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/sections/sub/23-05-2116217778231802123858.jpg'/>
+                            </div>
+                            <div class="product__content">
+                                <header class="product__title">
+                                    <a href="tenders-content.html">
+                                        بورصة أسعار الكتاكيت
+                                    </a>
+                                </header>
+                                <section class='product__info'>
+                                    <p class="big__note">
+                                        بوينوس إيريس (رويترز) - قالت غرفة سحق فول الصويا
+                                        الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت
+                                        متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء
+                                    </p>
+                                </section>
+                                <section class="product__bottom">
+                                    <section class="date__box">
+                                        <span class="date">21-6-2021</span>
+                                    </section>
+                                    <a class="more__details" href="tenders-content.html">اعرف أكتر</a>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="product__card big__card regular__hover">
+                            <div class="image__card">
+                                <img alt='product-image'
+                                     src='http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/sections/sub/23-05-2116217778231802123858.jpg'/>
+                            </div>
+                            <div class="product__content">
+                                <header class="product__title">
+                                    <a href="tenders-content.html">
+                                        بورصة أسعار الكتاكيت
+                                    </a>
+                                </header>
+                                <section class='product__info'>
+                                    <p class="big__note">
+                                        بوينوس إيريس (رويترز) - قالت غرفة سحق فول الصويا
+                                        الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت
+                                        متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء
+                                    </p>
+                                </section>
+                                <section class="product__bottom">
+                                    <section class="date__box">
+                                        <span class="date">21-6-2021</span>
+                                    </section>
+                                    <a class="more__details" href="tenders-content.html">اعرف أكتر</a>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="product__card big__card regular__hover">
+                            <div class="image__card">
+                                <img alt='product-image'
+                                     src='http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/sections/sub/23-05-2116217778231802123858.jpg'/>
+                            </div>
+                            <div class="product__content">
+                                <header class="product__title">
+                                    <a href="tenders-content.html">
+                                        بورصة أسعار الكتاكيت
+                                    </a>
+                                </header>
+                                <section class='product__info'>
+                                    <p class="big__note">
+                                        بوينوس إيريس (رويترز) - قالت غرفة سحق فول الصويا
+                                        الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت
+                                        متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء
+                                    </p>
+                                </section>
+                                <section class="product__bottom">
+                                    <section class="date__box">
+                                        <span class="date">21-6-2021</span>
+                                    </section>
+                                    <a class="more__details" href="tenders-content.html">اعرف أكتر</a>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="product__card big__card regular__hover">
+                            <div class="image__card">
+                                <img alt='product-image'
+                                     src='http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/sections/sub/23-05-2116217778231802123858.jpg'/>
+                            </div>
+                            <div class="product__content">
+                                <header class="product__title">
+                                    <a href="tenders-content.html">
+                                        بورصة أسعار الكتاكيت
+                                    </a>
+                                </header>
+                                <section class='product__info'>
+                                    <p class="big__note">
+                                        بوينوس إيريس (رويترز) - قالت غرفة سحق فول الصويا
+                                        الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت
+                                        متاخرر يوم الثلاثاء الارجنينيتنية فى سيارا في وقت متاخرر يوم الثلاثاء
+                                    </p>
+                                </section>
+                                <section class="product__bottom">
+                                    <section class="date__box">
+                                        <span class="date">21-6-2021</span>
+                                    </section>
+                                    <a class="more__details" href="tenders-content.html">اعرف أكتر</a>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pagination__container">
+                    <div class="col-12">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a aria-label="Previous" class="page-link" href="#">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a aria-label="Next" class="page-link" href="#">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <!-- End Left Section -->
+
+        </div>
+    </article>
+    <!-- End Global Content -->
+
+</div>
+<!-- Start Footer -->
+<footer>
+    <div class="overlay">
+        <div class="container holder">
+            <div class="row">
+                <ul class="col-lg-3 col-md-6 col-6">
+                    <li class="title">الشركة</li>
+                    <li><a href="../static_pages/about-us.html">من نحن</a></li>
+                    <li><a href="../static_pages/terms_and_conditions.html">شروط الاستخدام</a></li>
+                    <li><a href="../static_pages/privacy_policy.html">اتفاقية الخصوصية</a></li>
+                </ul>
+                <ul class="col-lg-3 col-md-6 col-6">
+                    <li class="title">تحتاج للمساعدة؟</li>
+                    <li><a href="../static_pages/contact-us.html">اتصل بنا</a></li>
+                </ul>
+                <section class="media-box col-lg-3 col-md-6 col-12">
+                    <section>
+                        <a class="google-play" href="#"><img alt="google play"
+                                                             src="../../images/android_ar.png"></a>
+                        <a class="app-store" href="#"><img alt="app store" src="../../images/iphone_ar.png"></a>
+                    </section>
+                    <section class="social-media">
+
+                        <a class="instagram" href="#" rel="noreferrer" target="_blank">
+                            <i class="fab fa-instagram-square"></i>
+                        </a>
+                        <a class="facebook" href="#" rel="noreferrer" target="_blank">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </section>
+                </section>
+                <h5 class="col-12">جميع الحقوق محفوظة للكناني</h5>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<!-- Start Scripts -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS v4.5 -->
+<script src="../../js/vendors/jquery-3.5.1.slim.min.js"></script>
+<script src="../../js/vendors/popper.min.js"></script>
+<script src="../../js/vendors/bootstrap.min.js"></script>
+<script src="../../js/vendors/jquery-3.5.1.js"></script>
+<!-- Slick -->
+<script src="../../vendors/slick/slick.min.js"></script>
+<script src="../../js/slick_initialising.js"></script>
+<!--          Select MENU Styling          -->
+<script src="../../js/vendors/jquery.nice-select.min.js"></script>
+<!-- My JavaScript -->
+<script src="../../js/global.js"></script>
+<script>
+    $('select').niceSelect();
+</script>
+<!-- End Scripts -->
+</body>
+
+</html>

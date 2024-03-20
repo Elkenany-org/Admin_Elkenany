@@ -1,0 +1,108 @@
+.questions {
+  padding: 3rem 0;
+
+  form {
+    .question-card {
+      background-color: #eee;
+      padding: 1rem;
+      border-radius: 13px;
+      margin-bottom: 1.2rem;
+
+      .form-group {
+        margin-bottom: 0;
+
+        h5 {
+          font-size: 1.2rem;
+          font-weight: bold;
+          margin-bottom: .8rem;
+          border-bottom: 1px solid #ccc;
+          padding-bottom: .7rem;
+
+          @media (max-width: 767px) {
+            font-size: 1.1rem;
+          }
+        }
+
+        .form-check {
+          padding-right: 0;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          input {
+            display: none;
+
+            &:checked {
+              & + label {
+                //font-weight: bold;
+                color: $font-color-second;
+                background-color: $font-color-main;
+
+                & + i {
+                  display: block;
+
+                }
+              }
+            }
+          }
+
+          label {
+            cursor: pointer;
+            padding: .4rem .9rem;
+            border-radius: 7px;
+            display: inline-block;
+            margin-bottom: .1rem;
+            transition: all .2s ease-in-out;
+            font-size: $fs-16;
+
+            &:hover {
+              color: $font-color-second;
+              background-color: $font-color-main;
+            }
+
+
+            @media (max-width: 767px) {
+              font-size: .9rem;
+            }
+          }
+
+          i {
+            font-size: .9rem;
+            position: relative;
+            top: 5px;
+            display: none;
+            margin-right: 1rem;
+          }
+
+        }
+      }
+    }
+
+    button {
+      display: block;
+      width: 160px;
+      padding: .6rem 1rem;
+      text-decoration: none;
+      color: $font-color-second;
+      background-color: $font-color-main;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      margin: 1.2rem auto auto;
+      border: 0;
+      transition: 0.3s all ease-in-out;
+
+      &:hover {
+        background-color: $font-color-second;
+        color: $font-color-main;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 1rem;
+      }
+    }
+
+
+  }
+
+}

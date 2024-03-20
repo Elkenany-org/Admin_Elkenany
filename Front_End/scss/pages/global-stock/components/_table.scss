@@ -1,0 +1,307 @@
+// -------------------------Start Table------------------------- //
+.table {
+  margin-top: 3em;
+  display: flex;
+  flex-flow: row wrap;
+
+  .head, .rows {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    .title, .data {
+      width: 30%;
+      text-align: center;
+      padding: .5rem 0;
+      color: $bg-color-second;
+    }
+  }
+
+  .head {
+    margin-bottom: 1em;
+
+    .title {
+      border-radius: 5px;
+      border: 2px solid $bg-color-main;
+      font-weight: bold;
+      font-size: 1.2rem;
+
+      @media (max-width: 767px) {
+        font-size: 1rem;
+      }
+
+      @media (max-width: 500px) {
+        font-size: .7rem;
+      }
+    }
+  }
+
+  .rows {
+    box-shadow: $fixed-box-shadow-regular;
+    border-radius: 5px;
+    margin-bottom: 0.8rem;
+
+    .data {
+      .company-name {
+        display: block;
+        color: $font-color-second;
+        font-size: 1.2rem;
+        font-weight: bold;
+        transition: all .3s ease-in-out;
+        margin-top: 0.3rem;
+
+        &:hover {
+          color: $bg-color-main-hover;
+        }
+      }
+
+      .data__content {
+        margin: 0.4rem auto;
+      }
+
+      .up {
+        color: green;
+      }
+
+      .down {
+        color: red;
+      }
+
+      &:hover .company-name {
+        color: $bg-color-main-hover;
+      }
+    }
+
+    .wall {
+      height: 100%;
+      width: 2px;
+      background-color: $bg-color-second;
+    }
+  }
+}
+
+// Start Media Query //
+@media (max-width: 991px) {
+  .table {
+    .head {
+      .title {
+        font-size: 1.2rem;
+        width: 30%;
+      }
+    }
+
+    .rows {
+      .data {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .table {
+    .head {
+      margin-bottom: .5em;
+
+      .title {
+        font-size: 1.2rem;
+      }
+    }
+
+    .rows {
+      .data {
+        .data__content {
+          font-size: 1.2rem;
+        }
+
+        .up, .down {
+          margin-top: 12px;
+        }
+      }
+
+      .company-name {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .table {
+    .head {
+      .title {
+        font-size: 1rem;
+      }
+
+    }
+
+    .rows {
+      .data {
+        h4 {
+          font-size: 1rem;
+        }
+
+        h6 {
+          font-size: .7rem;
+        }
+      }
+
+      .companies-logo {
+        width: 50px !important;
+      }
+
+      .company-name {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .table {
+
+    .head {
+      .title {
+        font-size: .9rem;
+      }
+    }
+
+    .rows {
+      .data {
+        display: flex;
+        align-items: center;
+
+        .data__content {
+          margin-top: 16px;
+          font-size: 1rem;
+          font-weight: bold;
+        }
+
+        .up, .down {
+          margin-top: 6px;
+        }
+      }
+
+      .company-name {
+        font-size: 9px;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .table {
+
+    .head {
+      .title {
+        font-size: .6rem;
+      }
+    }
+
+    .rows {
+      .data {
+        padding: 5px 0;
+
+        .data__content {
+          margin-top: 16px;
+          font-size: .65rem;
+          font-weight: bold;
+        }
+
+        .up, .down {
+          margin-top: 6px;
+        }
+      }
+
+      .company-name {
+        font-size: 9px;
+      }
+    }
+  }
+}
+
+// End Media Query //
+// -------------------------End------------------------- //
+
+// -------------------------Start Table------------------------- //
+.table__big {
+  margin-top: 3em;
+  display: flex;
+  flex-flow: row wrap;
+
+  .head, .rows {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    .title, .data {
+      width: 18%;
+      text-align: center;
+      padding: .5rem 0;
+    }
+  }
+
+  .head {
+    margin-bottom: 1em;
+
+    .title {
+      border-radius: 5px;
+      border: 2px solid $bg-color-main;
+      font-weight: bold;
+      font-size: 1.2rem;
+
+      @media (max-width: 767px) {
+        font-size: 1rem;
+      }
+
+      @media (max-width: 500px) {
+        font-size: .7rem;
+      }
+    }
+  }
+
+  .rows {
+    box-shadow: $fixed-box-shadow-regular;
+    border-radius: 5px;
+    margin-bottom: 0.8rem;
+
+    .data {
+      .company-name {
+        display: block;
+        color: $font-color-second;
+        font-size: 1.2rem;
+        font-weight: bold;
+        transition: all .3s ease-in-out;
+        margin-top: 0.3rem;
+
+        &:hover {
+          color: $bg-color-main-hover;
+        }
+      }
+
+      .data__content {
+        margin: 0.4rem auto;
+      }
+
+      .up {
+        color: green;
+      }
+
+      .down {
+        color: red;
+      }
+
+      &:hover .company-name {
+        color: $bg-color-main-hover;
+      }
+    }
+
+    .wall {
+      height: 100%;
+      width: 2px;
+      background-color: $bg-color-second;
+    }
+  }
+}

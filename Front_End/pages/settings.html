@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="This is Description Area">
+    <!-- Icon -->
+    <link rel="icon" href="../images/favicon.png">
+    <!-- Title -->
+    <title>الإعدادات</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../css/settings.css">
+</head>
+
+<body>
+
+    <!-- Start Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../home.html">
+            <img src="../images/logo.png" alt="main logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="daily_stock_exchange.html">البورصة اليومية <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        البورصة العالمية
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">البورصة العالمية</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">البورصة العالمية</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">البورصة العالمية</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="companies_guide.html">دليل الشركات</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consultants.html">الاستشاريين</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="market_home.html">سوق الكناني</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">الاخبار</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="search-area" type="search" placeholder="بحث">
+                <button class="submit" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <section class="profile-box dropdown d-lg-block d-none">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img class="profile-photo" src="../images/avatar.svg" alt="profile pic">
+                <h6>حسين كمال</h6>
+                <div class="arrow">
+                    <img class="arrow-down" src="../images/down_arrow.svg" alt="arrow down">
+                </div>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item dropdown-item-especial" href="#">
+                    <img class="profile-photo" src="../images/avatar.svg" alt="profile pic">
+                    <h6>حسين كمال الدين حسين</h6>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="settings.html">الإعدادات</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">تسجيل الخروج</a>
+            </div>
+        </section>
+    </nav>
+    <!-- End Navigation Bar -->
+
+    <!-- Start Settings  -->
+    <article class="settings">
+        <div class="container-fluid holder">
+            <!-- Start Titles -->
+            <section class="titles row">
+                <section class="title-left col-lg-10 col-11">
+                    <h3>البيانات الأساسية</h3>
+                </section>
+                <section class="title-right col-lg-2 col-1">
+                    <h3 class="d-lg-block d-none">الإعدادات</h3>
+                    <i class="fas fa-cog d-lg-none d-block"></i>
+                </section>
+            </section>
+            <!-- End Titles -->
+            <!-- Start Content -->
+            <section class="content row">
+                <!-- Start Left Content -->
+                <section class="left-content col-10">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <!-- Start Basics Content -->
+                        <div class="basics tab-pane fade show active" id="v-pills-basics" role="tabpanel"
+                            aria-labelledby="v-pills-basics-tab">
+                            <input type="file" id="imgupload" style="display:none" />
+                            <a id="OpenImgUpload" class="change-img">
+                                <div class="overlay">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </div>
+                                <img src="../images/avatar.svg" alt="profile photo">
+                            </a>
+                            <h3>تعديل الصورة الشخصية</h3>
+                            <form>
+                                <h4>الاسم</h4>
+                                <section id="name-box" class="name-box boxes">
+                                    <a id="name-edit">تغيير</a>
+                                    <input id="username" type="text" value="حسين كمال الدين" disabled>
+                                </section>
+                                <h4>الايميل</h4>
+                                <section id="email-box" class="mail-box boxes">
+                                    <a id="email-edit">تغيير</a>
+                                    <input id="email" class="email" type="email" value="Hussien.kamal92@gmail.com"
+                                        disabled>
+                                </section>
+                                <h4>التاريخ</h4>
+                                <section id="date-box" class="date-box boxes">
+                                    <a id="date-edit">تغيير</a>
+                                    <input id="date" class="date" type="text" value="30/9/2020" disabled>
+                                </section>
+                                <input id="submit" class="submit" type="submit" value="استمرار">
+                            </form>
+                        </div>
+                        <!-- End Basics Content -->
+                        <!-- Start privacy Content -->
+                        <div class="tab-pane fade" id="v-pills-privacy" role="tabpanel"
+                            aria-labelledby="v-pills-privacy-tab">الخصوصية
+                        </div>
+                        <!-- End privacy Content -->
+                        <!-- Start payments Content -->
+                        <div class="tab-pane fade" id="v-pills-payments" role="tabpanel"
+                            aria-labelledby="v-pills-payments-tab">بيانات الدفع
+                        </div>
+                        <!-- End payments Content -->
+                        <!-- Start bills Content -->
+                        <div class="tab-pane fade" id="v-pills-bills" role="tabpanel"
+                            aria-labelledby="v-pills-bills-tab">ايصالات الدفع
+                        </div>
+                        <!-- End bills Content -->
+                        <!-- Start subscriptions Content -->
+                        <div class="tab-pane fade" id="v-pills-subscriptions" role="tabpanel"
+                            aria-labelledby="v-pills-subscriptions-tab">بيانات الاشتراك
+                        </div>
+                        <!-- End subscriptions Content -->
+                    </div>
+                </section>
+                <!-- End Left Content -->
+                <!-- Start Right Content -->
+                <section class="right-content col-2">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="v-pills-basics-tab" data-toggle="pill" href="#v-pills-basics"
+                            role="tab" aria-controls="v-pills-basics" aria-selected="true">
+                            <i class="fas fa-user"></i>
+                            <span class="d-lg-block d-none">
+                                البيانات الأساسية
+                            </span>
+                        </a>
+                        <a class="nav-link" id="v-pills-privacy-tab" data-toggle="pill" href="#v-pills-privacy"
+                            role="tab" aria-controls="v-pills-privacy" aria-selected="false">
+                            <i class="fas fa-user-shield"></i>
+                            <span class="d-lg-block d-none">
+                                الخصوصية
+                            </span>
+                        </a>
+                        <a class="nav-link" id="v-pills-payments-tab" data-toggle="pill" href="#v-pills-payments"
+                            role="tab" aria-controls="v-pills-payments" aria-selected="false">
+                            <i class="fab fa-cc-visa"></i>
+                            <span class="d-lg-block d-none">
+                                بيانات الدفع
+                            </span>
+                        </a>
+                        <a class="nav-link" id="v-pills-bills-tab" data-toggle="pill" href="#v-pills-bills" role="tab"
+                            aria-controls="v-pills-bills" aria-selected="false">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <span class="d-lg-block d-none">
+                                ايصالات الدفع
+                            </span>
+                        </a>
+                        <a class="nav-link" id="v-pills-subscriptions-tab" data-toggle="pill"
+                            href="#v-pills-subscriptions" role="tab" aria-controls="v-pills-subscriptions"
+                            aria-selected="false">
+                            <i class="far fa-handshake"></i>
+                            <span class="d-lg-block d-none">
+                                بيانات الاشتراك
+                            </span>
+                        </a>
+                    </div>
+                </section>
+                <!-- End Right Content -->
+            </section>
+            <!-- End Content -->
+        </div>
+    </article>
+    <!-- End Settings  -->
+
+    <!-- Start Footer -->
+    <footer>
+        <div class="overlay">
+            <div class="container holder">
+                <div class="row">
+                    <ul class="col-lg-3 col-12">
+                        <li class="title">الشركة</li>
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">فريق الكناني</a></li>
+                        <li><a href="#">الوظائف</a></li>
+                        <li><a href="#">اخبارنا</a></li>
+                    </ul>
+                    <ul class="col-lg-3 col-12">
+                        <li class="title">تحتاج للمساعدة؟</li>
+                        <li><a href="#">اتصل بنا</a></li>
+                        <li><a href="#">شروط الاستخدام</a></li>
+                        <li><a href="#">اتفاقية الخصوصية</a></li>
+                    </ul>
+                    <ul class="col-lg-3 col-12">
+                        <li class="title">هل انت صاحب مزرعة؟</li>
+                        <li><a href="#">انصم الي مزارع الكناني</a></li>
+                    </ul>
+                    <section class="media-box col-lg-3 col-12">
+                        <a class="google-play" href="#"><img src="../images/android_ar.png" alt="google play"></a>
+                        <a class="app-store" href="#"><img src="../images/iphone_ar.png" alt="app store"></a>
+                        <section class="social-media">
+                            <a class="instagram" href="#">
+                                <i class="fab fa-instagram-square"></i>
+                            </a>
+                            <a class="facebook" href="#">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </section>
+                    </section>
+                    <h5 class="col-12">جميع الحقوق محفوظة للكناني</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Scripts -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS v4.5 -->
+    <script src="../js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- JQuery -->
+    <script src="../js/jquery-3.5.1.js"></script>
+    <!-- My JavaScript -->
+    <script src="../js/settings.js"></script>
+    <!-- End Scripts -->
+</body>
+
+</html>

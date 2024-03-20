@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="139.59.190.18" id="1c04972f-6f0f-445f-a598-752834eac77c" port="22" nameFormat="DESCRIPTIVE" username="stest" useOpenSSHConfig="true" />
+      <sshConfig authType="PASSWORD" host="139.59.190.18" id="c0c7047e-c46d-4897-9eea-faacf796e361" port="22" nameFormat="DESCRIPTIVE" username="kenany" useOpenSSHConfig="true" />
+      <sshConfig authType="PASSWORD" host="139.59.190.18" id="296275b9-b35f-4bf6-823d-a7f92f9d9889" port="22" nameFormat="DESCRIPTIVE" username="angular" useOpenSSHConfig="true" />
+      <sshConfig authType="PASSWORD" host="139.59.190.18" id="51b442c5-cc90-40e3-b803-df5014478680" port="22" nameFormat="DESCRIPTIVE" username="dr.gamal" useOpenSSHConfig="true" />
+      <sshConfig authType="PASSWORD" host="139.59.190.18" id="e2eefde1-6a2b-43d2-8fc3-e1c96964be2d" port="22" nameFormat="DESCRIPTIVE" username="admin" useOpenSSHConfig="true" />
+      <sshConfig authType="PASSWORD" host="139.59.190.18" id="a98a2654-d989-4d40-9d0c-d7313e297931" port="22" nameFormat="DESCRIPTIVE" username="kgdash" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>

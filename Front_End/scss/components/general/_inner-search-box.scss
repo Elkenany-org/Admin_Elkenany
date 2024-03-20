@@ -1,0 +1,164 @@
+.inner-search-box {
+  margin: 1.5rem 0 0 0;
+
+  .box-tabs {
+    @include semi-flex(center, space-between, row, nowrap);
+    border: 2px solid $bg-color-second;
+    border-radius: $rd-12;
+    box-shadow: $fixed-box-shadow-regular2;
+    position: relative;
+    z-index: 1;
+
+    .search-box-overlay, .edge {
+      position: absolute;
+      height: 100%;
+      border-radius: 15px;
+      top: 0;
+      right: 0;
+      width: 100%;
+    }
+
+    .search-box-overlay {
+      z-index: 3;
+      background-color: $bg-color-third;
+    }
+
+    .edge {
+      background-color: $bg-color-second;
+      z-index: 2;
+      right: -20px;
+    }
+
+    .tabs {
+      text-align: right;
+      border-left: 2px solid $bg-color-second;
+      padding: .8rem 1rem;
+      position: relative;
+      z-index: 4;
+
+      i {
+        color: $font-color-second;
+        font-size: .9rem;
+      }
+
+      .title {
+        display: inline-block;
+        color: $color-main;
+        margin-right: 5px;
+        margin-bottom: 0;
+        font-size: 1.2rem;
+      }
+
+      &:last-of-type:not(.tabs-especial) {
+        border-left: none;
+        border-right: 0;
+        margin: 0;
+        background-color: #FFF;
+        transition: $transition-300ms;
+        border-radius: $rd-12;
+
+        &:hover {
+          background-color: $color-white;
+        }
+      }
+
+      &.tabs-1 {
+        width: 100% !important;
+      }
+
+      &.tabs-2 {
+        width: 50% !important;
+      }
+
+      &.tabs-3 {
+        width: 33% !important;
+      }
+
+      &.tabs-4 {
+        width: 25% !important;
+      }
+
+      &.tabs-5 {
+        width: 20% !important;
+      }
+
+      &.tabs-6 {
+        width: 16.66666666666667% !important;
+      }
+    }
+
+    .tabs-especial {
+      cursor: pointer;
+      background: $color-white;
+      border-left: none;
+      height: 100%;
+      @include semi-flex(center, center, row, nowrap);
+      transition: $transition-200ms;
+
+      .submit {
+        background-image: none;
+        font-weight: bold;
+        font-size: 33px;
+        color: $font-color-second;
+        text-align: center;
+        width: 50%;
+        border-radius: $rd-16;
+      }
+
+      &:hover {
+        .submit {
+          background: $bg-color-main;
+        }
+      }
+
+    }
+  }
+
+}
+
+// End Search Box //
+
+.stats__btn {
+  display: block;
+  width: 95%;
+  margin: auto;
+  background: $bg-color-main;
+  color: $bg-color-second;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  height: 42px;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $bg-color-main;
+    background-color: $bg-color-second;
+  }
+}
+
+input.date {
+  margin: 0;
+  display: block;
+  height: 42px;
+  width: 100%;
+  text-align: center;
+  background: #FFF;
+  border-radius: 5px;
+  border: 1px solid #e8e8e8;
+  color: $bg-color-second;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $bg-color-main;
+    background-color: $bg-color-second;
+  }
+}

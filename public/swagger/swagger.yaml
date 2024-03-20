@@ -1,0 +1,1810 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: El kenany API's
+basePath: /kenany_3/api/
+
+
+
+paths:
+  /home-sectors:
+    get:
+      tags:
+        - Home
+      summary: Home sectors
+      description: 'Manage Home sectors with this API'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: header
+          name: device
+          type: string
+          description: 'a device header to send banners in response if the device is web'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /home-services:
+    get:
+      tags:
+        - Home
+      summary: Home Logos
+      description: 'get all logos of home'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /about-us:
+    get:
+      tags:
+        - Home
+      summary: About us
+      description: 'about us'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /contuct-us-office:
+    get:
+      tags:
+        - Home
+      summary: info about our branches
+      description: 'information of each branch of our company'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /profile:
+    get:
+      tags:
+        - Home
+      summary: show profile data
+      description: 'show all details about specific user'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: []
+
+  /profile-update:
+    post:
+      tags:
+        - Home
+      summary: Update profile
+      description: 'update profile of specific user'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: name
+          type: string
+          required: true
+        - in: formData
+          name: phone
+          type: string
+        - in: formData
+          name: email
+          type: string
+        - in: formData
+          name: password
+          type: string
+        - in: formData
+          name: avatar
+          type: file
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: []
+
+  /contuct-us:
+    post:
+      tags:
+        - Home
+      summary: contact us
+      description: 'contact with us'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: name
+          type: string
+          required: true
+        - in: formData
+          name: phone
+          type: string
+          required: true
+        - in: formData
+          name: email
+          type: string
+          required: true
+        - in: formData
+          name: desc
+          type: string
+          required: true
+        - in: formData
+          name: job
+          type: string
+          required: true
+        - in: formData
+          name: company
+          type: string
+          required: true
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: []
+
+  /notfications:
+    get:
+      tags:
+        - Home
+      summary: show all notifications
+      description: 'show all details of notifications'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: []
+
+  /poup-up:
+    get:
+      tags:
+        - Home
+      summary: show all pop-ups
+      description: 'show all details of pop-ups'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /search:
+    get:
+      tags:
+        - Home
+      summary: search in all fields
+      description: 'show all results of search in all fields of website'
+      parameters:
+        - in: query
+          name: search
+          type: string
+          description: 'word of search.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+####################################################
+
+  /guide/section:
+    get:
+      tags:
+        - Guide
+      summary: Guide section
+      description: 'get all sectors , banners , logos and all sub sections of the guide'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: type
+          type: string
+          required: true
+          description: 'type of section (poultry-farm-horses-fish-animal).'
+        - in: query
+          name: sort
+          type: number
+          description: 'type of sort the result (if alphabetic sort choose 0 , if according to view-count choose  1).'
+        - in: query
+          name: search
+          type: string
+          description: 'word of search.'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /guide/sub-section:
+    get:
+      tags:
+        - Guide
+      summary: Companies section
+      description: 'get all sectors , banners , logos, info of companies of specific sub section of the guide'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: sub_id
+          type: number
+          required: true
+          description: 'id of guide sub section you want to get there companies.'
+        - in: query
+          name: sort
+          type: number
+          description: 'type of sort the result (if alphabetic 0 rates 2).'
+        - in: query
+          name: search
+          type: string
+          description: 'word of search in the companies.'
+        - in: query
+          name: page
+          type: number
+          description: 'page number for pagination.'
+        - in: query
+          name: city_id
+          type: number
+          description: 'companies which in specific city.'
+        - in: query
+          name: country_id
+          type: number
+          description: 'companies which in specific country.'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /guide/company:
+    get:
+      tags:
+        - Guide
+      summary: specific company
+      description: 'information about specific company by id returned all data if it premium or the user is premium and some data only if both are free'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of specific company .'
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: []
+
+  /guide/all-filter-guide-sub-sections:
+    get:
+      tags:
+        - Guide
+      summary: filter sections
+      description: 'filter based on specific section'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: type
+          type: string
+          required: true
+          description: 'type of specific section (poultry-farm-horses-fish-animal) .'
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /guide/filter-guide-companies:
+    get:
+      tags:
+        - Guide
+      summary: filter sub sections of guide
+      description: 'filter sub sections of guide based on specific section and specific country and get all section and select the chosen section/sector '
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: sector_id
+          type: number
+          required: true
+          description: 'id of specific section (1-poultry, 3-farm ,5-horses, 4-fish, 2-animal).'
+        - in: query
+          name: country_id
+          type: number
+          description: 'filter based on specific country.'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /guide/transports-company:
+    get:
+      tags:
+        - Guide
+      summary: transports company
+      description: 'get transports company based on city and type (not completed)'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: city_id
+          type: number
+          required: true
+          description: 'id of city.'
+        - in: query
+          name: type
+          type: number
+          required: true
+          description: 'product type.'
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of transport company.'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /guide/gallary-company:
+    get:
+      tags:
+        - Guide
+      summary: gallary of specific company
+      description: 'get gallery (images) of specific company'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of gallery of company.'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /guide/filter-company-sub-sections:
+    get:
+      tags:
+        - Guide
+      summary: get sub-sections of guide
+      description: 'get sub sections of guide based on specific section.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of specific section (1-poultry, 3-farm ,5-horses, 4-fish, 2-animal).'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /guide/filter-company-country:
+    get:
+      tags:
+        - Guide
+      summary: get countries of guide sub-section
+      description: 'get all countries of specific guide sub-section.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of specific guide sub-section.'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /guide/rating-company:
+    post:
+      tags:
+        - Guide
+      summary: 'set rate of company'
+      description: 'set rate of specific company from 1 to 5'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: company_id
+          type: number
+          required: true
+
+        - in: formData
+          name: reat
+          type: string
+          required: true
+          description: 'rate of the company'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: []
+
+  /guide/update-rating-company:
+    post:
+      tags:
+        - Guide
+      summary: 'update rate of company'
+      description: 'update rate of specific company from 1 to 5'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: company_id
+          type: number
+          required: true
+
+        - in: formData
+          name: reat
+          type: string
+          required: true
+          description: 'rate of the company'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: []
+###################################################
+
+  /consultants/major:
+    get:
+      tags:
+        - Consultants
+      summary: Guide section
+      description: 'get all sectors , banners , logos and all sub sections of the consultants'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: type
+          type: string
+          required: true
+          description: 'type of section (poultry-farm-horses-fish-animal).'
+        - in: query
+          name: sort
+          type: number
+          description: 'type of sort the result (if alphabetic sort choose 0 , if according to view-count choose  1).'
+        - in: query
+          name: search
+          type: string
+          description: 'word of search.'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /consultants/doctors:
+    get:
+      tags:
+        - Consultants
+      summary: Doctors section
+      description: 'get info of doctors of specific sub section of the consultant'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: sub_id
+          type: number
+          required: true
+          description: 'id of consultant sub section you want to get there doctors.'
+        - in: query
+          name: sort
+          type: number
+          description: 'type of sort the result (if '' no sort , 2 desc rate , 6 desc meeting price , 7 asc meeting price , 8 available appointments , 9 not available appointments).'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /consultants/doctor:
+    get:
+      tags:
+        - Consultants
+      summary: specific doctor
+      description: 'information about specific doctor by id'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of specific doctor .'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /consultants/major-filter:
+    get:
+      tags:
+        - Consultants
+      summary: filter sections
+      description: 'filter based on specific section'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: type
+          type: string
+          required: true
+          description: 'type of specific section (poultry-farm-horses-fish-animal) .'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /consultants/doctors-filter:
+    get:
+      tags:
+        - Consultants
+      summary: filter for sub sections of Consultants
+      description: 'get sub sections of Consultants based on specific sub section and get all section and select the chosen section/sector and all sort types'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of sub section of the consultants.'
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /consultants/doctors-sub-filte:
+    get:
+      tags:
+        - Consultants
+      summary: get sub-sections of Consultants
+      description: 'get sub sections of consultants based on specific section.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of specific section (1-poultry, 3-farm ,5-horses, 4-fish, 2-animal).'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /consultants/doctor-services:
+    get:
+      tags:
+        - Consultants
+      summary: get appointments of specific doctor
+      description: 'get appointments of doctor based on type of appointment and date.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of doctor'
+        - in: query
+          name: type
+          type: string
+          required: true
+          description: 'type of appointment (meeting , call , online)'
+        - in: query
+          name: date
+          type: string
+          format: date
+          required: true
+          description: 'date of specific appointment'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /consultants/doctor-rating:
+    post:
+      tags:
+        - Consultants
+      summary: 'set rate of doctor'
+      description: 'set rate of specific doctor from 1 to 5'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: doctor_id
+          type: number
+          required: true
+
+        - in: formData
+          name: reat
+          type: string
+          required: true
+          description: 'rate of the company'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: []
+
+  /consultants/my-orders:
+    get:
+      tags:
+        - Consultants
+      summary: get appointments of login doctor
+      description: 'get appointments of the login doctor now.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: []
+
+  /consultants/order-service:
+    get:
+      tags:
+        - Consultants
+      summary: get data of service
+      description: 'get data of specific service .'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of service'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: []
+###################################################
+
+  /magazine/magazines:
+    get:
+      tags:
+        - Magazines
+      summary: Magazines section
+      description: 'get all sectors , banners , logos, info of magazines based on specific section/sector.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: type
+          type: string
+          required: true
+          description: 'id of section you want to get there magazines (poultry-farm-horses-fish-animal).'
+        - in: query
+          name: sort
+          type: number
+          description: 'type of sort the result (if alphabetic 0 rates 2).'
+        - in: query
+          name: search
+          type: string
+          description: 'search about specific magazine.'
+        - in: query
+          name: city_id
+          type: number
+          description: 'magazines which in specific city.'
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /magazine/magazine-detials:
+    get:
+      tags:
+        - Magazines
+      summary: specific magazine
+      description: 'information about specific magazine by id'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of specific magazine.'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /magazine/rating-magazine:
+    post:
+      tags:
+        - Magazines
+      summary: 'set rate of magazine'
+      description: 'set rate of specific magazine from 1 to 5'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: maga_id
+          type: number
+          required: true
+
+        - in: formData
+          name: reat
+          type: string
+          required: true
+          description: 'rate of the magazine'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: []
+
+  /magazine/update-rating-magazine:
+    post:
+      tags:
+        - Magazines
+      summary: 'update rate of magazine'
+      description: 'update rate of specific magazine from 1 to 5'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: maga_id
+          type: number
+          required: true
+
+        - in: formData
+          name: reat
+          type: string
+          required: true
+          description: 'rate of the magazine'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: []
+
+  /magazine/filter-sections-magazines:
+    get:
+      tags:
+        - Magazines
+      summary: filter of magazines
+      description: 'filter of magazines based on section type and country id '
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: type
+          type: string
+          description: 'type of section you want to filter magazines based on (poultry-farm-horses-fish-animal).'
+        - in: query
+          name: country_id
+          type: number
+          description: 'id of specific country to filter magazines based on.'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /magazine/magazine-gallary:
+    get:
+      tags:
+        - Magazines
+      summary: gallary of specific magazine
+      description: 'get gallery (images) of specific magazine'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of gallery of magazine.'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+###################################################
+
+  /showes/all-showes:
+    get:
+      tags:
+        - Shows
+      summary: Shows section
+      description: 'get all sectors , banners , logos, info of shows based on specific section/sector.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: type
+          type: string
+          required: true
+          description: 'id of section you want to get there shows (poultry-farm-horses-fish-animal).'
+        - in: query
+          name: sort
+          type: number
+          description: 'type of sort the result (if alphabetic 0 rates 2).'
+        - in: query
+          name: search
+          type: string
+          description: 'search about specific show.'
+        - in: query
+          name: city_id
+          type: number
+          description: 'shows which in specific city.'
+        - in: query
+          name: country_id
+          type: number
+          description: 'shows which in specific country.'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /showes/one-show:
+    get:
+      tags:
+        - Shows
+      summary: get specific show
+      description: 'get all info of specific show based on show id.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          description: 'id of show.'
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /showes/one-show-review:
+    get:
+      tags:
+        - Shows
+      summary: review of specific show
+      description: 'review of specific show by id'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of specific show.'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /showes/one-show-showers:
+    get:
+      tags:
+        - Shows
+      summary: Showers of show
+      description: 'get banners , logos, showers based on id of show.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of show you want to get there showers.'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /showes/one-show-speakers:
+    get:
+      tags:
+        - Shows
+      summary: speakers of show
+      description: 'get banners , logos, speakers based on id of show.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of show you want to get there speakers.'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /showes/filter-showes:
+    get:
+      tags:
+        - Shows
+      summary: filter of shows
+      description: 'get sectors , cities , countries and sort based on type of section selected and country id.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: type
+          type: string
+          required: true
+          description: 'type of section you want to get there magazines (poultry-farm-horses-fish-animal).'
+        - in: query
+          name: country_id
+          type: number
+          description: 'id of country you want to filter based on.'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /showes/one-show-place:
+    post:
+      tags:
+        - Shows
+      summary: 'add place of show'
+      description: 'add place of specific show'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: email
+          type: number
+          required: true
+
+        - in: formData
+          name: company
+          type: string
+          required: true
+
+        - in: formData
+          name: desc
+          type: number
+          required: true
+
+        - in: formData
+          name: phone
+          type: string
+          required: true
+
+        - in: formData
+          name: show_id
+          type: number
+          required: true
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /showes/one-show-reat:
+    post:
+      tags:
+        - Shows
+      summary: 'add rate of show'
+      description: 'add rate of specific show'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: name
+          type: string
+          required: true
+
+        - in: formData
+          name: email
+          type: string
+          required: true
+
+        - in: formData
+          name: desc
+          type: number
+          required: true
+
+        - in: formData
+          name: show_id
+          type: number
+          required: true
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /showes/one-show-going:
+    post:
+      tags:
+        - Shows
+      summary: 'going to show'
+      description: 'add new going to a specific show'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: show_id
+          type: number
+          required: true
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: []
+
+  /showes/one-show-notgoing:
+    post:
+      tags:
+        - Shows
+      summary: 'not going to show'
+      description: 'add one not going to a specific show'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: show_id
+          type: number
+          required: true
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: []
+
+  /showes/one-show-interested:
+    post:
+      tags:
+        - Shows
+      summary: 'interested in show'
+      description: 'add new interested in a specific show'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: show_id
+          type: number
+          required: true
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: []
+
+  /showes/one-show-notinterested:
+    post:
+      tags:
+        - Shows
+      summary: 'not interested in show'
+      description: 'add one not interested in a specific show'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: show_id
+          type: number
+          required: true
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: [ ]
+
+###################################################
+
+  /news/news:
+    get:
+      tags:
+        - News
+      summary: News section
+      description: 'get all sectors , banners , logos, info of news based on specific section/sector.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: type
+          type: string
+          required: true
+          description: 'type of section you want to get there shows (poultry-farm-horses-fish-animal).'
+        - in: query
+          name: sort
+          type: number
+          description: 'type of sort the result (if alphabetic 0 viewcount 2).'
+        - in: query
+          name: search
+          type: string
+          description: 'search about specific show.'
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /news/news-detials:
+    get:
+      tags:
+        - News
+      summary: get info of new
+      description: 'get info of specific new based on id.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of specific new.'
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /news/filter-sections-news:
+    get:
+      tags:
+        - News
+      summary: filter of news
+      description: 'filter in news based on section and type of sort.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: type
+          type: string
+          required: true
+          description: 'type of section you want to get there shows (poultry-farm-horses-fish-animal).'
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+###################################################
+
+  /register:
+    post:
+      tags:
+        - Authorization
+      summary: 'Register'
+      description: 'register new customer'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: name
+          type: string
+          required: true
+        - in: formData
+          name: email
+          type: string
+          required: true
+        - in: formData
+          name: phone
+          type: string
+          required: true
+        - in: formData
+          name: password
+          type: string
+          required: true
+        - in: formData
+          name: device_token
+          type: string
+          required: true
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /login:
+    post:
+      tags:
+        - Authorization
+      summary: 'Login'
+      description: 'Login customer'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: email
+          type: string
+          required: true
+        - in: formData
+          name: password
+          type: string
+          required: true
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /forget-password:
+    post:
+      tags:
+        - Authorization
+      summary: 'forget password 1st step'
+      description: 'forget password using phone send code to this phone number'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: phone
+          type: string
+          required: true
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /forget-password-code:
+    post:
+      tags:
+        - Authorization
+      summary: 'forget password 2nd step'
+      description: 'send the code and password from phone that receive the code in the first step'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: phone
+          type: string
+          required: true
+        - in: formData
+          name: code
+          type: string
+        - in: formData
+          name: password
+          type: string
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /store-fcm:
+    post:
+      tags:
+        - Authorization
+      summary: 'store fcm in database '
+      description: 'store firebase cloud messaging code for specific device token'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: device_token
+          type: string
+          required: true
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: [ ]
+
+  /logout:
+    post:
+      tags:
+        - Authorization
+      summary: 'Logout'
+      description: 'logout of authenticated customer'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: [ ]
+
+  /customer/check-login:
+    post:
+      tags:
+        - Authorization
+      summary: 'customer check login'
+      description: 'check the customer is login or not'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: api_token
+          type: string
+          required: true
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /reg-log-social:
+    post:
+      tags:
+        - Authorization
+      summary: 'Login or Register by social'
+      description: 'Login or register by google or facebook based on google id and unique email'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: name
+          type: string
+          description: 'required if this email is register for first time'
+        - in: formData
+          name: email
+          type: string
+          required: true
+          description: 'required for register or login'
+        - in: formData
+          name: device_token
+          type: string
+          description: 'required if this email is register for first time'
+        - in: formData
+          name: google_id
+          type: string
+          description: 'required if this email is register for first time'
+        - in: formData
+          name: password
+          type: string
+          description: 'required for login and it is the same of google id'
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+###################################################
+
+  /localstock/local-stock-sections:
+    get:
+      tags:
+        - Local/FodderStock
+      summary: LocalStock and FodderStock section
+      description: 'get all sectors , banners , logos, all sub sections of local and fodder stock.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: type
+          type: string
+          required: true
+          description: 'type of section you want to get there stocks (poultry-farm-horses-fish-animal).'
+        - in: query
+          name: search
+          type: string
+          description: 'search about specific stocks.'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /localstock/all-local-stock-sections:
+    get:
+      tags:
+        - Local/FodderStock
+      summary: filter of stocks
+      description: 'filter in stocks based on section and type of sort.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: type
+          type: string
+          required: true
+          description: 'type of section you want to get there stocks (poultry-farm-horses-fish-animal).'
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /v2/local/tables:
+    get:
+      tags:
+        - Local/FodderStock
+      summary: tables of local stock
+      description: 'tables of local stock based on date.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: date
+          type: string
+          format: date
+          description: 'date of stock'
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of stock'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: [ ]
+
+  /v2/fodder/tables:
+    get:
+      tags:
+        - Local/FodderStock
+      summary: tables of fodder stock
+      description: 'tables of fodder stock based on date.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: date
+          type: string
+          format: date
+          description: 'date of stock'
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of section (1 poultry,2 animal,3 farm,4 fish,5 horses)'
+        - in: query
+          name: comp_id
+          type: number
+          description: 'id of specific company'
+        - in: query
+          name: fod_id
+          type: number
+          description: 'id of fodder stock'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: [ ]
+
+  /localstock/new-local-stock-show-sub-section:
+    get:
+      tags:
+        - Local/FodderStock
+      summary: tables of local and fodder stock for ios/android
+      description: 'tables of local and fodder stock based on type of stock ,id of company , date and this api for ios and android.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: date
+          type: string
+          format: date
+          description: 'date of stock'
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of stock'
+        - in: query
+          name: comp_id
+          type: number
+          description: 'id of specific company'
+        - in: query
+          name: type
+          type: string
+          description: 'type of stock (local or fodder)'
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - Bearer: [ ]
+
+  /localstock/feeds-items:
+    get:
+      tags:
+        - Local/FodderStock
+      summary: fodder items
+      description: 'get fodder categories and fodder list of these categories for android/ios and get fodder list only if device web sent in header.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: stock_id
+          type: number
+          required: true
+          description: 'id of section you want to get its stocks (1 poultry,2 animal,3 farm,4 fish,5 horses)'
+        - in: query
+          name: mini_id
+          type: number
+          description: 'id of stock you want to select from fodder categories ,only used for android/ios'
+        - in: query
+          name: food_id
+          type: number
+          description: 'id of stock you want to select from fodder list'
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /localstock/companies-items:
+    get:
+      tags:
+        - Local/FodderStock
+      summary: companies select
+      description: 'get all companies of specific section and select specific one based on company_id.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: stock_id
+          type: number
+          required: true
+          description: 'id of section you want to get its stocks (1 poultry,2 animal,3 farm,4 fish,5 horses)'
+        - in: query
+          name: company_id
+          type: number
+          description: 'id of company you want to select from companies '
+
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+  /localstock/comprison-fodder:
+    get:
+      tags:
+        - Local/FodderStock
+      summary: fodderstock comparison
+      description: 'get all companies of specific fodder stock and its all feeds.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: id
+          type: number
+          required: true
+          description: 'id of fodder stock you want compare'
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+
+
+###################################################
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header

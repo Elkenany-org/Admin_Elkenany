@@ -1,0 +1,13 @@
+{
+    "name": "FodderStock",
+    "alias": "fodderstock",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\FodderStock\\Providers\\FodderStockServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

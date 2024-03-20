@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="This is Description Area" name="description">
+    <!-- Icon -->
+    <link href="../../images/favicon.png" rel="icon">
+    <!-- Title -->
+    <title>بورصة عادية</title>
+    <!-- Bootstrap CSS -->
+    <link href="../../css/vendors/bootstrap.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../../css/vendors/all.min.css" rel="stylesheet">
+    <!-- slick -->
+    <link href="../../vendors/slick/slick.css" rel="stylesheet" type="text/css"/>
+    <link href="../../vendors/slick/slick-theme.css" rel="stylesheet" type="text/css"/>
+
+    <!-- My CSS -->
+    <link href="../../css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="main__content__body">
+    <!-- Start Loading Screen -->
+    <article class="loading-screen">
+        <div class="chicken-loader">
+            <span></span>
+        </div>
+    </article>
+    <!-- End Loading Screen -->
+
+    <!-- Start button to top -->
+    <button class="btn_top" id="myBtn">
+        <span class="arrow"></span>
+    </button>
+    <!-- End button to top -->
+
+    <!-- Start Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../../index.html">
+            <img alt="main logo" src="../../images/logo.png">
+        </a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="daily_stock_exchange.html">البورصة اليومية <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#" id="navbarDropdown" role="button">
+                        البورصة العالمية
+                    </a>
+                    <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                        <a class="dropdown-item" href="#">البورصة العالمية</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">البورصة العالمية</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">البورصة العالمية</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../companies/companies_guide.html">دليل الشركات</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../consultants/consultants.html">الاستشاريين</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../market/market_home.html">سوق الكناني</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">الاخبار</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="search-area" placeholder="بحث" type="search">
+                <button class="submit" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <section class="sign-box">
+                <a class="log-in" href="../auth-pages/login.html">الدخول</a>
+                <a class="sign-up" href="../auth-pages/sign_up.html">انضم الان</a>
+            </section>
+        </div>
+        <section class="profile-box dropdown d-lg-block d-none">
+            <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown"
+               href="#"
+               id="navbarDropdown" role="button">
+                <img alt="profile pic" class="profile-photo" src="../../images/avatar.svg">
+                <h6>حسين كمال</h6>
+                <div class="arrow">
+                    <img alt="arrow down" class="arrow-down" src="../../images/down_arrow.svg">
+                </div>
+            </a>
+            <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                <a class="dropdown-item dropdown-item-especial" href="#">
+                    <img alt="profile pic" class="profile-photo" src="../../images/avatar.svg">
+                    <h6>حسين كمال الدين حسين</h6>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../auth-pages/settings.html">الإعدادات</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">تسجيل الخروج</a>
+            </div>
+        </section>
+    </nav>
+    <!-- End Navigation Bar -->
+
+    <!-- Start Header -->
+    <header class="banner__header">
+        <div class="container-fluid one-full-slider">
+            <a href="#" target="_blank"><img alt="banner" class="banner" src="../../images/banner.png"></a>
+            <a href="#" target="_blank"><img alt="banner" class="banner" src="../../images/banner.png"></a>
+            <a href="#" target="_blank"><img alt="banner" class="banner" src="../../images/banner.png"></a>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start breadcrumb -->
+    <div class="breadcrumb__container container">
+        <div class="custom__breadcrumb">
+            <h1 class="page__title">البورصة اليومية</h1>
+        </div>
+    </div>
+    <!-- End breadcrumb -->
+    <!-- Start Search Box -->
+    <article class="inner-search-box d-lg-block d-none">
+        <div class="container">
+            <form class="box-tabs">
+                <div class="search-box-overlay"></div>
+                <section class="tabs tabs-4">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h4 class="title">القطاع:</h4>
+                    <select class="form-control">
+                        <option value="الداجني">الداجني</option>
+                        <option value="الحيواني">الحيواني</option>
+                        <option value="الزراعي">الزراعي</option>
+                        <option value="السمكي">السمكي</option>
+                        <option value="الخيول العربية">الخيول العربية</option>
+                    </select>
+                </section>
+                <section class="tabs tabs-4">
+                    <i class="fas fa-list-ul"></i>
+                    <h4 class="title">البورصة:</h4>
+                    <select class="form-control">
+                        <option value="الداجني">الداجني</option>
+                        <option value="الحيواني">الحيواني</option>
+                        <option value="الزراعي">الزراعي</option>
+                        <option value="السمكي">السمكي</option>
+                        <option value="الخيول العربية">الخيول العربية</option>
+                    </select>
+                </section>
+                <section class="tabs tabs-4">
+                    <i class="far fa-calendar-alt"></i>
+                    <h4 class="title">التاريخ:</h4>
+                    <input class="date" type="date">
+                </section>
+                <section class="tabs tabs-4">
+                    <i class="fas fa-poll"></i>
+                    <h4 class="title">احصائيات:</h4>
+                    <a class="stats__btn" href="statistics_main.html">احصائيات</a>
+                </section>
+            </form>
+        </div>
+    </article>
+    <!-- End Search Box -->
+
+    <!-- Start Accordion Section -->
+    <section class="right d-sm-block d-md-block d-lg-none col-lg-3 col-md-7 col-sm-12">
+        <h2 class="main-title" id="show-hide-accordion">
+            حدد بحثك
+            <i class="icon-s fas fa-search"></i>
+        </h2>
+        <div class="accordion" id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button aria-controls="collapseOne" aria-expanded="true" class="btn btn-link"
+                                data-target="#collapseOne" data-toggle="collapse">
+                            <i class="fas fa-puzzle-piece"></i>
+                            القطاع
+                        </button>
+                    </h5>
+                </div>
+                <div aria-labelledby="headingOne" class="collapse show" data-parent="#accordion" id="collapseOne">
+                    <div class="card-body">
+                        <ul>
+                            <li>
+                                <a>
+                                    <input checked id="tab-1-val-1" name="tab-1-values" type="radio" value="">
+                                    <label for="tab-1-val-1">الداجني</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <input id="tab-1-val-2" name="tab-1-values" type="radio" value="">
+                                    <label for="tab-1-val-2">الحيواني</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <input id="tab-1-val-3" name="tab-1-values" type="radio" value="">
+                                    <label for="tab-1-val-3">الزراعي</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <input id="tab-1-val-4" name="tab-1-values" type="radio" value="">
+                                    <label for="tab-1-val-4">السمكي</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <input id="tab-1-val-5" name="tab-1-values" type="radio" value="">
+                                    <label for="tab-1-val-5">الخيول العربية</label>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button aria-controls="collapseThree" aria-expanded="false" class="btn btn-link collapsed"
+                                data-target="#collapseThree" data-toggle="collapse">
+                            <i class="far fa-calendar-alt"></i>
+                            التاريخ
+                        </button>
+                    </h5>
+                </div>
+                <div aria-labelledby="headingThree" class="collapse" data-parent="#accordion" id="collapseThree">
+                    <div class="card-body">
+                        <input class="date w-100 text-center" type="date">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSeven">
+                    <h5 class="mb-0">
+                        <button aria-controls="collapseSeven" aria-expanded="true" class="btn btn-link"
+                                data-target="#collapseSeven" data-toggle="collapse">
+                            <i class="fas fa-list-ul"></i>
+                            القسم
+                        </button>
+                    </h5>
+                </div>
+                <div aria-labelledby="headingSeven" class="collapse" data-parent="#accordion" id="collapseSeven">
+                    <div class="card-body">
+                        <ul>
+                            <li>
+                                <a>
+                                    <input checked id="tab-1-val-1" name="tab-1-values" type="radio" value="">
+                                    <label for="tab-1-val-1">الداجني</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <input id="tab-1-val-2" name="tab-1-values" type="radio" value="">
+                                    <label for="tab-1-val-2">الحيواني</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <input id="tab-1-val-3" name="tab-1-values" type="radio" value="">
+                                    <label for="tab-1-val-3">الزراعي</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <input id="tab-1-val-4" name="tab-1-values" type="radio" value="">
+                                    <label for="tab-1-val-4">السمكي</label>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <input id="tab-1-val-5" name="tab-1-values" type="radio" value="">
+                                    <label for="tab-1-val-5">الخيول العربية</label>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button aria-controls="collapseFive" aria-expanded="false"
+                                class="btn btn-link collapsed" data-target="#collapseFive"
+                                data-toggle="collapse">
+                            <i class="fas fa-poll"></i>
+                            الاحصائيات
+                        </button>
+                    </h5>
+                </div>
+                <div aria-labelledby="headingFive" class="collapse" data-parent="#accordion"
+                     id="collapseFive">
+                    <div class="card-body">
+                        <a class="stats__btn" href="statistics_main.html">احصائيات</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Accordion Section -->
+
+    <!-- Start Partners -->
+    <article class="partners slider my-2">
+        <div class="container-fluid logos__holder">
+            <section class="partners-slider">
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_1.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_2.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_3.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_4.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_5.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_6.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_7.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_8.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_9.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+                <div class="item">
+                    <a class="logo-holder" href="#">
+                        <img alt="partner logo" src="../../images/partners_slider/partner_10.png">
+                    </a>
+                    <div class="wall"></div>
+                </div>
+            </section>
+        </div>
+    </article>
+    <!-- End Partners -->
+
+    <div class="global__container">
+
+        <!-- Start Table -->
+        <article class="table table__chart-6 container">
+            <section class="head">
+                <h3 class="title">الشركة</h3>
+                <h3 class="title">السعر</h3>
+                <h3 class="title">مقدار التغير</h3>
+                <h3 class="title">الوزن</h3>
+                <h3 class="title">العمر</h3>
+                <h3 class="title title__chart  d-lg-block d-none">اتجاه السعر</h3>
+            </section>
+            <!--  add row__shadow when rows length > = 3  -->
+            <div class="rows__container row__shadow">
+                <!-- Start One Row           add ads class if ad  -->
+                <section class="rows ">
+                    <a class="data data__title__img" href="../companies/companies_details.html">
+                        <span class="company__name">رومي اسمر برونزى</span>
+                    </a>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">10.00 جنية</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data data__container">
+                        <h4 class="data__content">0.00</h4>
+                        <h6 class="date">07:05 / 2021-05-30</h6>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">0</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">يوم</h4>
+                        <!-- <h4 class="down">-1</h4> -->
+                        <!--                <h6 class="date">13/12/2020</h6>-->
+                        <!--                <h6 class="time">09:32:07 AM</h6>-->
+                    </section>
+                    <div class="wall  d-lg-block d-none"></div>
+                    <section class="data data__charts charts d-lg-block d-none">
+                        <div id="chart"></div>
+                        <script>
+                            var options = {
+                                series: [{
+                                    name: "Desktops",
+                                    data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+                                }],
+                                chart: {
+                                    height: 350,
+                                    type: 'line',
+                                    zoom: {
+                                        enabled: false
+                                    }
+                                },
+                                dataLabels: {
+                                    enabled: false
+                                },
+                                stroke: {
+                                    curve: 'straight'
+                                },
+                                title: {
+                                    text: 'Product Trends by Month',
+                                    align: 'left'
+                                },
+                                grid: {
+                                    row: {
+                                        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                                        opacity: 0.5
+                                    },
+                                },
+                                xaxis: {
+                                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                                }
+                            };
+                            var chart = new ApexCharts(document.querySelector("#chart"), options);
+                            chart.render();
+                        </script>
+                    </section>
+                </section>
+                <!-- End One Row  -->
+
+                <!-- Start One Row           add ads class if ad  -->
+                <section class="rows ">
+                    <a class="data data__title__img" href="../companies/companies_details.html">
+                        <img alt="logo"
+                             class="companies__logo"
+                             src="http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/company/images/23-05-211621771005127869530.jpeg">
+                        <span class="company__name"> مؤسسه عبدالرشيد الخولى للدواجن</span>
+                    </a>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">3.50 جنية</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data data__container">
+                        <h4 class="data__content">0.00</h4>
+                        <h6 class="date">07:05 / 2021-05-30</h6>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">0</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">0</h4>
+                    </section>
+                    <div class="wall  d-lg-block d-none"></div>
+                    <section class="data data__charts charts d-lg-block d-none">
+                        <div class="chart3"></div>
+                    </section>
+                </section>
+                <!-- End One Row  -->
+
+                <!-- Start One Row           add ads class if ad  -->
+                <section class="rows ">
+                    <a class="data data__title__img" href="../companies/companies_details.html">
+                        <span class="company__name"> بط فرنساوي (بيور)</span>
+                    </a>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">5.50 جنية</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data data__container">
+                        <h4 class="data__content">0.00</h4>
+                        <h6 class="date">07:05 / 2021-05-30</h6>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">0</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">0</h4>
+                    </section>
+                    <div class="wall  d-lg-block d-none"></div>
+                    <section class="data data__charts charts d-lg-block d-none">
+                        <div class="chart4"></div>
+                    </section>
+                </section>
+                <!-- End One Row  -->
+
+                <!-- Start One Row           add ads class if ad  -->
+                <section class="rows ">
+                    <a class="data data__title__img" href="../companies/companies_details.html">
+                        <img alt="logo"
+                             class="companies__logo"
+                             src="http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/company/images/23-05-211621771005127869530.jpeg">
+                        <span class="company__name">المؤسسة المتحدة وكيل شركة آل سعيدان لتصنيع اجهزة الرى المحورى</span>
+                    </a>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">3.50 جنية</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data data__container">
+                        <h4 class="data__content">0.00</h4>
+                        <h6 class="date">07:05 / 2021-05-30</h6>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">0</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">0</h4>
+                    </section>
+                    <div class="wall  d-lg-block d-none"></div>
+                    <section class="data data__charts charts d-lg-block d-none">
+                        <div class="chart14"></div>
+                    </section>
+                </section>
+                <!-- End One Row  -->
+
+                <!-- Start One Row           add ads class if ad  -->
+                <section class="rows ">
+                    <a class="data data__title__img" href="../companies/companies_details.html">
+                        <span class="company__name"> مؤسسه عبدالرشيد الخولى للدواجن مؤسسه عبدالرشيد الخولى للدواجن </span>
+                    </a>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">3.50 جنية</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data data__container">
+                        <h4 class="data__content">0.00</h4>
+                        <h6 class="date">07:05 / 2021-05-30</h6>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">0</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">0</h4>
+                    </section>
+                    <div class="wall  d-lg-block d-none"></div>
+                    <section class="data data__charts charts d-lg-block d-none">
+                        <div class="chart5"></div>
+                    </section>
+                </section>
+                <!-- End One Row  -->
+
+                <!-- Start One Row           add ads class if ad  -->
+                <section class="rows ">
+                    <a class="data data__title__img" href="../companies/companies_details.html">
+                        <img alt="logo"
+                             class="companies__logo"
+                             src="http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/company/images/23-05-211621771005127869530.jpeg">
+                        <span class="company__name">المؤسسة المتحدة وكيل شركة آل سعيدان لتصنيع اجهزة الرى المحورى</span>
+                    </a>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">3.50 جنية</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data data__container">
+                        <h4 class="data__content">0.00</h4>
+                        <h6 class="date">07:05 / 2021-05-30</h6>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">0</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">0</h4>
+                    </section>
+                    <div class="wall  d-lg-block d-none"></div>
+                    <section class="data data__charts charts d-lg-block d-none">
+                        <div class="chart12"></div>
+                    </section>
+                </section>
+                <!-- End One Row  -->
+
+                <!-- Start One Row           add ads class if ad  -->
+                <section class="rows ">
+                    <a class="data data__title__img" href="../companies/companies_details.html">
+                        <span class="company__name"> مسحوق لحم وعظم (30% بروتين 8% فسفور 12% كالسيوم)</span>
+                    </a>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">3.50 جنية</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data data__container">
+                        <h4 class="data__content">0.00</h4>
+                        <h6 class="date">07:05 / 2021-05-30</h6>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">0</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">0</h4>
+                    </section>
+                    <div class="wall  d-lg-block d-none"></div>
+                    <section class="data data__charts charts d-lg-block d-none">
+                        <div class="chart13"></div>
+                    </section>
+                </section>
+                <!-- End One Row  -->
+            </div>
+
+        </article>
+        <!-- End Table -->
+
+        <!-- Start Table -->
+        <article class="table table__chart-5 container">
+            <section class="head">
+                <h3 class="title">الشركة</h3>
+                <h3 class="title">السعر</h3>
+                <h3 class="title">مقدار التغير</h3>
+                <h3 class="title">العمر</h3>
+                <h3 class="title title__chart  d-lg-block d-none">اتجاه السعر</h3>
+            </section>
+            <div class="rows__container">
+                <!-- Start One Row           add ads class if ad  -->
+                <section class="rows ">
+                    <a class="data data__title__img" href="../companies/companies_details.html">
+                        <span class="company__name">رومي اسمر برونزى</span>
+                    </a>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">10.00 جنية</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data data__container">
+                        <h4 class="data__content">0.00</h4>
+                        <h6 class="date">07:05 / 2021-05-30</h6>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">0</h4>
+                    </section>
+                    <div class="wall  d-lg-block d-none"></div>
+                    <section class="data data__charts charts d-lg-block d-none">
+                    </section>
+                </section>
+                <!-- End One Row  -->
+
+                <!-- Start One Row           add ads class if ad  -->
+                <section class="rows ">
+                    <a class="data data__title__img" href="../companies/companies_details.html">
+                        <img alt="logo"
+                             class="companies__logo"
+                             src="http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/company/images/23-05-211621771005127869530.jpeg">
+                        <span class="company__name"> مؤسسه عبدالرشيد الخولى للدواجن</span>
+                    </a>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">3.50 جنية</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data data__container">
+                        <h4 class="data__content">0.00</h4>
+                        <h6 class="date">07:05 / 2021-05-30</h6>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">0</h4>
+                    </section>
+                    <div class="wall  d-lg-block d-none"></div>
+                    <section class="data data__charts charts d-lg-block d-none">
+                        <div class="chart6"></div>
+                    </section>
+                </section>
+                <!-- End One Row  -->
+            </div>
+        </article>
+        <!-- End Table -->
+
+        <!-- Start Table -->
+        <article class="table table__chart-4 container">
+            <section class="head">
+                <h3 class="title">الشركة</h3>
+                <h3 class="title">السعر</h3>
+                <h3 class="title">مقدار التغير</h3>
+                <h3 class="title title__chart  d-lg-block d-none">اتجاه السعر</h3>
+            </section>
+            <div class="rows__container">
+                <!-- Start One Row           add ads class if ad  -->
+                <section class="rows ">
+                    <a class="data data__title__img" href="../companies/companies_details.html">
+                        <span class="company__name"> مسحوق لحم اصفر ( بدون ريش 55%-60%)</span>
+                    </a>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">10.00 جنية</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data data__container">
+                        <h4 class="data__content">0.00</h4>
+                        <h6 class="date">07:05 / 2021-05-30</h6>
+                    </section>
+                    <div class="wall  d-lg-block d-none"></div>
+                    <section class="data data__charts charts d-lg-block d-none">
+                        <div class="chart7"></div>
+                    </section>
+                </section>
+                <!-- End One Row  -->
+
+                <!-- Start One Row           add ads class if ad  -->
+                <section class="rows ">
+                    <a class="data data__title__img" href="../companies/companies_details.html">
+                        <img alt="logo"
+                             class="companies__logo"
+                             src="http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/company/images/23-05-211621771005127869530.jpeg">
+                        <span class="company__name"> مسحوق لحم وعظم (30% بروتين 8% فسفور 12% كالسيوم)</span>
+                    </a>
+                    <div class="wall"></div>
+                    <section class="data">
+                        <h4 class="data__content">3.50 جنية</h4>
+                    </section>
+                    <div class="wall"></div>
+                    <section class="data data__container">
+                        <h4 class="data__content">0.00</h4>
+                        <h6 class="date">07:05 / 2021-05-30</h6>
+                    </section>
+                    <div class="wall  d-lg-block d-none"></div>
+                    <section class="data data__charts charts d-lg-block d-none">
+                        <div class="chart8"></div>
+                    </section>
+                </section>
+                <!-- End One Row  -->
+            </div>
+
+        </article>
+        <!-- End Table -->
+
+        <!-- Start Table -->
+        <article class="table table__chart-3 container">
+            <section class="head">
+                <h3 class="title">الشركة</h3>
+                <h3 class="title">مقدار التغير</h3>
+                <h3 class="title title__chart  d-lg-block d-none">اتجاه السعر</h3>
+            </section>
+            <div class="rows__container">
+                <!-- Start One Row           add ads class if ad  -->
+                <section class="rows ">
+                    <a class="data data__title__img" href="../companies/companies_details.html">
+                        <span class="company__name">رومي اسمر برونزى</span>
+                    </a>
+                    <div class="wall"></div>
+                    <section class="data data__container">
+                        <h4 class="data__content">0.00</h4>
+                        <h6 class="date">07:05 / 2021-05-30</h6>
+                    </section>
+                    <div class="wall  d-lg-block d-none"></div>
+                    <section class="data data__charts charts d-lg-flex d-none">
+                        <div class="chart11"></div>
+                    </section>
+                </section>
+                <!-- End One Row  -->
+
+                <!-- Start One Row           add ads class if ad  -->
+                <section class="rows ">
+                    <a class="data data__title__img" href="../companies/companies_details.html">
+                        <img alt="logo"
+                             class="companies__logo"
+                             src="http://phpstack-597257-1931215.cloudwaysapps.com/public/uploads/company/images/23-05-211621771005127869530.jpeg">
+                        <span class="company__name"> مؤسسه عبدالرشيد الخولى للدواجن</span>
+                    </a>
+                    <div class="wall"></div>
+                    <section class="data data__container">
+                        <h4 class="data__content">0.00</h4>
+                        <h6 class="date">07:05 / 2021-05-30</h6>
+                    </section>
+                    <div class="wall  d-lg-flex d-none"></div>
+                    <section class="data data__charts charts d-lg-block d-none">
+                        <div class="chart10"></div>
+                    </section>
+                </section>
+                <!-- End One Row  -->
+            </div>
+
+        </article>
+        <!-- End Table -->
+
+        <!-- Start Caution -->
+        <article class="caution container">
+            <i class="icon fas fa-exclamation-triangle"></i>
+            <p class="caution-description">هذه الاسعار استرشادية عن طريق المورد وتختلف حسب الجودة والكمية وطرق
+                السداد ووقت التنفيذ</p>
+        </article>
+        <!-- End Caution -->
+    </div>
+</div>
+<!-- Start Footer -->
+<footer>
+    <div class="overlay">
+        <div class="container holder">
+            <div class="row">
+                <ul class="col-lg-3 col-md-6 col-6">
+                    <li class="title">الشركة</li>
+                    <li><a href="../static_pages/about-us.html">من نحن</a></li>
+                    <li><a href="../static_pages/terms_and_conditions.html">شروط الاستخدام</a></li>
+                    <li><a href="../static_pages/privacy_policy.html">اتفاقية الخصوصية</a></li>
+                </ul>
+                <ul class="col-lg-3 col-md-6 col-6">
+                    <li class="title">تحتاج للمساعدة؟</li>
+                    <li><a href="../static_pages/contact-us.html">اتصل بنا</a></li>
+                </ul>
+                <section class="media-box col-lg-3 col-md-6 col-12">
+                    <section>
+                        <a class="google-play" href="#"><img alt="google play" src="../../images/android_ar.png"></a>
+                        <a class="app-store" href="#"><img alt="app store" src="../../images/iphone_ar.png"></a>
+                    </section>
+                    <section class="social-media">
+
+                        <a class="instagram" href="#" rel="noreferrer" target="_blank">
+                            <i class="fab fa-instagram-square"></i>
+                        </a>
+                        <a class="facebook" href="#" rel="noreferrer" target="_blank">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </section>
+                </section>
+                <h5 class="col-12">جميع الحقوق محفوظة للكناني</h5>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<!-- Start Scripts -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS v4.5 -->
+<script src="../../js/vendors/jquery-3.5.1.slim.min.js"></script>
+<script src="../../js/vendors/popper.min.js"></script>
+<script src="../../js/vendors/bootstrap.min.js"></script>
+
+<script src="../../js/vendors/jquery-3.5.1.js"></script>
+
+
+<script>
+    window.Promise ||
+    document.write(
+        '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
+    )
+    window.Promise ||
+    document.write(
+        '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
+    )
+    window.Promise ||
+    document.write(
+        '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
+    )
+</script>
+<script src="../../js/vendors/apexcharts.js"></script>
+
+
+<!-- Slick -->
+<script src="../../vendors/slick/slick.min.js"></script>
+<script src="../../js/slick_initialising.js"></script>
+<!-- Rating -->
+<script src="../../js/vendors/rater.min.js"></script>
+<script src="../../js/rate_initialising.js"></script>
+<!-- Line Charts -->
+<!--<script src="../../js/vendors/linecharts.js"></script>-->
+<!--          Select MENU Styling          -->
+<script src="../../js/vendors/jquery.nice-select.min.js"></script>
+<!-- My JavaScript -->
+<script src="../../js/global.js"></script>
+<!--<script src="../../js/charts_initialising.js"></script>-->
+<script>
+    $('select').niceSelect();
+</script>
+
+<script>
+    // Replace Math.random() with a pseudo-random number generator to get reproducible results in e2e tests
+    // Based on https://gist.github.com/blixt/f17b47c62508be59987b
+    var _seed = 42;
+    Math.random = function () {
+        _seed = _seed * 16807 % 2147483647;
+        return (_seed - 1) / 2147483646;
+    };
+</script>
+<!-- End Scripts -->
+</body>
+
+</html>

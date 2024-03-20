@@ -1,0 +1,395 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="ar">-->
+
+<!--<head>-->
+<!--    &lt;!&ndash; Required meta tags &ndash;&gt;-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">-->
+<!--    <meta content="This is Description Area" name="description">-->
+<!--    &lt;!&ndash; Icon &ndash;&gt;-->
+<!--    <link href="../../images/favicon.png" rel="icon">-->
+<!--    &lt;!&ndash; Title &ndash;&gt;-->
+<!--    <title>مقارنة بورصة عادية</title>-->
+<!--    &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--    <link href="../../css/vendors/bootstrap.css" rel="stylesheet">-->
+<!--    &lt;!&ndash; Font Awesome &ndash;&gt;-->
+<!--    <link href="../../css/vendors/all.min.css" rel="stylesheet">-->
+<!--    &lt;!&ndash; slick &ndash;&gt;-->
+<!--    <link href="../../slick/slick.css" rel="stylesheet" type="text/css"/>-->
+<!--    <link href="../../slick/slick-theme.css" rel="stylesheet" type="text/css"/>-->
+<!--    &lt;!&ndash; My CSS &ndash;&gt;-->
+<!--    <link href="../../css/ordinary_comparison.css" rel="stylesheet">-->
+<!--</head>-->
+
+<!--<body>-->
+<!--&lt;!&ndash; Start Loading Screen &ndash;&gt;-->
+<!--<article class="loading-screen">-->
+<!--    <div class="chicken-loader">-->
+<!--        <span></span>-->
+<!--    </div>-->
+<!--</article>-->
+<!--&lt;!&ndash; End Loading Screen &ndash;&gt;-->
+
+<!--&lt;!&ndash; Start button to top &ndash;&gt;-->
+<!--<button class="btn_top" id="myBtn">-->
+<!--    <span class="arrow"></span>-->
+<!--</button>-->
+<!--&lt;!&ndash; End button to top &ndash;&gt;-->
+
+<!--&lt;!&ndash; Start Navigation Bar &ndash;&gt;-->
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+<!--    <a class="navbar-brand" href="../../index.html">-->
+<!--        <img alt="main logo" src="../../images/logo.png">-->
+<!--    </a>-->
+<!--    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"-->
+<!--            class="navbar-toggler"-->
+<!--            data-target="#navbarSupportedContent" data-toggle="collapse" type="button">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+
+<!--    <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--        <ul class="navbar-nav mr-auto">-->
+<!--            <li class="nav-item active">-->
+<!--                <a class="nav-link" href="daily_stock_exchange.html">البورصة اليومية <span-->
+<!--                        class="sr-only">(current)</span></a>-->
+<!--            </li>-->
+<!--            <li class="nav-item dropdown">-->
+<!--                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown"-->
+<!--                   href="#" id="navbarDropdown" role="button">-->
+<!--                    البورصة العالمية-->
+<!--                </a>-->
+<!--                <div aria-labelledby="navbarDropdown" class="dropdown-menu">-->
+<!--                    <a class="dropdown-item" href="#">البورصة العالمية</a>-->
+<!--                    <div class="dropdown-divider"></div>-->
+<!--                    <a class="dropdown-item" href="#">البورصة العالمية</a>-->
+<!--                    <div class="dropdown-divider"></div>-->
+<!--                    <a class="dropdown-item" href="#">البورصة العالمية</a>-->
+<!--                </div>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="../companies/companies_guide.html">دليل الشركات</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="../consultants/consultants.html">الاستشاريين</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="../market/market_home.html">سوق الكناني</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#">الاخبار</a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--        <form class="form-inline my-2 my-lg-0">-->
+<!--            <input class="search-area" placeholder="بحث" type="search">-->
+<!--            <button class="submit" type="submit">-->
+<!--                <i class="fas fa-search"></i>-->
+<!--            </button>-->
+<!--        </form>-->
+<!--        <section class="sign-box">-->
+<!--            <a class="log-in" href="../auth-pages/login.html">الدخول</a>-->
+<!--            <a class="sign-up" href="../auth-pages/sign_up.html">انضم الان</a>-->
+<!--        </section>-->
+<!--    </div>-->
+<!--    <section class="profile-box dropdown d-lg-block d-none">-->
+<!--        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"-->
+<!--           id="navbarDropdown" role="button">-->
+<!--            <img alt="profile pic" class="profile-photo" src="../../images/avatar.svg">-->
+<!--            <h6>حسين كمال</h6>-->
+<!--            <div class="arrow">-->
+<!--                <img alt="arrow down" class="arrow-down" src="../../images/down_arrow.svg">-->
+<!--            </div>-->
+<!--        </a>-->
+<!--        <div aria-labelledby="navbarDropdown" class="dropdown-menu">-->
+<!--            <a class="dropdown-item dropdown-item-especial" href="#">-->
+<!--                <img alt="profile pic" class="profile-photo" src="../../images/avatar.svg">-->
+<!--                <h6>حسين كمال الدين حسين</h6>-->
+<!--            </a>-->
+<!--            <div class="dropdown-divider"></div>-->
+<!--            <a class="dropdown-item" href="../auth-pages/settings.html">الإعدادات</a>-->
+<!--            <div class="dropdown-divider"></div>-->
+<!--            <a class="dropdown-item" href="#">تسجيل الخروج</a>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--</nav>-->
+<!--&lt;!&ndash; End Navigation Bar &ndash;&gt;-->
+
+<!--&lt;!&ndash; Start Header &ndash;&gt;-->
+<!--<header class="banner__header">-->
+<!--    <div class="container-fluid one-full-slider">-->
+<!--        <a href="#" target="_blank"><img alt="banner" class="banner" src="../../images/banner.png"></a>-->
+<!--        <a href="#" target="_blank"><img alt="banner" class="banner" src="../../images/banner.png"></a>-->
+<!--        <a href="#" target="_blank"><img alt="banner" class="banner" src="../../images/banner.png"></a>-->
+<!--    </div>-->
+<!--</header>-->
+<!--&lt;!&ndash; End Header &ndash;&gt;-->
+
+<!--&lt;!&ndash; Start Search Box &ndash;&gt;-->
+<!--<article class="inner-search-box d-lg-block d-none">-->
+<!--    <div class="container holder">-->
+<!--        <form class="box-tabs">-->
+<!--            <section class="tabs">-->
+<!--                <i class="far fa-building"></i>-->
+<!--                <h4 class="title">الشركات:</h4>-->
+<!--                &lt;!&ndash; Start MultisSelect Box &ndash;&gt;-->
+<!--                <div class="multiselect" id="multiselect-companies">-->
+<!--                    <div class="selectBox" onclick="showCheckboxes('companies')">-->
+<!--                        <select>-->
+<!--                            <option>اختر الشركات</option>-->
+<!--                        </select>-->
+<!--                        <span class="warning">حد أقصي 3 شركات</span>-->
+<!--                        <span class="companies-error">اختر شركة واحد علي الاقل</span>-->
+<!--                        <div class="overSelect"></div>-->
+<!--                    </div>-->
+<!--                    <div class="checkboxes" id="checkboxes-companies">-->
+<!--                        <div class="company__search">-->
+<!--                            <label for="search">-->
+<!--                                <input class="" id="search" name="search" placeholder="ابحث عن"-->
+<!--                                       type="search">-->
+<!--                            </label>-->
+<!--                        </div>-->
+<!--                        <label class="company__filter__label" for="company-one">-->
+<!--                            <input class="checks  checks-company" id="company-one" name="companies"-->
+<!--                                   type="checkbox">-->
+<!--                            شركة الكناني جروب</label>-->
+<!--                        <label class="company__filter__label" for="company-two">-->
+<!--                            <input class="checks  checks-company" id="company-two" name="companies"-->
+<!--                                   type="checkbox">شركة الكناني</label>-->
+<!--                        <label class="company__filter__label" for="company-three">-->
+<!--                            <input class="checks  checks-company" id="company-three" name="companies"-->
+<!--                                   type="checkbox">شركة النور والهدى</label>-->
+<!--                        <label class="company__filter__label" for="company-four">-->
+<!--                            <input class="checks  checks-company" id="company-four" name="companies"-->
+<!--                                   type="checkbox">شركة البركة</label>-->
+<!--                        <label class="company__filter__label" for="company-five">-->
+<!--                            <input class="checks  checks-company" id="company-five" name="companies"-->
+<!--                                   type="checkbox">شركة ناسكو ايجيبت</label>-->
+<!--                        <label class="company__filter__label" for="company-six">-->
+<!--                            <input class="checks  checks-company" id="company-six" name="companies"-->
+<!--                                   type="checkbox">شركة المصطفى</label>-->
+<!--                        <label class="company__filter__label" for="company-seven">-->
+<!--                            <input class="checks  checks-company" id="company-seven" name="companies"-->
+<!--                                   type="checkbox">مزارع دينا</label>-->
+<!--                        <label class="company__filter__label" for="2121212">-->
+<!--                            <input class="checks  checks-company" id="2121212" name="companies" type="checkbox"-->
+<!--                                   value="2">مزارع ضياء</label>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; End MultisSelect Box &ndash;&gt;-->
+<!--            </section>-->
+<!--            <section class="tabs tabs-especial" onClick="submit()">-->
+<!--                <span class="submit" id="search-box-submit">تطبيق</span>-->
+<!--            </section>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</article>-->
+<!--&lt;!&ndash; End Search Box &ndash;&gt;-->
+
+<!--&lt;!&ndash; Start Accordion Section &ndash;&gt;-->
+<!--<section class="right col-lg-3 col-md-7 col-sm-12">-->
+<!--    <h2 class="main-title" id="show-hide-accordion">-->
+<!--        تحديد الشركات-->
+<!--        <i class="icon-s fas fa-search"></i>-->
+<!--    </h2>-->
+<!--    <div class="accordion" id="accordion">-->
+<!--        <div class="card">-->
+<!--            <div class="card-header" id="headingOne">-->
+<!--                <h5 class="mb-0">-->
+<!--                    <button aria-controls="collapseOne" aria-expanded="true" class="btn btn-link"-->
+<!--                            data-target="#collapseOne" data-toggle="collapse">-->
+<!--                        <i class="far fa-building"></i>-->
+<!--                        الشركات-->
+<!--                    </button>-->
+<!--                    <span class="companies-error-accordion">اختر شركة واحد علي الاقل</span>-->
+<!--                </h5>-->
+<!--            </div>-->
+<!--            <div aria-labelledby="headingOne" class="collapse show" data-parent="#accordion" id="collapseOne">-->
+<!--                <div class="card-body">-->
+<!--                    &lt;!&ndash; Start MultisSelect Box &ndash;&gt;-->
+<!--                    <div class="multiselect multiselect-accordion" id="multiselect-companies-accordion">-->
+<!--                        <div class="selectBox" onclick="showCheckboxes('companies')">-->
+<!--                            <span class="warning">حد أقصي 3 شركات</span>-->
+<!--                            <div class="overSelect"></div>-->
+<!--                        </div>-->
+<!--                        <div class="checkboxes" id="checkboxes-companies-accordion">-->
+<!--                            <div class="company__search">-->
+<!--                                <label for="search">-->
+<!--                                    <input class="" id="search" name="search" placeholder="ابحث عن"-->
+<!--                                           type="search">-->
+<!--                                </label>-->
+<!--                            </div>-->
+<!--                            <label class="company__filter__label" for="company-accordion-one">-->
+<!--                                <input class="checks checks-company-accordion" id="company-accordion-one"-->
+<!--                                       name="companies-accordion" type="checkbox">شركة الكناني-->
+<!--                                جروب</label>-->
+<!--                            <label class="company__filter__label" for="company-accordion-two">-->
+<!--                                <input class="checks checks-company-accordion" id="company-accordion-two"-->
+<!--                                       name="companies-accordion" type="checkbox">شركة الكناني-->
+<!--                                جروب</label>-->
+<!--                            <label class="company__filter__label" for="company-accordion-three">-->
+<!--                                <input class="checks checks-company-accordion" id="company-accordion-three"-->
+<!--                                       name="companies-accordion" type="checkbox">شركة-->
+<!--                                الكناني-->
+<!--                                جروب</label>-->
+<!--                            <label class="company__filter__label" for="company-accordion-four">-->
+<!--                                <input class="checks checks-company-accordion" id="company-accordion-four"-->
+<!--                                       name="companies-accordion" type="checkbox">شركة-->
+<!--                                الكناني-->
+<!--                                جروب</label>-->
+<!--                            <label class="company__filter__label" for="company-accordion-five">-->
+<!--                                <input class="checks checks-company-accordion" id="company-accordion-five"-->
+<!--                                       name="companies-accordion" type="checkbox">شركة-->
+<!--                                الكناني-->
+<!--                                جروب</label>-->
+<!--                            <label class="company__filter__label" for="company-accordion-six">-->
+<!--                                <input class="checks checks-company-accordion" id="company-accordion-six"-->
+<!--                                       name="companies-accordion" type="checkbox">شركة الكناني-->
+<!--                                جروب</label>-->
+<!--                            <label class="company__filter__label" for="company-accordion-seven">-->
+<!--                                <input class="checks checks-company-accordion" id="company-accordion-seven"-->
+<!--                                       name="companies-accordion" type="checkbox">شركة-->
+<!--                                الكناني-->
+<!--                                جروب</label>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; End MultisSelect Box &ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <a class="submit-accordion" onclick="submitAccordion()">تطبيق</a>-->
+<!--    </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; End Accordion Section &ndash;&gt;-->
+
+<!--&lt;!&ndash; Start Partners &ndash;&gt;-->
+<!--<article class="partners slider">-->
+<!--    <div class="container-fluid logos__holder">-->
+<!--        <section class="partners-slider">-->
+<!--            <div class="item">-->
+<!--                <a class="logo-holder" href="#">-->
+<!--                    <img alt="partner logo" src="../../images/partners_slider/partner_1.png">-->
+<!--                </a>-->
+<!--                <div class="wall"></div>-->
+<!--            </div>-->
+<!--            <div class="item">-->
+<!--                <a class="logo-holder" href="#">-->
+<!--                    <img alt="partner logo" src="../../images/partners_slider/partner_2.png">-->
+<!--                </a>-->
+<!--                <div class="wall"></div>-->
+<!--            </div>-->
+<!--            <div class="item">-->
+<!--                <a class="logo-holder" href="#">-->
+<!--                    <img alt="partner logo" src="../../images/partners_slider/partner_3.png">-->
+<!--                </a>-->
+<!--                <div class="wall"></div>-->
+<!--            </div>-->
+<!--            <div class="item">-->
+<!--                <a class="logo-holder" href="#">-->
+<!--                    <img alt="partner logo" src="../../images/partners_slider/partner_4.png">-->
+<!--                </a>-->
+<!--                <div class="wall"></div>-->
+<!--            </div>-->
+<!--            <div class="item">-->
+<!--                <a class="logo-holder" href="#">-->
+<!--                    <img alt="partner logo" src="../../images/partners_slider/partner_5.png">-->
+<!--                </a>-->
+<!--                <div class="wall"></div>-->
+<!--            </div>-->
+<!--            <div class="item">-->
+<!--                <a class="logo-holder" href="#">-->
+<!--                    <img alt="partner logo" src="../../images/partners_slider/partner_6.png">-->
+<!--                </a>-->
+<!--                <div class="wall"></div>-->
+<!--            </div>-->
+<!--            <div class="item">-->
+<!--                <a class="logo-holder" href="#">-->
+<!--                    <img alt="partner logo" src="../../images/partners_slider/partner_7.png">-->
+<!--                </a>-->
+<!--                <div class="wall"></div>-->
+<!--            </div>-->
+<!--            <div class="item">-->
+<!--                <a class="logo-holder" href="#">-->
+<!--                    <img alt="partner logo" src="../../images/partners_slider/partner_8.png">-->
+<!--                </a>-->
+<!--                <div class="wall"></div>-->
+<!--            </div>-->
+<!--            <div class="item">-->
+<!--                <a class="logo-holder" href="#">-->
+<!--                    <img alt="partner logo" src="../../images/partners_slider/partner_9.png">-->
+<!--                </a>-->
+<!--                <div class="wall"></div>-->
+<!--            </div>-->
+<!--            <div class="item">-->
+<!--                <a class="logo-holder" href="#">-->
+<!--                    <img alt="partner logo" src="../../images/partners_slider/partner_10.png">-->
+<!--                </a>-->
+<!--                <div class="wall"></div>-->
+<!--            </div>-->
+<!--        </section>-->
+<!--    </div>-->
+<!--</article>-->
+<!--&lt;!&ndash; End Partners &ndash;&gt;-->
+
+<!--&lt;!&ndash; Start Comparison &ndash;&gt;-->
+<!--<article class="comparison">-->
+<!--    <div class="container-fluid">-->
+<!--        <div class="holder" id="comparison-holder">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</article>-->
+<!--&lt;!&ndash; End Comparison &ndash;&gt;-->
+
+<!--&lt;!&ndash; Start Footer &ndash;&gt;-->
+<!--<footer>-->
+<!--    <div class="overlay">-->
+<!--        <div class="container holder">-->
+<!--            <div class="row">-->
+<!--                <ul class="col-lg-3 col-md-6 col-6">-->
+<!--                    <li class="title">الشركة</li>-->
+<!--                    <li><a href="../static_pages/about-us.html">من نحن</a></li>-->
+<!--                    <li><a href="../static_pages/terms_and_conditions.html">شروط الاستخدام</a></li>-->
+<!--                    <li><a href="../static_pages/privacy_policy.html">اتفاقية الخصوصية</a></li>-->
+<!--                </ul>-->
+<!--                <ul class="col-lg-3 col-md-6 col-6">-->
+<!--                    <li class="title">تحتاج للمساعدة؟</li>-->
+<!--                    <li><a href="../static_pages/contact-us.html">اتصل بنا</a></li>-->
+<!--                </ul>-->
+<!--                <section class="media-box col-lg-3 col-md-6 col-12">-->
+<!--                    <section>-->
+<!--                        <a class="google-play" href="#"><img alt="google play" src="../../images/android_ar.png"></a>-->
+<!--                        <a class="app-store" href="#"><img alt="app store" src="../../images/iphone_ar.png"></a>-->
+<!--                    </section>-->
+<!--                    <section class="social-media">-->
+
+<!--                        <a class="instagram" href="#" rel="noreferrer" target="_blank">-->
+<!--                            <i class="fab fa-instagram-square"></i>-->
+<!--                        </a>-->
+<!--                        <a class="facebook" href="#" rel="noreferrer" target="_blank">-->
+<!--                            <i class="fab fa-facebook-square"></i>-->
+<!--                        </a>-->
+<!--                    </section>-->
+<!--                </section>-->
+<!--                <h5 class="col-12">جميع الحقوق محفوظة للكناني</h5>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</footer>-->
+<!--&lt;!&ndash; End Footer &ndash;&gt;-->
+
+
+<!--&lt;!&ndash; Start Scripts &ndash;&gt;-->
+<!--&lt;!&ndash; jQuery first, then Popper.js, then Bootstrap JS v4.5 &ndash;&gt;-->
+<!--<script src="../../js/vendors/jquery-3.5.1.slim.min.js"></script>-->
+<!--<script src="../../js/vendors/popper.min.js"></script>-->
+<!--<script src="../../js/vendors/bootstrap.min.js"></script>&lt;!&ndash; JQuery &ndash;&gt;-->
+<!--<script src="../../js/vendors/jquery-3.5.1.js"></script>-->
+<!--&lt;!&ndash; Slick &ndash;&gt;-->
+<!--<script src="../../vendors/slick/slick.min.js"></script>-->
+<!--<script src="../../js/slick_initialising.js"></script>-->
+<!--&lt;!&ndash; Rating &ndash;&gt;-->
+<!--&lt;!&ndash; My JavaScript &ndash;&gt;-->
+<!--<script src="../../js/global.js"></script>-->
+<!--<script src="../../js/ordinary_comparison%20.js"></script>-->
+<!--&lt;!&ndash; End Scripts &ndash;&gt;-->
+<!--</body>-->
+
+<!--</html>-->

@@ -1,0 +1,252 @@
+/* ****************************Scroll BAR****************************** */
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #9D9D9D; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FFAA00;
+  border-radius: 10px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(247, 125, 14, 0.7); }
+
+/* ****************************Scroll BAR****************************** */
+@font-face {
+  font-family: 'bein';
+  src: url("../../Front_End/fonts/beinNormal.ttf"); }
+
+body {
+  direction: rtl;
+  text-align: right;
+  font-family: "bein", sans-serif; }
+
+/* ----------- Start Loading Screen ----------- */
+.loading-screen {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #FFF;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .loading-screen .chicken-loader {
+    background: url("../images/loader.gif");
+    height: 300px;
+    width: 300px;
+    /* Bird Wattle */ }
+
+/* ----------- End Loading Screen ----------- */
+/* ---------- Start Button to top ----------- */
+.btn_top {
+  position: fixed;
+  bottom: 10px;
+  right: -60px;
+  z-index: 99;
+  border: none !important;
+  outline: none !important;
+  background-color: #FFAA00;
+  cursor: pointer;
+  padding: 20px 25px 20px;
+  opacity: .9;
+  transition: all .3s ease-in-out; }
+  .btn_top .arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg); }
+  .btn_top:hover {
+    background-color: #d48f04;
+    opacity: 1;
+    transform: translate(0, -5px); }
+
+/* ---------- End Button to top ----------- */
+/* ---------- Start Global ----------- */
+html {
+  scroll-behavior: smooth; }
+
+body {
+  background-color: #ffffff;
+  font-family: "bein", sans-serif;
+  direction: rtl;
+  color: #1f6b00; }
+
+a {
+  text-decoration: none !important;
+  line-height: 1.5 !important; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.regular-cards {
+  border: 2px solid #FFAA00;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  padding: 2em 1em;
+  margin: 1em 0 1rem;
+  transition: all .5s;
+  display: flex;
+  flex-flow: row nowrap; }
+  .regular-cards .content-box {
+    margin: 0 auto; }
+
+.cards {
+  border: 2px solid #FFAA00;
+  border-radius: 40px 40px 0 0;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  padding: 3.5em 1em;
+  margin: 1em 0 2em;
+  transition: all .5s; }
+
+/* ---------- Start Global Media Query ----------- */
+@media (max-width: 991px) {
+  .regular-cards {
+    justify-content: center;
+    flex-flow: column wrap;
+    padding: 1em 0; } }
+
+@media (min-width: 991px) {
+  .container {
+    max-width: 960px; } }
+
+/* ---------- End Global Media Query ----------- */
+/* ---------- End Global ----------- */
+.links {
+  color: #1f6b00 !important;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+  display: inline-block !important; }
+
+.login .main-title, .sign-up .main-title {
+  font-size: 35px;
+  text-align: center;
+  margin: .5em 0;
+  color: #1f6b00; }
+
+.login .holder, .sign-up .holder {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0px 4px 5px #ddd; }
+  .login .holder .login-box img, .login .holder .sign-up-box img, .sign-up .holder .login-box img, .sign-up .holder .sign-up-box img {
+    width: 140px;
+    margin: 0 0 1.5em; }
+  .login .holder .login-box form, .login .holder .sign-up-box form, .sign-up .holder .login-box form, .sign-up .holder .sign-up-box form {
+    margin-top: 2em;
+    margin: 0 auto; }
+    .login .holder .login-box form input, .login .holder .sign-up-box form input, .sign-up .holder .login-box form input, .sign-up .holder .sign-up-box form input {
+      width: 100%;
+      padding: 0 10px;
+      outline: none;
+      direction: rtl;
+      border-radius: 5px;
+      border: 1px solid #707070;
+      height: 48px;
+      margin-bottom: 8px;
+      transition: all .5s; }
+    .login .holder .login-box form .submit, .login .holder .sign-up-box form .submit, .sign-up .holder .login-box form .submit, .sign-up .holder .sign-up-box form .submit {
+      margin-top: 10px;
+      background-color: #FFAA00;
+      color: #1f6b00;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      box-shadow: 0px 4px 5px #ddd; }
+      .login .holder .login-box form .submit:hover, .login .holder .sign-up-box form .submit:hover, .sign-up .holder .login-box form .submit:hover, .sign-up .holder .sign-up-box form .submit:hover {
+        background-color: #d48f04; }
+  .login .holder .login-box .login-options, .login .holder .sign-up-box .login-options, .sign-up .holder .login-box .login-options, .sign-up .holder .sign-up-box .login-options {
+    display: flex;
+    flex-flow: row wrap;
+    direction: rtl;
+    margin: 1em 0 0.8em; }
+    .login .holder .login-box .login-options .forgot-password, .login .holder .sign-up-box .login-options .forgot-password, .sign-up .holder .login-box .login-options .forgot-password, .sign-up .holder .sign-up-box .login-options .forgot-password {
+      margin: 0 0 0 auto; }
+  .login .holder .login-box .or, .login .holder .sign-up-box .or, .sign-up .holder .login-box .or, .sign-up .holder .sign-up-box .or {
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    margin-bottom: .6em; }
+    .login .holder .login-box .or::before, .login .holder .login-box .or::after, .login .holder .sign-up-box .or::before, .login .holder .sign-up-box .or::after, .sign-up .holder .login-box .or::before, .sign-up .holder .login-box .or::after, .sign-up .holder .sign-up-box .or::before, .sign-up .holder .sign-up-box .or::after {
+      content: "";
+      width: 50px;
+      height: 1px;
+      background-color: #1a5302;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      right: 0%; }
+    .login .holder .login-box .or::after, .login .holder .sign-up-box .or::after, .sign-up .holder .login-box .or::after, .sign-up .holder .sign-up-box .or::after {
+      right: auto;
+      left: 0%; }
+  .login .holder .login-box .login-extras .login-facebook, .login .holder .login-box .login-extras .login-google, .login .holder .login-box .login-extras .sign-up-facebook, .login .holder .login-box .login-extras .sign-up-google, .login .holder .login-box .sign-up-extras .login-facebook, .login .holder .login-box .sign-up-extras .login-google, .login .holder .login-box .sign-up-extras .sign-up-facebook, .login .holder .login-box .sign-up-extras .sign-up-google, .login .holder .sign-up-box .login-extras .login-facebook, .login .holder .sign-up-box .login-extras .login-google, .login .holder .sign-up-box .login-extras .sign-up-facebook, .login .holder .sign-up-box .login-extras .sign-up-google, .login .holder .sign-up-box .sign-up-extras .login-facebook, .login .holder .sign-up-box .sign-up-extras .login-google, .login .holder .sign-up-box .sign-up-extras .sign-up-facebook, .login .holder .sign-up-box .sign-up-extras .sign-up-google, .sign-up .holder .login-box .login-extras .login-facebook, .sign-up .holder .login-box .login-extras .login-google, .sign-up .holder .login-box .login-extras .sign-up-facebook, .sign-up .holder .login-box .login-extras .sign-up-google, .sign-up .holder .login-box .sign-up-extras .login-facebook, .sign-up .holder .login-box .sign-up-extras .login-google, .sign-up .holder .login-box .sign-up-extras .sign-up-facebook, .sign-up .holder .login-box .sign-up-extras .sign-up-google, .sign-up .holder .sign-up-box .login-extras .login-facebook, .sign-up .holder .sign-up-box .login-extras .login-google, .sign-up .holder .sign-up-box .login-extras .sign-up-facebook, .sign-up .holder .sign-up-box .login-extras .sign-up-google, .sign-up .holder .sign-up-box .sign-up-extras .login-facebook, .sign-up .holder .sign-up-box .sign-up-extras .login-google, .sign-up .holder .sign-up-box .sign-up-extras .sign-up-facebook, .sign-up .holder .sign-up-box .sign-up-extras .sign-up-google {
+    direction: ltr;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0px 4px 5px #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: all .5s; }
+    .login .holder .login-box .login-extras .login-facebook i, .login .holder .login-box .login-extras .login-google i, .login .holder .login-box .login-extras .sign-up-facebook i, .login .holder .login-box .login-extras .sign-up-google i, .login .holder .login-box .sign-up-extras .login-facebook i, .login .holder .login-box .sign-up-extras .login-google i, .login .holder .login-box .sign-up-extras .sign-up-facebook i, .login .holder .login-box .sign-up-extras .sign-up-google i, .login .holder .sign-up-box .login-extras .login-facebook i, .login .holder .sign-up-box .login-extras .login-google i, .login .holder .sign-up-box .login-extras .sign-up-facebook i, .login .holder .sign-up-box .login-extras .sign-up-google i, .login .holder .sign-up-box .sign-up-extras .login-facebook i, .login .holder .sign-up-box .sign-up-extras .login-google i, .login .holder .sign-up-box .sign-up-extras .sign-up-facebook i, .login .holder .sign-up-box .sign-up-extras .sign-up-google i, .sign-up .holder .login-box .login-extras .login-facebook i, .sign-up .holder .login-box .login-extras .login-google i, .sign-up .holder .login-box .login-extras .sign-up-facebook i, .sign-up .holder .login-box .login-extras .sign-up-google i, .sign-up .holder .login-box .sign-up-extras .login-facebook i, .sign-up .holder .login-box .sign-up-extras .login-google i, .sign-up .holder .login-box .sign-up-extras .sign-up-facebook i, .sign-up .holder .login-box .sign-up-extras .sign-up-google i, .sign-up .holder .sign-up-box .login-extras .login-facebook i, .sign-up .holder .sign-up-box .login-extras .login-google i, .sign-up .holder .sign-up-box .login-extras .sign-up-facebook i, .sign-up .holder .sign-up-box .login-extras .sign-up-google i, .sign-up .holder .sign-up-box .sign-up-extras .login-facebook i, .sign-up .holder .sign-up-box .sign-up-extras .login-google i, .sign-up .holder .sign-up-box .sign-up-extras .sign-up-facebook i, .sign-up .holder .sign-up-box .sign-up-extras .sign-up-google i {
+      margin: 4px 5px 0 0;
+      font-size: 17px; }
+  .login .holder .login-box .login-extras .login-facebook, .login .holder .login-box .login-extras .sign-up-facebook, .login .holder .login-box .sign-up-extras .login-facebook, .login .holder .login-box .sign-up-extras .sign-up-facebook, .login .holder .sign-up-box .login-extras .login-facebook, .login .holder .sign-up-box .login-extras .sign-up-facebook, .login .holder .sign-up-box .sign-up-extras .login-facebook, .login .holder .sign-up-box .sign-up-extras .sign-up-facebook, .sign-up .holder .login-box .login-extras .login-facebook, .sign-up .holder .login-box .login-extras .sign-up-facebook, .sign-up .holder .login-box .sign-up-extras .login-facebook, .sign-up .holder .login-box .sign-up-extras .sign-up-facebook, .sign-up .holder .sign-up-box .login-extras .login-facebook, .sign-up .holder .sign-up-box .login-extras .sign-up-facebook, .sign-up .holder .sign-up-box .sign-up-extras .login-facebook, .sign-up .holder .sign-up-box .sign-up-extras .sign-up-facebook {
+    background-color: #0E5AA7; }
+    .login .holder .login-box .login-extras .login-facebook i, .login .holder .login-box .login-extras .sign-up-facebook i, .login .holder .login-box .sign-up-extras .login-facebook i, .login .holder .login-box .sign-up-extras .sign-up-facebook i, .login .holder .sign-up-box .login-extras .login-facebook i, .login .holder .sign-up-box .login-extras .sign-up-facebook i, .login .holder .sign-up-box .sign-up-extras .login-facebook i, .login .holder .sign-up-box .sign-up-extras .sign-up-facebook i, .sign-up .holder .login-box .login-extras .login-facebook i, .sign-up .holder .login-box .login-extras .sign-up-facebook i, .sign-up .holder .login-box .sign-up-extras .login-facebook i, .sign-up .holder .login-box .sign-up-extras .sign-up-facebook i, .sign-up .holder .sign-up-box .login-extras .login-facebook i, .sign-up .holder .sign-up-box .login-extras .sign-up-facebook i, .sign-up .holder .sign-up-box .sign-up-extras .login-facebook i, .sign-up .holder .sign-up-box .sign-up-extras .sign-up-facebook i {
+      margin: 3px 5px 0 0; }
+    .login .holder .login-box .login-extras .login-facebook:hover, .login .holder .login-box .login-extras .sign-up-facebook:hover, .login .holder .login-box .sign-up-extras .login-facebook:hover, .login .holder .login-box .sign-up-extras .sign-up-facebook:hover, .login .holder .sign-up-box .login-extras .login-facebook:hover, .login .holder .sign-up-box .login-extras .sign-up-facebook:hover, .login .holder .sign-up-box .sign-up-extras .login-facebook:hover, .login .holder .sign-up-box .sign-up-extras .sign-up-facebook:hover, .sign-up .holder .login-box .login-extras .login-facebook:hover, .sign-up .holder .login-box .login-extras .sign-up-facebook:hover, .sign-up .holder .login-box .sign-up-extras .login-facebook:hover, .sign-up .holder .login-box .sign-up-extras .sign-up-facebook:hover, .sign-up .holder .sign-up-box .login-extras .login-facebook:hover, .sign-up .holder .sign-up-box .login-extras .sign-up-facebook:hover, .sign-up .holder .sign-up-box .sign-up-extras .login-facebook:hover, .sign-up .holder .sign-up-box .sign-up-extras .sign-up-facebook:hover {
+      background-color: #0b4885; }
+  .login .holder .login-box .login-extras .login-google, .login .holder .login-box .login-extras .sign-up-google, .login .holder .login-box .sign-up-extras .login-google, .login .holder .login-box .sign-up-extras .sign-up-google, .login .holder .sign-up-box .login-extras .login-google, .login .holder .sign-up-box .login-extras .sign-up-google, .login .holder .sign-up-box .sign-up-extras .login-google, .login .holder .sign-up-box .sign-up-extras .sign-up-google, .sign-up .holder .login-box .login-extras .login-google, .sign-up .holder .login-box .login-extras .sign-up-google, .sign-up .holder .login-box .sign-up-extras .login-google, .sign-up .holder .login-box .sign-up-extras .sign-up-google, .sign-up .holder .sign-up-box .login-extras .login-google, .sign-up .holder .sign-up-box .login-extras .sign-up-google, .sign-up .holder .sign-up-box .sign-up-extras .login-google, .sign-up .holder .sign-up-box .sign-up-extras .sign-up-google {
+    background-color: #E63125; }
+    .login .holder .login-box .login-extras .login-google:hover, .login .holder .login-box .login-extras .sign-up-google:hover, .login .holder .login-box .sign-up-extras .login-google:hover, .login .holder .login-box .sign-up-extras .sign-up-google:hover, .login .holder .sign-up-box .login-extras .login-google:hover, .login .holder .sign-up-box .login-extras .sign-up-google:hover, .login .holder .sign-up-box .sign-up-extras .login-google:hover, .login .holder .sign-up-box .sign-up-extras .sign-up-google:hover, .sign-up .holder .login-box .login-extras .login-google:hover, .sign-up .holder .login-box .login-extras .sign-up-google:hover, .sign-up .holder .login-box .sign-up-extras .login-google:hover, .sign-up .holder .login-box .sign-up-extras .sign-up-google:hover, .sign-up .holder .sign-up-box .login-extras .login-google:hover, .sign-up .holder .sign-up-box .login-extras .sign-up-google:hover, .sign-up .holder .sign-up-box .sign-up-extras .login-google:hover, .sign-up .holder .sign-up-box .sign-up-extras .sign-up-google:hover {
+      background-color: #b8251b; }
+
+@media (max-width: 576px) {
+  .holder {
+    width: 100% !important;
+    padding: 1.5em 2em !important; }
+    .holder .login-box .login-options {
+      justify-content: center; }
+      .holder .login-box .login-options .forgot-password {
+        margin: 0 0 10px 0 !important; } }
+
+@media (min-width: 576px) {
+  .holder {
+    width: 100% !important;
+    padding: 1.5em 2em !important; } }
+
+@media (min-width: 768px) {
+  .holder {
+    width: 80% !important;
+    padding: 1.5em 2em !important; } }
+
+@media (min-width: 992px) {
+  .holder {
+    width: 60% !important;
+    padding: 1.5em 2em !important; } }
+
+@media (max-width: 1200px) {
+  .main-title {
+    font-size: 30px !important; } }
+
+@media (min-width: 1200px) {
+  .main-title {
+    font-size: 35px !important; }
+  .holder {
+    width: 50% !important;
+    padding: 1.5em 5em !important; } }

@@ -1,0 +1,313 @@
+﻿// Start Settings //
+.settings {
+  direction: ltr;
+  margin: 3em 0;
+  color: $font-color-second;
+
+  .holder {
+    i {
+      font-size: 20px;
+      margin-top: 7px;
+    }
+
+    h3, h4 {
+      font-weight: bold;
+    }
+
+    .titles {
+      border-bottom: 1.5px solid $bg-color-second;
+      margin: 0 20px;
+      padding-bottom: .5em;
+      flex-wrap: nowrap;
+
+      h3 {
+        text-align: center;
+      }
+    }
+
+    .title-right {
+      h3 {
+        text-align: right;
+      }
+    }
+
+    .content {
+      text-align: center;
+
+      .left-content {
+        border-right: 1.5px solid;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        padding: 0 2em;
+
+        .basics {
+          .change-img {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            border-radius: 50%;
+            cursor: pointer;
+
+            .overlay {
+              position: absolute;
+              z-index: 2;
+              width: 150px;
+              height: 150px;
+              background-color: rgba(0, 0, 0, .4);
+              top: 100%;
+              left: 0;
+              transition: all .5s;
+              border-radius: 50%;
+
+              i {
+                color: white;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                font-size: 40px;
+                text-shadow: 2px 2px 1px black;
+              }
+            }
+
+            img {
+              position: relative;
+              z-index: 1;
+              width: 150px;
+              height: 150px;
+              border: 3px solid $bg-color-second;
+              border-radius: 50%;
+              padding: 3px;
+            }
+
+            &:hover .overlay {
+              top: 0%;
+            }
+          }
+
+          h3 {
+            color: $font-color-fourth;
+            margin-top: .5em;
+          }
+
+          form {
+            margin-top: 2em;
+            width: 50%;
+            margin: 2em auto 0;
+
+            h4 {
+              text-align: right;
+            }
+
+            .boxes {
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: flex-end;
+              border-radius: 5px;
+              border: 2px solid $bg-color-second;
+              padding: 0 10px;
+              margin-bottom: 2em;
+
+              input {
+                width: 90%;
+                border: none;
+                background-color: transparent;
+                direction: rtl;
+                padding: 0;
+                height: 45px;
+                outline: none;
+              }
+
+              .email, .date {
+                font-family: Arial, Helvetica, sans-serif;
+              }
+
+              a {
+                width: 10%;
+                color: $font-color-fourth;
+                margin-top: 10px;
+                transition: all .2s;
+                cursor: pointer;
+
+                &:hover {
+                  color: $font-color-second;
+                }
+              }
+            }
+
+            .submit {
+              width: 100%;
+              height: 45px;
+              margin-top: 10px;
+              background-color: $font-color-main;
+              color: $font-color-second;
+              font-size: 20px;
+              font-weight: bold;
+              border: none;
+              box-shadow: 0px 4px 5px #ddd;
+              border-radius: 5px;
+              display: none;
+
+              &:hover {
+                background-color: $bg-color-main-hover;
+              }
+            }
+          }
+        }
+      }
+
+      .right-content {
+        padding: 0;
+
+        .nav {
+          margin-top: 1em;
+
+          .nav-link {
+            color: $font-color-second;
+            font-weight: bold;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 15px 20px 0;
+            display: flex;
+            flex-flow: row nowrap;
+            font-size: 20px;
+            transition: all .3s;
+            direction: rtl;
+
+            i {
+              margin: 3px 0 0 10px;
+            }
+
+            &:hover {
+              color: $font-color-main;
+              background-color: $bg-color-second;
+            }
+          }
+
+          .active {
+            color: $font-color-main;
+            background-color: $bg-color-second;
+          }
+        }
+      }
+    }
+  }
+}
+
+// End Settings //
+
+// Start media query //
+@media (max-width: 1255px) {
+  .settings {
+    .holder {
+      .content {
+        .right-content {
+          .nav {
+            .nav-link {
+              flex-flow: row wrap;
+              justify-content: center;
+            }
+
+            i {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .settings {
+    .titles {
+      .title-right {
+        i {
+          text-align: center;
+        }
+      }
+    }
+
+    .left-content {
+      .basics {
+        form {
+          width: 100% !important;
+        }
+      }
+    }
+
+    .right-content {
+      .nav {
+        .nav-link {
+          margin: 15px 0 0 !important;
+          justify-content: center !important;
+          width: 45px;
+          margin-right: auto !important;
+          margin-left: auto !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+
+          i {
+            margin: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .settings {
+    .holder {
+      .content {
+        .left-content {
+          padding-right: 10px;
+          padding-left: 10px;
+
+          .basics {
+            .change-img {
+              .overlay {
+                width: 100px;
+                height: 100px;
+
+                i {
+                  font-size: 30px;
+                }
+              }
+
+              img {
+                width: 100px;
+                height: 100px;
+              }
+            }
+
+            h3 {
+              font-size: 20px;
+            }
+
+            form {
+              h4 {
+                font-size: $fs-18;
+
+              }
+
+              .boxes {
+                input {
+                  font-size: $fs-14;
+
+                  width: 75%;
+                }
+
+                a {
+                  width: 25%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// End media query //

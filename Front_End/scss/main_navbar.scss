@@ -1,0 +1,134 @@
+﻿@import "variables.scss";
+
+// Start Global // 
+.dropdown-menu
+{
+    border-radius: 10px;
+    padding: 0;
+    border: 1px solid #ddd;
+    margin: 0;
+    .dropdown-item
+    {
+        padding: 10px 0;
+        text-align: center;
+        font-weight: bold;
+        &:hover
+        {
+            background-color: #F0F0F0;
+        }
+        .active, &:active
+        {
+            background-color: $bg-color-second;
+        }
+        &:first-of-type
+        {
+            border-radius: 10px 10px 0 0;
+        }
+        &:last-of-type
+        {
+            border-radius: 0 0 10px 10px;
+        }
+    }
+    .dropdown-divider
+    {
+        margin: 0;
+    }
+}
+.collapsing 
+{
+    transition: 0s !important;
+}
+// End Global // 
+
+// Start Navigation Bar // 
+.navbar
+{
+    direction: rtl;
+    background-color: $bg-color-third !important;
+    box-shadow: $fixed-box-shadow-regular2;
+    .navbar-brand
+    {
+        img 
+        {
+            width: 69px;
+        }
+    }
+    .collapse
+    {
+        .navbar-nav
+        {
+            // margin: 0 10px 0 0 !important;
+            .nav-item
+            {
+                .nav-link
+                {
+                    color: $font-color-second;
+                    font-weight: bold;
+                    margin-right: 10px;
+                    &:hover
+                    {
+                        background-color: #F0F0F0;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+        form
+        {
+            background-color: #F0F0F0 !important;
+            padding: 5px 10px 5px 0;
+            border-radius: 20px;
+            margin-right: 10px;
+            display: flex;
+            flex-flow: row nowrap;
+            height: 35px;
+            .submit
+            {
+                border: none;
+                outline: none;
+                background-color: transparent;
+                i 
+                {
+                    margin-top: 5px;
+                }
+            }
+        }
+        .sign-box
+        {
+            // margin: 0 auto 0 0;
+            a 
+            {
+                color: $font-color-second;
+                font-weight: bold;
+                background-color: transparent;
+                padding: 10px;
+                border-radius: 20px;
+                transition: all .2s;
+                display: inline-block;
+                margin-right: 10px;
+                &:hover
+                {
+                    background-color: $bg-color-main;
+                }
+            }
+        }
+    }
+}
+// End Navigation Bar // 
+
+// Start Media Query //
+@media (max-width: 1200px) 
+{
+    .navbar  
+    {
+        .collapse
+        {
+            text-align: center;
+        }
+        .sign-box
+        {
+            margin-top: 10px !important;
+        }
+    }
+}
+// End Media Query //

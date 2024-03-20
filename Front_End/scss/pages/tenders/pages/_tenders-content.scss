@@ -1,0 +1,64 @@
+.main__container {
+  .news__container {
+    text-align: center;
+    margin: 1rem auto;
+
+    .header {
+      img {
+        border-top-right-radius: 24px;
+        border-top-left-radius: 24px;
+        width: 100%;
+        height: 400px;
+        max-height: 450px;
+      }
+    }
+
+    .content {
+      .content__title {
+        color: $color-main;
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 1rem auto;
+
+        &::-moz-selection { /* Code for Firefox */
+          color: $color-main;
+          background: $bg-color-main;
+        }
+
+        &::selection {
+          color: $color-main;
+          background: $bg-color-main;
+        }
+      }
+
+      .content__image {
+        img {
+          max-width: 100%;
+          width: 100%;
+          height: 400px;
+          max-height: 450px;
+        }
+      }
+
+      .content__description {
+        text-align: right;
+        font-size: 1.4rem;
+        font-weight: 500;
+
+        p {
+          line-height: 2;
+
+          &::-moz-selection { /* Code for Firefox */
+            color: $color-main;
+            background: $bg-color-main;
+          }
+
+          &::selection {
+            color: $color-main;
+            background: $bg-color-main;
+          }
+        }
+      }
+    }
+  }
+}

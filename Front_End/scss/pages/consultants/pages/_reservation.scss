@@ -1,0 +1,99 @@
+// Start Reservation //
+.reservation {
+  width: 40%;
+  background-color: #f5f5f5;
+  padding: 2em;
+  margin: 2em auto 0;
+  border-radius: 10px;
+
+  .reservation__holder {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+
+    .title {
+      font-weight: bold;
+      padding-bottom: 1em;
+    }
+
+    .reservation-box {
+      margin-bottom: 1rem;
+
+      .day-title, .hour-title {
+        text-align: right;
+        margin-bottom: 2px;
+      }
+    }
+
+    input, select, .submit {
+      width: 100%;
+      padding: 0 10px;
+      outline: none;
+      direction: ltr;
+      border-radius: 5px;
+      border: 1px solid #707070;
+      height: 48px;
+      margin-bottom: 1em;
+      transition: all .5s;
+    }
+
+    .submit {
+      margin-top: 1em;
+      background-color: $font-color-main;
+      color: $font-color-second;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      box-shadow: 0px 4px 5px #ddd;
+      display: block;
+      padding-top: 9px;
+
+      &:hover {
+        background-color: $bg-color-main-hover;
+      }
+    }
+  }
+}
+
+// End Reservation //
+
+
+// Start Media Query //
+@media (max-width: 1100px) {
+  .reservation {
+    width: 50%;
+  }
+}
+
+@media (max-width: 950px) {
+  .reservation {
+    width: 60%;
+  }
+}
+
+@media (max-width: 800px) {
+  .reservation {
+    width: 70%;
+  }
+}
+
+@media (max-width: 650px) {
+  .reservation {
+    width: 80%;
+  }
+}
+
+@media (max-width: 550px) {
+  .reservation {
+    width: 90%;
+    padding: 2em 1em;
+
+    .reservation__holder {
+      width: 90%;
+    }
+  }
+}
+
+// End Media Query //

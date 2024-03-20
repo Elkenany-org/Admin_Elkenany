@@ -1,0 +1,115 @@
+.simple__cards__container-big {
+  .single__card__big {
+    margin: 0.5rem auto;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-bottom-color: $color-main;
+    transition: all 0.2s ease-in-out;
+
+    .card__header__big {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .logo__box {
+        text-align: center;
+
+        .card__image {
+          width: 95px;
+          height: 95px;
+          border-radius: 10px;
+          border: 2px solid $bg-color-second;
+        }
+      }
+
+      .content__big {
+        display: flex;
+        flex-flow: column wrap;
+        padding: 0 1rem;
+
+        .title {
+          width: 100%;
+          text-align: center;
+          font-weight: 700;
+          color: $color-main;
+          font-size: 1.5rem;
+          margin: 0;
+        }
+
+        .role {
+          width: 100%;
+          text-align: center;
+          font-weight: 600;
+          color: $bg-color-fourth;
+          font-size: 1.2rem;
+          margin: 0;
+        }
+
+        .location {
+          font-size: 1.2rem;
+          font-weight: 500;
+          margin-bottom: 0.2rem;
+
+        }
+      }
+    }
+
+    .card__footer {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-end;
+
+      .rate {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+
+        i {
+          font-size: .9rem;
+          color: $bg-color-main;
+          @media (max-width: 767px) {
+            font-size: .8rem;
+          }
+        }
+      }
+
+      .date {
+        color: $color-main;
+        font-size: 1.2rem;
+        font-weight: 500;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &:hover {
+      background: #EEE;
+      border-radius: 12px;
+      border: 1px solid $color-main;
+    }
+  }
+}
+
+
+// Start Media Query //
+@media (max-width: 991px) {
+  .simple__cards__container {
+    .single__card {
+      .logo__box {
+        margin-bottom: 0 !important;
+        text-align: center !important;
+      }
+
+      .content__box {
+        margin: 1rem 0;
+
+        h2 {
+          margin-top: 0 !important;
+        }
+      }
+    }
+  }
+}

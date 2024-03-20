@@ -1,0 +1,91 @@
+.all-cards {
+  .one-card {
+    align-items: center;
+
+    .logo-box {
+      text-align: right;
+      margin: 0 auto;
+
+      .card-image {
+        width: 95px;
+        height: 95px;
+        border-radius: 10px;
+        border: 2px solid $bg-color-second;
+      }
+    }
+
+    .content-box {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: flex-end;
+      padding: 0 1rem;
+
+      .card__content {
+        color: $font-color-second;
+        width: 100%;
+        text-align: center;
+
+        .card__title {
+          font-size: 1.5rem;
+          margin: 0;
+          font-weight: 600
+        }
+
+        .card__title-body {
+          font-size: 1.2rem;
+          font-weight: 400;
+          margin: 0.4rem auto 0 auto;
+        }
+      }
+
+      .card__footer {
+        margin: 0.2rem auto 0rem auto;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: baseline;
+        font-size: 1rem;
+        font-weight: bold;
+        color: $font-color-second;
+
+        .content__date {
+
+          margin-top: 1rem;
+        }
+
+        .content__duration {
+
+        }
+      }
+
+
+    }
+
+
+    &:hover {
+      box-shadow: $fixed-box-shadow-regular2;
+      border: 2px solid $bg-color-main-hover;
+    }
+  }
+}
+
+
+// Start Media Query //
+@media (max-width: 991px) {
+  .all-cards {
+    .one-card {
+      .logo-box {
+        margin-bottom: 0 !important;
+        text-align: center !important;
+      }
+
+      .content-box {
+        margin: 1rem 0;
+
+        .card__content {
+          margin-top: 0 !important;
+        }
+      }
+    }
+  }
+}

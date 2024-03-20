@@ -1,0 +1,83 @@
+// Strat redirect Card //
+.redirect-card {
+  width: 40%;
+  background-color: #f5f5f5;
+  padding: 2em;
+  margin: 2em auto 0;
+  border-radius: 10px;
+
+  .holder {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+
+    .title {
+      font-weight: bold;
+    }
+
+    .sad-face {
+      width: 150px;
+      margin: 1em 0;
+    }
+
+    .redirect-card-box {
+      p {
+        font-size: 26px;
+        margin: 0;
+
+        a {
+          color: $bg-color-main-hover;
+          transition: all .5s;
+          border-bottom: 2px solid $bg-color-main-hover;
+          line-height: 1.1 !important;
+          display: inline-block;
+
+          &:hover {
+            color: $bg-color-main;
+          }
+        }
+      }
+    }
+  }
+}
+
+// End redirect Card //
+
+
+// Start Media Query //
+@media (max-width: 1100px) {
+  .redirect-card {
+    width: 50%;
+  }
+}
+
+@media (max-width: 950px) {
+  .redirect-card {
+    width: 60%;
+  }
+}
+
+@media (max-width: 800px) {
+  .redirect-card {
+    width: 70%;
+  }
+}
+
+@media (max-width: 650px) {
+  .redirect-card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 550px) {
+  .redirect-card {
+    width: 90%;
+    padding: 2em 1em;
+
+    .holder {
+      width: 90%;
+    }
+  }
+}
+
+// End Media Query //

@@ -1,0 +1,263 @@
+.add__details__main {
+  margin: 3rem auto;
+}
+
+.main__title {
+  color: $color-main;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.small__bar__container {
+  .price__container {
+    background: #EEE;
+    padding: 0.6rem;
+    text-align: center;
+    border-radius: 12px;
+
+    .price__content {
+      font-size: 1.5rem;
+      font-weight: 500;
+      direction: rtl;
+      margin-bottom: 0;
+    }
+  }
+
+  .single__action {
+    background: $bg-color-second;
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 8px;
+    margin: 0.8rem auto;
+    color: $bg-color-main;
+    direction: rtl;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    .icon {
+      margin-left: 1rem;
+    }
+
+    &:hover {
+      background: $bg-color-main;
+      color: $bg-color-second;
+    }
+  }
+
+  .address__map {
+    background-image: url("../../images/market/semi-map.png");
+    background-size: 100% 100%;
+    background-color: #eee;
+    padding: 12px;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .overlay {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      direction: rtl;
+      background: rgba(246, 246, 246, 0.8);
+      padding: 10px 5px;
+
+
+      .map__icon {
+        width: 14%;
+
+        .icon {
+          font-size: 2rem;
+        }
+      }
+
+      .address__data {
+        width: 84%;
+        font-size: 12px;
+
+        .address__content {
+
+        }
+
+        .address__link {
+          color: #474747;
+
+          &:hover {
+            color: $bg-color-main;
+          }
+        }
+      }
+    }
+
+  }
+
+  .user__info {
+    p {
+      margin-bottom: 0;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: rtl;
+    background: #EEE;
+    padding: 0.6rem;
+    border-radius: 12px;
+    margin: 1rem auto;
+
+    .user__icon {
+      width: 14%;
+
+      .icon {
+        font-size: 2rem;
+      }
+    }
+
+    .user__data {
+      width: 84%;
+      padding: 0 0.5rem;
+
+      .user__name {
+        font-size: $fs-18;
+
+      }
+
+      .user__date {
+        font-size: 12px;
+
+      }
+    }
+  }
+}
+
+.images__slider__top__single {
+  margin: auto;
+  text-align: center;
+
+  .single__slide {
+    margin: auto;
+    text-align: center;
+
+    img {
+      display: inline-block;
+    }
+  }
+
+  .slick-arrow {
+    display: none;
+  }
+}
+
+.images__slider {
+  direction: ltr;
+  width: 100%;
+  padding: 0 50px;
+  margin: 2rem auto;
+
+  .slick-list {
+    height: 150px !important;
+  }
+
+  .single__slide {
+    outline: none;
+    position: relative;
+    margin: 0 1.5rem !important;
+    width: 110px !important;
+
+    .logo__holder {
+      width: 150px;
+      border: 1px solid $bg-color-main;
+      padding: 1rem;
+      border-radius: 24px;
+      margin: 0 auto;
+      outline: none;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        border-radius: 12px;
+        transition: all .5s;
+      }
+
+      &:hover img {
+        transform: scale(1.09, 1.09);
+      }
+    }
+
+
+  }
+
+  .slick-dots {
+    left: 0;
+
+    li {
+      button {
+        &::before {
+          color: $bg-color-main !important;
+        }
+      }
+    }
+  }
+
+  .slick-arrow {
+    top: 45%;
+
+    &::before {
+      color: $bg-color-main;
+      font-size: 2.6rem;
+    }
+  }
+
+  .slick-prev {
+    left: 1%;
+  }
+
+  .slick-next {
+    right: 3%;
+  }
+}
+
+.add__details {
+  text-align: center;
+
+  .add__description {
+    font-size: 1.2rem;
+  }
+
+  .add__details-services {
+    .single__service {
+      @include semi-flex(baseline, flex-start, row, nowrap);
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      transition: $transition-200ms;
+      border-bottom: 1px solid transparent;
+      direction: rtl;
+
+      &:hover {
+        background: $semi-gray;
+        border-color: $color-gray-7;
+      }
+
+      p {
+        margin-bottom: 0.2rem;
+        font-size: 1rem;
+      }
+
+      .service__title {
+        width: 30%;
+        text-align: start;
+        font-weight: $fw-semiBold;
+      }
+
+      .service__body {
+        width: 65%;
+        text-align: start;
+      }
+    }
+
+
+  }
+}

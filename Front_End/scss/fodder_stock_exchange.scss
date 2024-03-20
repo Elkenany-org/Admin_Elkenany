@@ -1,0 +1,516 @@
+@import "variables";
+@import "placeholders";
+@import "inner_pages_navbar";
+@import "footer";
+@import "accordion";
+@import "logos_slider";
+@import "inner-search-box";
+@import "nice_select";
+
+.stats__btn {
+  display: block;
+  width: 95%;
+  margin: auto;
+  background: $bg-color-main;
+  color: $bg-color-second;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  height: 42px;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $bg-color-main;
+    background-color: $bg-color-second;
+  }
+
+}
+
+input.date {
+  margin: 0;
+  display: block;
+  height: 42px;
+  width: 100%;
+  text-align: center;
+  background: #FFF;
+  border-radius: 5px;
+  border: 1px solid #e8e8e8;
+  color: $bg-color-second;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $bg-color-main;
+    background-color: $bg-color-second;
+  }
+
+
+}
+
+// Start Header //
+header {
+  direction: ltr;
+  margin-top: 1em;
+
+  .banner {
+    width: 100%;
+  }
+}
+
+// End Header //
+
+// Start Slider //
+.slider {
+  padding: 3em 0 0;
+
+  .slick-dots {
+    display: none !important;
+  }
+}
+
+// End Slider //
+
+// Start Search Box //
+.inner-search-box {
+  .holder {
+    .box-tabs {
+      .tabs {
+        width: 25%;
+
+        &:last-of-type {
+          border-left: none;
+          border-right: 0;
+          width: 25%;
+          margin: 0;
+          background-color: #FFF;
+          transition: all .5s;
+          border-radius: 12px;
+
+          &:hover {
+            background-color: #FFF;
+          }
+        }
+      }
+    }
+  }
+}
+
+// End Search Box //
+
+// Start Accordion Section //
+.right {
+  display: none;
+  margin: 3em auto 1em;
+}
+
+// End Accordion Section //
+// Start Caution //
+.caution {
+  .holder {
+    display: flex;
+    flex-flow: row nowrap;
+
+    .icon {
+      //color: $bg-color-main;
+      font-size: 25px;
+      color: #d63031;
+    }
+
+    .caution-description {
+      text-align: center;
+      color: $bg-color-second;
+      font-size: 24px;
+      margin: 0 10px 0 0;
+    }
+  }
+}
+
+// End Caution //
+
+// Start Table //
+.table {
+  margin-top: 3em;
+  display: flex;
+  flex-flow: row wrap;
+
+  .select__categories {
+    border-color: transparent;
+  }
+
+  .head, .rows {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    .title, .data {
+      width: 15%;
+      text-align: center;
+      padding: .6rem 0;
+    }
+
+    .title__categories {
+      margin: 0 !important;
+      padding: 0 !important;
+      height: 46px !important;
+    }
+
+    .title__chart {
+      width: 18%;
+    }
+  }
+
+  .head {
+    margin-bottom: 1em;
+
+    .title {
+      border-radius: 5px;
+      border: 2px solid $bg-color-main;
+      font-weight: bold;
+      font-size: 1.2rem;
+
+      @media (max-width: 767px) {
+        font-size: 1rem;
+      }
+
+      @media (max-width: 500px) {
+        font-size: .7rem;
+      }
+    }
+  }
+
+  .rows {
+    box-shadow: $fixed-box-shadow-regular;
+    border-radius: 5px;
+    margin-bottom: 1em;
+
+    .data {
+      .companies-logo {
+        margin-top: 5px;
+        width: 70px;
+      }
+
+      .company-name {
+        display: block;
+        color: $font-color-second;
+        font-weight: bold;
+        transition: all .5s;
+
+        &:hover {
+          color: $bg-color-main-hover;
+        }
+      }
+
+      h4 {
+        margin: 35px 0 0 0;
+      }
+
+      h6 {
+        margin: 0;
+      }
+
+      .up {
+        margin-top: 20px;
+        color: green;
+      }
+
+      .down {
+        margin-top: 20px;
+        color: red;
+      }
+
+      &:hover .company-name {
+        color: $bg-color-main-hover;
+      }
+    }
+
+    .charts {
+      padding: 0;
+      width: 20%;
+
+    }
+
+    .wall {
+      height: 100%;
+      width: 2px;
+      background-color: $bg-color-second;
+    }
+  }
+
+  .ads {
+    background-color: $bg-color-main;
+
+    &:hover .company-name {
+      color: $font-color-second !important;
+    }
+  }
+}
+
+// End Table //
+
+// Start Media Query //
+@media (max-width: 991px) {
+  .table {
+    .head {
+      .title {
+        font-size: 1.2rem;
+        width: 22%;
+      }
+    }
+
+    .rows {
+      .data {
+        width: 25%;
+      }
+    }
+  }
+
+
+  // Start Caution //
+  .caution {
+    .holder {
+      .icon {
+        font-size: 20px;
+      }
+
+      .caution-description {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  // End Caution //
+}
+
+@media (max-width: 690px) {
+  .table {
+    .head {
+      margin-bottom: .5em;
+
+      .title {
+        font-size: 1.2rem;
+      }
+    }
+
+    .rows {
+      .data {
+        h4 {
+          font-size: 1.2rem;
+          margin-top: 28px;
+        }
+
+        h6 {
+          font-size: .8rem;
+          font-weight: bold;
+        }
+
+        .up, .down {
+          margin-top: 12px;
+        }
+      }
+
+      .companies-logo {
+        width: 50px !important;
+      }
+
+      .company-name {
+        font-size: 15px;
+      }
+    }
+  }
+  // Start Caution //
+  .caution {
+    .holder {
+      .icon {
+        font-size: 19px;
+      }
+
+      .caution-description {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+  // End Caution //
+}
+
+@media (max-width: 600px) {
+  .table {
+    .head {
+      .title {
+        font-size: 1.2rem;
+      }
+    }
+
+    .rows {
+      .data {
+        h4 {
+          font-size: 1.2rem;
+        }
+
+        h6 {
+          font-size: .8rem;
+        }
+      }
+
+      .companies-logo {
+        width: 50px !important;
+      }
+
+      .company-name {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .table {
+    .head {
+      .title {
+        font-size: .9rem;
+      }
+    }
+
+    .rows {
+      .data {
+        padding: 5px 0;
+
+        h4 {
+          margin-top: 16px;
+          font-size: 0.8rem;
+          font-weight: bold;
+        }
+
+        h6 {
+          font-size: .6rem;
+        }
+
+        .up, .down {
+          margin-top: 6px;
+        }
+      }
+
+      .companies-logo {
+        width: 30px !important;
+        margin: 0 !important;
+      }
+
+      .company-name {
+        font-size: 0.6rem;
+      }
+    }
+  }
+  // Start Caution //
+  .caution {
+    .holder {
+      .icon {
+        font-size: 18px;
+        //color: #d63031;
+
+      }
+
+      .caution-description {
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+  }
+  // End Caution //
+  .nice-select {
+    font-size: 0.8rem;
+    padding: 0;
+
+    &:after {
+      height: 8px;
+      width: 8px;
+      border-bottom: 2px solid $bg-color-main;
+      border-right: 2px solid $bg-color-main;
+      left: 12px;
+      margin-top: 3px;
+      right: 80%;
+      top: 25%
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .table {
+    .head {
+      .title {
+        font-size: .8rem;
+      }
+    }
+
+    .rows {
+      .data {
+        padding: 5px 0;
+
+        h4 {
+          margin-top: 16px;
+          font-size: .8rem;
+          font-weight: bold;
+        }
+
+        h6 {
+          font-size: .6rem;
+        }
+
+        .up, .down {
+          margin-top: 6px;
+        }
+      }
+
+      .companies-logo {
+        width: 30px !important;
+        margin: 0 !important;
+      }
+
+      .company-name {
+        font-size: 0.6rem;
+      }
+    }
+  }
+  // Start Caution //
+  .caution {
+    .holder {
+      .icon {
+        font-size: 18px;
+        //color: #d63031;
+
+      }
+
+      .caution-description {
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+  }
+  // End Caution //
+  .nice-select {
+    font-size: 0.8rem;
+    padding: 0;
+
+    &:after {
+      height: 8px;
+      width: 8px;
+      border-bottom: 2px solid $bg-color-main;
+      border-right: 2px solid $bg-color-main;
+      left: 12px;
+      margin-top: 3px;
+      right: 80%;
+      top: 25%
+    }
+  }
+}
+
+// End Media Query //

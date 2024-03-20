@@ -1,0 +1,228 @@
+﻿.main-title {
+  background-color: $bg-color-main;
+  border-radius: 20px 0 20px 0;
+  display: inline-block;
+  padding: 10px 35px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cards {
+  border: 2px solid $bg-color-main;
+  border-radius: 40px 40px 0 0;
+  box-shadow: $fixed-box-shadow-regular;
+  padding: 1rem;
+  margin: 1em 0 2em;
+  transition: all .5s;
+}
+
+.company-info, .about-company, .company-details {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: $font-color-second;
+  padding: 1.5em 2em;
+
+  .image-holder {
+    text-align: center;
+    width: 100%;
+    margin-top: 1em;
+
+    .company-image {
+      width: 100px;
+      border-radius: 0.8rem;
+    }
+  }
+
+  p {
+    width: 100%;
+    font-size: 1.2rem;
+    margin: .8em 0;
+    text-align: center;
+  }
+
+  .rate {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    line-height: 1;
+
+    .rating {
+      direction: ltr;
+      font-size: 25px;
+
+      span {
+        color: $font-color-main;
+        cursor: pointer;
+      }
+    }
+
+    .raters-number {
+      color: #757677;
+      margin: 6.5px 10px 0 0;
+    }
+  }
+}
+
+.about-company {
+  p {
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+}
+
+.company-products, .company-market, .company-gallery, .transport-cost {
+  padding: 1.5em 2em;
+
+  .main-title {
+    margin: 0 auto;
+    display: table;
+  }
+
+  .slider {
+    padding: 0;
+
+    .slick-dots {
+      display: none !important;
+    }
+
+    .slick-arrow {
+      top: 37%;
+    }
+
+    .slick-prev {
+      left: 0%;
+    }
+
+    .partners-slider, .products-slider, .market-slider, .gallery-slider {
+      .item {
+        .logo-holder {
+          border: none;
+          padding: 0;
+          font-weight: bold;
+          font-size: 20px;
+          color: $font-color-second;
+          width: 140px !important;
+
+          img {
+            border-radius: 20px;
+            border: 1px solid $bg-color-second;
+          }
+
+          &:hover img {
+            transform: none;
+          }
+        }
+      }
+    }
+
+    .gallery-slider {
+      .item {
+        a {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.company-details {
+  .address-box, .contact-box {
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+    font-size: 25px;
+
+    i {
+      font-size: 20px;
+      margin-left: 10px;
+    }
+
+    .addresses, .contacts {
+      .address-title, .contact-title {
+        color: $bg-color-main;
+        font-weight: bold;
+      }
+
+      .address-content, .contact-content {
+        color: $font-color-second;
+        transition: all .5s;
+
+        &:hover {
+          color: $font-color-fourth;
+        }
+      }
+    }
+
+    .email {
+      font-size: 20px;
+      color: $font-color-second;
+      transition: all .5s;
+      font-weight: bold;
+
+      &:hover {
+        color: $font-color-fourth;
+      }
+    }
+  }
+
+  .social-box {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 1em;
+    font-size: 20px;
+
+    .social-holder {
+      font-size: 30px;
+
+      a {
+        margin-right: 5px;
+
+        i {
+          color: $font-color-fourth;
+          transition: all .5s;
+        }
+      }
+
+      .web {
+        i {
+          &:hover {
+            color: #F2D383;
+          }
+        }
+      }
+
+      .facebook {
+        i {
+          &:hover {
+            color: #507CBD;
+          }
+        }
+      }
+
+      .instagram {
+        i {
+          &:hover {
+            color: #DA7493;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 499px) {
+  .company-products, .company-market, .company-gallery {
+    padding: 1.5em 0em !important;
+
+    .slider {
+      .slick-arrow {
+        display: none !important;
+      }
+    }
+  }
+}
+

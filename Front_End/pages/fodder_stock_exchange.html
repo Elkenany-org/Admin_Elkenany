@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="This is Description Area">
+    <!-- Icon -->
+    <link rel="icon" href="../images/favicon.png">
+    <!-- Title -->
+    <title>بورصة الأعلاف</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
+    <!-- Line Charts -->
+    <link rel="stylesheet" href="../css/linecharts.css">
+    <!-- Select Menu Styling   -->
+    <link rel="stylesheet" type="text/css" href="../css/nice-select.css"/>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../css/fodder_stock_exchange.css">
+</head>
+
+<body>
+<!-- Start Loading Screen -->
+<article class="loading-screen">
+    <div class="chicken-loader">
+        <span></span>
+    </div>
+</article>
+<!-- End Loading Screen -->
+
+<!-- Start button to top -->
+<button id="myBtn" class="btn_top">
+    <span class="arrow"></span>
+</button>
+<!-- End button to top -->
+
+<!-- Start Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../home.html">
+        <img src="../images/logo.png" alt="main logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="daily_stock_exchange.html">البورصة اليومية <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    البورصة العالمية
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">البورصة العالمية</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">البورصة العالمية</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">البورصة العالمية</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="companies_guide.html">دليل الشركات</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="consultants.html">الاستشاريين</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="market_home.html">سوق الكناني</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">الاخبار</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="search-area" type="search" placeholder="بحث">
+            <button class="submit" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+        <section class="sign-box">
+            <a class="log-in" href="login.html">الدخول</a>
+            <a class="sign-up" href="sign_up.html">انضم الان</a>
+        </section>
+    </div>
+    <section class="profile-box dropdown d-lg-block d-none">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">
+            <img class="profile-photo" src="../images/avatar.svg" alt="profile pic">
+            <h6>حسين كمال</h6>
+            <div class="arrow">
+                <img class="arrow-down" src="../images/down_arrow.svg" alt="arrow down">
+            </div>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item dropdown-item-especial" href="#">
+                <img class="profile-photo" src="../images/avatar.svg" alt="profile pic">
+                <h6>حسين كمال الدين حسين</h6>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="settings.html">الإعدادات</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">تسجيل الخروج</a>
+        </div>
+    </section>
+</nav>
+<!-- End Navigation Bar -->
+
+<!-- Start Header -->
+<header>
+    <div class="container-fluid one-full-slider">
+        <a href="#" target="_blank"><img class="banner" src="../images/banner.png" alt="banner"></a>
+        <a href="#" target="_blank"><img class="banner" src="../images/banner.png" alt="banner"></a>
+        <a href="#" target="_blank"><img class="banner" src="../images/banner.png" alt="banner"></a>
+    </div>
+</header>
+<!-- End Header -->
+
+<!-- Start Search Box -->
+<article class="inner-search-box d-lg-block d-none">
+    <div class="container holder">
+        <form class="box-tabs">
+            <section class="tabs">
+                <i class="fas fa-puzzle-piece"></i>
+                <h4 class="title">القطاع:</h4>
+                <select class="form-control">
+                    <option value="الداجني">الداجني</option>
+                    <option value="الحيواني">الحيواني</option>
+                    <option value="الزراعي">الزراعي</option>
+                    <option value="السمكي">السمكي</option>
+                    <option value="الخيول العربية">الخيول العربية</option>
+                </select>
+            </section>
+            <section class="tabs">
+                <i class="far fa-calendar-alt"></i>
+                <h4 class="title">التاريخ:</h4>
+                <input class="date" type="date">
+            </section>
+            <section class="tabs">
+                <i class="fas fa-balance-scale"></i>
+                <h4 class="title">مقارنة</h4>
+                <a class="stats__btn" href="ordinary_comparison.html">قارن الان</a>
+            </section>
+            <section class="tabs">
+                <i class="fas fa-poll"></i>
+                <h4 class="title">احصائيات:</h4>
+                <a href="statistics_main.html" class="stats__btn">احصائيات</a>
+            </section>
+        </form>
+    </div>
+</article>
+<!-- End Search Box -->
+
+<!-- Start Accordion Section -->
+<section class="right col-lg-3 col-md-7 col-sm-12">
+    <h2 id="show-hide-accordion" class="main-title">
+        حدد بحثك
+        <i class="icon-s fas fa-search"></i>
+    </h2>
+    <div id="accordion" class="accordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                        <i class="fas fa-puzzle-piece"></i>
+                        القطاع
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <a>
+                                <input type="radio" id="tab-1-val-1" name="tab-1-values" value="" checked>
+                                <label for="tab-1-val-1">الداجني</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <input type="radio" id="tab-1-val-2" name="tab-1-values" value="">
+                                <label for="tab-1-val-2">الحيواني</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <input type="radio" id="tab-1-val-3" name="tab-1-values" value="">
+                                <label for="tab-1-val-3">الزراعي</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <input type="radio" id="tab-1-val-4" name="tab-1-values" value="">
+                                <label for="tab-1-val-4">السمكي</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <input type="radio" id="tab-1-val-5" name="tab-1-values" value="">
+                                <label for="tab-1-val-5">الخيول العربية</label>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                        <i class="far fa-calendar-alt"></i>
+                        التاريخ
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    <input class="date w-100 text-center" type="date">
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                            aria-expanded="false" aria-controls="collapseFour">
+                        <i class="fas fa-balance-scale"></i>
+                        مقارنة
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                <div class="card-body">
+                    <ul>
+                        <li><a class="stats__btn" href="ordinary_comparison.html">قارن الان</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseFour" aria-expanded="false"
+                            aria-controls="collapseFour">
+                        <i class="fas fa-poll"></i>
+                        الاحصائيات
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                 data-parent="#accordion">
+                <div class="card-body">
+                    <a href="statistics_main.html" class="stats__btn">احصائيات</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Accordion Section -->
+
+
+<!-- Start Partners -->
+<article class="partners slider">
+    <div class="container-fluid holder">
+        <section class="partners-slider">
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_1.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_2.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_3.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_4.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_5.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_6.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_7.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_8.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_9.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+            <div class="item">
+                <a href="#" class="logo-holder">
+                    <img src="../images/partners_slider/partner_10.png" alt="partner logo">
+                </a>
+                <div class="wall"></div>
+            </div>
+        </section>
+    </div>
+</article>
+<!-- End Partners -->
+
+<!-- Start Table -->
+<article class="table container">
+    <section class="head">
+        <h3 class="title">الشركات</h3>
+        <!-- Start Dropdown Item -->
+        <section class="title title__categories">
+            <select class="select__categories">
+                <option value="بادى نامى" selected>بادى نامى</option>
+                <option value="بادى ناهى">بادى ناهى</option>
+                <option value="بادى تسمين سوبر 23 %">بادى تسمين سوبر 23 %</option>
+                <option value="نامى تسمين سوبر 21 %">نامى تسمين سوبر 21 %</option>
+                <option value="ناهى تسمين سوبر 19 %">ناهى تسمين سوبر 19 %</option>
+                <option value="بادى نامى تسمين 21 %">بادى نامى تسمين 21 %</option>
+            </select>
+        </section>
+        <!-- End Dropdown Item -->
+        <h3 class="title">السعر</h3>
+        <h3 class="title title__chart  d-lg-block d-none">اتجاه السعر</h3>
+        <h3 class="title">مقدار التغير</h3>
+    </section>
+
+    <!-- Start One Row  -->
+    <section class="rows ads">
+        <a href="companies_details.html" class="data">
+            <img class="companies-logo" src="../images/companies_logo.png" alt="logo">
+            <span class="company-name">الكناني جروب</span>
+        </a>
+        <div class="wall"></div>
+        <section class="data">
+            <h4>بادي نامي</h4>
+        </section>
+
+        <div class="wall"></div>
+        <section class="data">
+            <h4>7 جنية</h4>
+        </section>
+        <div class="wall d-lg-block d-none"></div>
+        <section class="data charts d-lg-block d-none">
+            <div class="chart1"></div>
+        </section>
+        <div class="wall"></div>
+        <section class="data">
+            <h4 class="up">+7</h4>
+            <!-- <h4 class="down">-1</h4> -->
+            <h6 class="date">13/12/2020</h6>
+            <h6 class="time">09:32:07 AM</h6>
+        </section>
+    </section>
+    <!-- End One Row  -->
+    <!-- Start One Row  -->
+    <section class="rows">
+        <a href="companies_details.html" class="data">
+            <img class="companies-logo" src="../images/companies_logo.png" alt="logo">
+            <span class="company-name">الكناني جروب</span>
+        </a>
+        <div class="wall"></div>
+        <section class="data">
+            <h4>بادي نامي</h4>
+        </section>
+
+        <div class="wall"></div>
+        <section class="data">
+            <h4>7 جنية</h4>
+        </section>
+        <div class="wall d-lg-block d-none"></div>
+        <section class="data charts d-lg-block d-none">
+            <div class="chart2"></div>
+        </section>
+        <div class="wall"></div>
+        <section class="data">
+            <!-- <h4 class="up">+1</h4> -->
+            <h4 class="down">-1</h4>
+            <h6 class="date">13/12/2020</h6>
+            <h6 class="time">09:32:07 AM</h6>
+        </section>
+    </section>
+    <!-- End One Row  -->
+    <!-- Start One Row  -->
+    <section class="rows">
+        <a href="companies_details.html" class="data">
+            <img class="companies-logo" src="../images/companies_logo.png" alt="logo">
+            <span class="company-name">الكناني جروب</span>
+        </a>
+        <div class="wall"></div>
+        <section class="data">
+            <h4>بادي نامي</h4>
+        </section>
+
+        <div class="wall"></div>
+        <section class="data">
+            <h4>7 جنية</h4>
+        </section>
+        <div class="wall d-lg-block d-none"></div>
+        <section class="data charts d-lg-block d-none">
+            <div class="chart3"></div>
+        </section>
+        <div class="wall"></div>
+        <section class="data">
+            <h4 class="up">+5</h4>
+            <!-- <h4 class="down">-1</h4> -->
+            <h6 class="date">13/12/2020</h6>
+            <h6 class="time">09:32:07 AM</h6>
+        </section>
+    </section>
+    <!-- End One Row  -->
+    <!-- Start One Row  -->
+    <section class="rows">
+        <a href="companies_details.html" class="data">
+            <img class="companies-logo" src="../images/companies_logo.png" alt="logo">
+            <span class="company-name">الكناني جروب</span>
+        </a>
+        <div class="wall"></div>
+        <section class="data">
+            <h4>بادي نامي</h4>
+        </section>
+
+        <div class="wall"></div>
+        <section class="data">
+            <h4>7 جنية</h4>
+        </section>
+        <div class="wall d-lg-block d-none"></div>
+        <section class="data charts d-lg-block d-none">
+            <div class="chart4"></div>
+        </section>
+        <div class="wall"></div>
+        <section class="data">
+            <!-- <h4 class="up">+1</h4> -->
+            <h4 class="down">-2</h4>
+            <h6 class="date">13/12/2020</h6>
+            <h6 class="time">09:32:07 AM</h6>
+        </section>
+    </section>
+    <!-- End One Row  -->
+    <!-- Start One Row  -->
+    <section class="rows">
+        <a href="companies_details.html" class="data">
+            <img class="companies-logo" src="../images/companies_logo.png" alt="logo">
+            <span class="company-name">الكناني جروب</span>
+        </a>
+        <div class="wall"></div>
+        <section class="data">
+            <h4>بادي نامي</h4>
+        </section>
+
+        <div class="wall"></div>
+        <section class="data">
+            <h4>7 جنية</h4>
+        </section>
+        <div class="wall d-lg-block d-none"></div>
+        <section class="data charts d-lg-block d-none">
+            <div class="chart5"></div>
+        </section>
+        <div class="wall"></div>
+        <section class="data">
+            <h4 class="up">+1</h4>
+            <!-- <h4 class="down">-1</h4> -->
+            <h6 class="date">13/12/2020</h6>
+            <h6 class="time">09:32:07 AM</h6>
+        </section>
+    </section>
+    <!-- End One Row  -->
+    <!-- Start One Row  -->
+    <section class="rows">
+        <a href="companies_details.html" class="data">
+            <img class="companies-logo" src="../images/companies_logo.png" alt="logo">
+            <span class="company-name">الكناني جروب</span>
+        </a>
+        <div class="wall"></div>
+        <section class="data">
+            <h4>بادي نامي</h4>
+        </section>
+
+        <div class="wall"></div>
+        <section class="data">
+            <h4>7 جنية</h4>
+        </section>
+        <div class="wall d-lg-block d-none"></div>
+        <section class="data charts d-lg-block d-none">
+            <div class="chart6"></div>
+        </section>
+        <div class="wall"></div>
+        <section class="data">
+            <h4 class="up">+2</h4>
+            <!-- <h4 class="down">-1</h4> -->
+            <h6 class="date">13/12/2020</h6>
+            <h6 class="time">09:32:07 AM</h6>
+        </section>
+    </section>
+    <!-- End One Row  -->
+</article>
+<!-- End Table -->
+
+<!-- Start Caution -->
+<article class="caution">
+    <div class="container">
+        <div class="holder">
+            <i class="icon fas fa-exclamation-triangle"></i>
+            <h3 class="caution-description">هذه الاسعار استرشادية عن طريق المورد وتختلف حسب الجودة والكمية وطرق
+                السداد ووقت التنفيذ</h3>
+        </div>
+    </div>
+</article>
+<!-- End Caution -->
+
+<!-- Start Footer -->
+<footer>
+    <div class="overlay">
+        <div class="container holder">
+            <div class="row">
+                <ul class="col-lg-3 col-12">
+                    <li class="title">الشركة</li>
+                    <li><a href="#">من نحن</a></li>
+                    <li><a href="#">فريق الكناني</a></li>
+                    <li><a href="#">الوظائف</a></li>
+                    <li><a href="#">اخبارنا</a></li>
+                </ul>
+                <ul class="col-lg-3 col-12">
+                    <li class="title">تحتاج للمساعدة؟</li>
+                    <li><a href="#">اتصل بنا</a></li>
+                    <li><a href="#">شروط الاستخدام</a></li>
+                    <li><a href="#">اتفاقية الخصوصية</a></li>
+                </ul>
+                <ul class="col-lg-3 col-12">
+                    <li class="title">هل انت صاحب مزرعة؟</li>
+                    <li><a href="#">انصم الي مزارع الكناني</a></li>
+                </ul>
+                <section class="media-box col-lg-3 col-12">
+                    <a class="google-play" href="#"><img src="../images/android_ar.png" alt="google play"></a>
+                    <a class="app-store" href="#"><img src="../images/iphone_ar.png" alt="app store"></a>
+                    <section class="social-media">
+                        <a class="instagram" href="#">
+                            <i class="fab fa-instagram-square"></i>
+                        </a>
+                        <a class="facebook" href="#">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </section>
+                </section>
+                <h5 class="col-12">جميع الحقوق محفوظة للكناني</h5>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+
+<!-- Start Scripts -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS v4.5 -->
+<script src="../js/jquery-3.5.1.slim.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<!-- JQuery -->
+<script src="../js/jquery-3.5.1.js"></script>
+<!-- Slick -->
+<script src="../slick/slick.min.js"></script>
+<script src="../js/slick_initialising.js"></script>
+<!-- Rating -->
+<script src="../js/rater.min.js"></script>
+<script src="../js/rate_initialising.js"></script>
+<!-- Line Charts -->
+<script src="../js/linecharts.js"></script>
+<script src="../js/charts_initialising.js"></script>
+<!--          Select MENU Styling          -->
+<script src="../js/jquery.nice-select.min.js"></script>
+<!-- My JavaScript -->
+<script src="../js/global.js"></script>
+<script>
+    $('select').niceSelect();
+    $('select__categories').niceSelect();
+</script>
+<!-- End Scripts -->
+</body>
+
+</html>

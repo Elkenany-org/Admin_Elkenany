@@ -1,0 +1,13 @@
+{
+    "name": "Tenders",
+    "alias": "tenders",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Tenders\\Providers\\TendersServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

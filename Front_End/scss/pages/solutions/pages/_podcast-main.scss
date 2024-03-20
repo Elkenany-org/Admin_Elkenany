@@ -1,0 +1,17 @@
+
+.page__title__container {
+  text-align: center;
+  margin: 0 auto 0.5rem auto;
+
+  .main__title {
+    color: $color-main;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .sec__title {
+    color: $bg-color-main-hover;
+    font-size: 1.6rem;
+  }
+}
+

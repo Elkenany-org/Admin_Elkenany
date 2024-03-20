@@ -1,0 +1,61 @@
+.slider {
+  padding: 0 0 3em; }
+  .slider .holder {
+    text-align: center; }
+    .slider .holder .main-title {
+      font-size: 2.1rem;
+      font-weight: bold;
+      margin-bottom: 1em;
+      color: #FFAA00; }
+      @media (max-width: 767px) {
+        .slider .holder .main-title {
+          font-size: 1.9rem; } }
+    .slider .holder .partners-slider, .slider .holder .products-slider, .slider .holder .market-slider, .slider .holder .gallery-slider, .slider .holder .add-slider {
+      direction: ltr;
+      width: 100%;
+      padding: 0 50px; }
+      .slider .holder .partners-slider .item, .slider .holder .products-slider .item, .slider .holder .market-slider .item, .slider .holder .gallery-slider .item, .slider .holder .add-slider .item {
+        outline: none;
+        position: relative; }
+        .slider .holder .partners-slider .item .logo-holder, .slider .holder .products-slider .item .logo-holder, .slider .holder .market-slider .item .logo-holder, .slider .holder .gallery-slider .item .logo-holder, .slider .holder .add-slider .item .logo-holder {
+          width: 150px;
+          border: 1px solid #FFAA00;
+          padding: 30px 20px;
+          border-radius: 40px;
+          margin: 0 auto;
+          display: block;
+          outline: none; }
+          .slider .holder .partners-slider .item .logo-holder img, .slider .holder .products-slider .item .logo-holder img, .slider .holder .market-slider .item .logo-holder img, .slider .holder .gallery-slider .item .logo-holder img, .slider .holder .add-slider .item .logo-holder img {
+            width: 100%;
+            transition: all .5s; }
+          .slider .holder .partners-slider .item .logo-holder:hover img, .slider .holder .products-slider .item .logo-holder:hover img, .slider .holder .market-slider .item .logo-holder:hover img, .slider .holder .gallery-slider .item .logo-holder:hover img, .slider .holder .add-slider .item .logo-holder:hover img {
+            transform: scale(1.09, 1.09); }
+        .slider .holder .partners-slider .item .wall, .slider .holder .products-slider .item .wall, .slider .holder .market-slider .item .wall, .slider .holder .gallery-slider .item .wall, .slider .holder .add-slider .item .wall {
+          height: 90px;
+          width: 10px;
+          background-color: #FFAA00;
+          position: absolute;
+          top: 25%;
+          right: 0%; }
+      .slider .holder .partners-slider .slick-dots, .slider .holder .products-slider .slick-dots, .slider .holder .market-slider .slick-dots, .slider .holder .gallery-slider .slick-dots, .slider .holder .add-slider .slick-dots {
+        bottom: -50px;
+        left: 0; }
+        .slider .holder .partners-slider .slick-dots li button::before, .slider .holder .products-slider .slick-dots li button::before, .slider .holder .market-slider .slick-dots li button::before, .slider .holder .gallery-slider .slick-dots li button::before, .slider .holder .add-slider .slick-dots li button::before {
+          color: #FFAA00 !important; }
+      .slider .holder .partners-slider .slick-arrow, .slider .holder .products-slider .slick-arrow, .slider .holder .market-slider .slick-arrow, .slider .holder .gallery-slider .slick-arrow, .slider .holder .add-slider .slick-arrow {
+        top: 45%; }
+        .slider .holder .partners-slider .slick-arrow::before, .slider .holder .products-slider .slick-arrow::before, .slider .holder .market-slider .slick-arrow::before, .slider .holder .gallery-slider .slick-arrow::before, .slider .holder .add-slider .slick-arrow::before {
+          color: #FFAA00;
+          font-size: 2.6rem; }
+      .slider .holder .partners-slider .slick-prev, .slider .holder .products-slider .slick-prev, .slider .holder .market-slider .slick-prev, .slider .holder .gallery-slider .slick-prev, .slider .holder .add-slider .slick-prev {
+        left: 1%; }
+      .slider .holder .partners-slider .slick-next, .slider .holder .products-slider .slick-next, .slider .holder .market-slider .slick-next, .slider .holder .gallery-slider .slick-next, .slider .holder .add-slider .slick-next {
+        right: 3%; }
+
+@media (max-width: 576px) {
+  .slider .holder .partners-slider .item .wall {
+    display: none; }
+  .slider .holder .partners-slider .slick-dots li {
+    margin: 0; }
+  .slider .holder .partners-slider .slick-next {
+    right: 7%; } }

@@ -1,0 +1,49 @@
+.breadcrumb__container {
+  margin-top: 1rem;
+  position: relative;
+  top: 2.5rem;
+
+  &.nt-0 {
+    margin-top: 0;
+  }
+
+  .custom__breadcrumb {
+    background: $bg-color-main;
+    padding: 1rem 0.5rem;
+    border-radius: 12px;
+    opacity: 0.8;
+  }
+
+  .breadcrumb {
+    background: transparent;
+
+    .breadcrumb-item {
+      font-size: 1.2rem;
+
+      a:not(.active) {
+        color: $color-main;
+        transition: $transition-200ms;
+
+        &:hover {
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin: 1rem auto;
+    .custom__breadcrumb {
+      background: $bg-color-main;
+      padding: 0.6rem 0.5rem;
+      border-radius: $rd-12;
+      opacity: 0.8;
+
+      .page__title {
+        font-size: $fs-28;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+  }
+}

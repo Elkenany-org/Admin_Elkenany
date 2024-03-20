@@ -1,0 +1,23 @@
+{
+    "Moderators": true,
+    "LocalStock": true,
+    "Guide": true,
+    "Store": true,
+    "Consultants": true,
+    "InternationalStock": true,
+    "News": true,
+    "Academy": true,
+    "Wafer": true,
+    "Analysis": true,
+    "Cities": true,
+    "FodderStock": true,
+    "Magazines": true,
+    "SystemAds": true,
+    "Countries": true,
+    "Shows": true,
+    "Us": true,
+    "Tenders": true,
+    "MedicineStock": true,
+    "Notification": true,
+    "Recruitment": true
+}

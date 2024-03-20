@@ -1,0 +1,28 @@
+﻿.title__box__container {
+  @include semi-flex(center, space-between, row, nowrap);
+
+  .right__box {
+    .title {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .sections-number {
+      margin: 4px 8px 0 0;
+      font-size: $fs-18;
+
+    }
+  }
+
+  .left__box {
+    .title {
+      font-size: 1.4rem;
+    }
+
+    .progress-bar {
+      background: $bg-color-main;
+      color: $bg-color-second;
+    }
+  }
+
+}

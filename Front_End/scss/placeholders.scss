@@ -1,0 +1,200 @@
+﻿@import "variables";
+
+/* ----------- Start Loading Screen ----------- */
+.loading-screen {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  top: 0%;
+  left: 0%;
+  z-index: 2000;
+
+  .chicken-loader { /* Bird Wattle */
+    animation: birdWattle 2s linear infinite;
+    border: 1.2rem solid transparent;
+    border-left: 1.2rem solid darken(red, 20);
+    border-bottom: 1.2rem solid darken(red, 20);
+    border-radius: 50%;
+    height: 10rem;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 10rem;
+
+    &::before,
+    &::after {
+      border-radius: 50%;
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::before { /* Large beak with head */
+      animation: birdBeak 2s linear infinite;
+    }
+
+    &::after { /* Small beak */
+      animation: birdBottomBeak 2s linear infinite;
+      border: 2.4rem solid transparent;
+      border-right: 2.4rem solid darken(orange, 10);
+    }
+
+    span { /* Eye */
+      animation: birdEye 2s linear infinite;
+      background: black;
+      border-radius: 50%;
+      height: 1.6rem;
+      left: 1.6rem;
+      position: absolute;
+      top: 3.1rem;
+      width: 1.6rem;
+    }
+  }
+}
+
+@keyframes birdWattle {
+  0%, 20%, 100% {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  40%, 80% {
+    transform: translate(-50%, -50%) rotate(225deg);
+  }
+}
+
+@keyframes birdBeak {
+  0%, 20%, 100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    border: 4rem solid transparent;
+    border-top: 4rem solid orange;
+    border-left: 4rem solid white;
+    border-bottom: 4rem solid lightgray;
+  }
+  40%, 80% {
+    border-top: 4rem solid lightgray;
+    border-left: 4rem solid white;
+    border-bottom: 4rem solid orange;
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+}
+
+@keyframes birdBottomBeak {
+  0%, 20%, 100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  40%, 80% {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+}
+
+@keyframes birdEye {
+  0%, 20%, 100% {
+    transform: translate(0, 0);
+  }
+  40%, 80% {
+    transform: translate(1.5rem, 1.5rem);
+  }
+}
+
+/* ----------- End Loading Screen ----------- */
+
+/* ---------- Start Button to top ----------- */
+.btn_top {
+  position: fixed;
+  bottom: 10px;
+  right: -60px;
+  z-index: 99;
+  border: none !important;
+  outline: none !important;
+  background-color: $bg-color-main;
+  cursor: pointer;
+  padding: 20px 25px 20px;
+  opacity: .9;
+  transition: all .3s ease-in-out;
+  //display: none;
+
+  .arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg);
+  }
+
+  &:hover {
+    background-color: $bg-color-main-hover;
+    opacity: 1;
+    transform: translate(0, -5px);
+  }
+}
+
+/* ---------- End Button to top ----------- */
+
+/* ---------- Start Global ----------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg-color-third;
+  font-family: $font-family, sans-serif;
+  direction: rtl;
+  color: $font-color-second;
+}
+
+a {
+  text-decoration: none !important;
+  line-height: 1.5 !important;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.regular-cards {
+  border: 2px solid $bg-color-main;
+  //border-radius: 40px 40px 0 0;
+  border-radius: 20px 20px 0 0;
+  box-shadow: $fixed-box-shadow-regular;
+  padding: 2em 1em;
+  margin: 1em 0 1rem;
+  transition: all .5s;
+  display: flex;
+  flex-flow: row nowrap;
+
+  .content-box {
+    margin: 0 auto;
+  }
+}
+
+.cards {
+  border: 2px solid $bg-color-main;
+  border-radius: 40px 40px 0 0;
+  box-shadow: $fixed-box-shadow-regular;
+  padding: 3.5em 1em;
+  margin: 1em 0 2em;
+  transition: all .5s;
+}
+
+/* ---------- Start Global Media Query ----------- */
+@media (max-width: 991px) {
+  .regular-cards {
+    justify-content: center;
+    flex-flow: column wrap;
+    padding: 1em 0;
+  }
+}
+
+@media (min-width: 991px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* ---------- End Global Media Query ----------- */
+/* ---------- End Global ----------- */

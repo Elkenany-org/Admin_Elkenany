@@ -1,0 +1,75 @@
+.popup-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 1000;
+
+  .popup-transport {
+    max-width: 600px;
+    width: 80%;
+    padding: 1.5rem;
+    position: relative;
+    background: #fff;
+    margin: 7em auto 0;
+    border-radius: 12px;
+
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: $fs-20;
+      font-weight: $fw-bold;
+      line-height: 1;
+      color: $bg-color-second;
+      font-family: sans-serif;
+      transition: $transition-200ms;
+      margin: 0 0.5rem;
+      @include semi-flex(center, center, row, nowrap);
+      width: 35px;
+      height: 35px;
+
+      i {
+        padding: 0.4rem 0.6rem;
+        border-radius: 50%;
+        background: $bg-color-main;
+        color: $bg-color-second;
+      }
+
+      &:hover {
+        color: $bg-color-main;
+
+        i {
+          background: #1a5302;
+
+          color: $bg-color-main;
+        }
+      }
+    }
+
+    .popup-content {
+      width: 100%;
+      margin-top: 1em;
+
+      .popup-title {
+        text-align: center;
+        font-weight: $fw-semiBold;
+
+        &.danger__title {
+          color: #d63031;
+        }
+      }
+
+      .popup-description {
+        text-align: right;
+        font-size: 24px;
+        margin: 0;
+        text-align: center;
+        padding: .5em;
+      }
+    }
+  }
+}

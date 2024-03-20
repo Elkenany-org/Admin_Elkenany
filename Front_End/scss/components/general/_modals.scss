@@ -1,0 +1,141 @@
+.modal {
+  padding: 0;
+
+  button {
+    border: 0;
+    background: $color-white;
+  }
+
+  .modal-dialog {
+    max-width: 50%;
+
+    .modal-content {
+      border-radius: 12px;
+
+      .modal-header {
+        border-bottom-color: $bg-color-second;
+        align-items: baseline;
+
+        .modal__title {
+          font-size: $fs-20;
+          font-weight: $fw-semiBold;
+          margin-bottom: 0;
+        }
+
+        .modal__close {
+          border: 0;
+          border-radius: 50%;
+          background: $bg-color-main;
+          color: $bg-color-second;
+          @include semi-flex(center, center, row, nowrap);
+          padding: 0.4rem 0.6rem;
+          width: 35px;
+          height: 35px;
+
+          i {
+            color: $bg-color-second;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-45%, -70%);
+          }
+
+          &:hover {
+            background: $bg-color-second;
+
+            i {
+              color: $bg-color-main;
+            }
+          }
+        }
+
+      }
+
+      .modal-body {
+        direction: ltr;
+
+        .popup-slider {
+          width: 90%;
+
+          .slick-track {
+            img {
+              height: 500px;
+              max-height: 500px;
+              border-radius: 4px;
+            }
+          }
+
+          .slick-arrow {
+            z-index: 20;
+            top: 45%;
+
+            &::before {
+              font-size: 50px;
+              color: $bg-color-second;
+            }
+          }
+
+          .slick-prev {
+            left: -35px;
+          }
+
+          .slick-next {
+            right: -5px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .modal {
+    .modal-dialog {
+      max-width: 60% !important;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .modal {
+    .modal-dialog {
+      max-width: 80% !important;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .modal {
+    .modal-dialog {
+      max-width: 95% !important;
+    }
+  }
+}
+
+@media (max-width: 499px) {
+  .modal {
+    .modal-dialog {
+      max-width: 95% !important;
+
+      .modal-body {
+        direction: ltr;
+
+        .popup-slider {
+          width: 90%;
+
+          img {
+            height: 300px !important;
+            max-height: 300px !important;
+          }
+
+          .slick-arrow {
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
