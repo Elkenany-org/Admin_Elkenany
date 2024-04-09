@@ -3,29 +3,29 @@
 namespace Modules\Guide\Http\Controllers;
 
 
+use App\Noty;
+use App\Social;
 use App\Traits\ApiResponse;
+use File;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
-use Modules\Guide\Entities\Guide_Section;
-use Modules\Guide\Entities\Company;
-use Modules\Guide\Entities\Company_Alboum_Images;
-use Modules\Guide\Entities\Company_Social_media;
-use Modules\Guide\Entities\Company_product;
-use Modules\Guide\Entities\Company_address;
-use Modules\Guide\Entities\Guide_Sub_Section;
-use Modules\Guide\Entities\Company_transport;
-use Modules\Guide\Entities\Company_gallary;
-use Modules\Guide\Entities\Companies_Sec;
-use Modules\Countries\Entities\Country;
-use Modules\Cities\Entities\City;
-use App\Noty;
-use App\Social;
-use Session;
 use Image;
-use File;
+use Modules\Cities\Entities\City;
+use Modules\Countries\Entities\Country;
+use Modules\Guide\Entities\Companies_Sec;
+use Modules\Guide\Entities\Company;
+use Modules\Guide\Entities\Company_address;
+use Modules\Guide\Entities\Company_Alboum_Images;
+use Modules\Guide\Entities\Company_gallary;
+use Modules\Guide\Entities\Company_product;
+use Modules\Guide\Entities\Company_Social_media;
+use Modules\Guide\Entities\Company_transport;
+use Modules\Guide\Entities\Guide_Section;
+use Modules\Guide\Entities\Guide_Sub_Section;
+use Session;
 use View;
 class CompaniesController extends Controller
 {
@@ -116,11 +116,11 @@ class CompaniesController extends Controller
             'phones'         => 'required',
             'emails'         => 'required',
             'faxs'           => 'required',
-     
         ]);
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
+       
         if(!$request->SubSections){
             return redirect()->back()->with(['danger'=>'يجب تحديد قسم فرعي']);
         }
@@ -137,6 +137,7 @@ class CompaniesController extends Controller
             $company->longitude = $request->longitude;
             $company->country_id = $request->country_id;
             $company->city_id = $request->city_id;
+            
 
             if (count($request->mobiles) > 0) {
                 $mobiles = json_encode($request->mobiles);
@@ -161,11 +162,11 @@ class CompaniesController extends Controller
 //                Image::make($photo)->save('uploads/company/images/' . $name);
 //                $company->image = $name;
             }
+         
             $company->save();
 
             $company->sort = $company->id;
             $company->save();
-
             //social
             if (!is_null($request->social_link)) {
                 foreach (array_combine($request->social_id, $request->social_link) as $social_id => $social_link) {
@@ -174,7 +175,6 @@ class CompaniesController extends Controller
                     }
                 }
             }
-
 
             $loca = $request->loca;
             $lat = $request->lat;
@@ -205,7 +205,6 @@ class CompaniesController extends Controller
                     $item->save();
                 }
             }
-
 
             $datass = Guide_Sub_Section::with('Section')->whereIn('id', $request->SubSections)->get();
 

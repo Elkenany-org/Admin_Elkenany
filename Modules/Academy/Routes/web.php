@@ -316,7 +316,7 @@ Route::group(['middleware' => ['role','auth']], function() {
 
 //
 //// courses
-//Route::get('academy-courses', 'AcademyfrontController@Index')->name('front_academy_courses');
+Route::get('academy-courses', 'AcademyfrontController@Index')->name('front_academy_courses');
 //
 //// courses live
 //Route::get('academy-course-live/{id}', 'AcademyfrontController@live')->name('front_live_courses');

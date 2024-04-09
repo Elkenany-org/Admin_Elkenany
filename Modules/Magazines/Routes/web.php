@@ -238,13 +238,13 @@ Route::group(['middleware' => ['role','auth']], function() {
 });
 //
 //// magazines sort
-//Route::get('magazines-section-sort-rate-count/{id}',[
-//	'uses'=>'MagazineFrontController@sortmagazinesrate',
-//	'as'  =>'front_magazines_sort_rate_magazines',
-//	'type'=>'main',
-//	'kind'=>'magazinesrate',
-//	'title'=>'المجلات والدلائل حسب التقيم',
-//]);
+// Route::get('magazines-section-sort-rate-count/{id}',[
+// 	'uses'=>'MagazineFrontController@sortmagazinesrate',
+// 	'as'  =>'front_magazines_sort_rate_magazines',
+// 	'type'=>'main',
+// 	'kind'=>'magazinesrate',
+// 	'title'=>'المجلات والدلائل حسب التقيم',
+// ]);
 //
 //// magazines sort by city
 //Route::get('magazines-section-sort-city/{id}',[
@@ -255,13 +255,13 @@ Route::group(['middleware' => ['role','auth']], function() {
 //	'title'=>'المجلات والدلائل حسب المحافظات',
 //]);
 //// magazines
-//Route::get('magazines-magazines/{id}',[
-//	'uses'=>'MagazineFrontController@magazines',
-//	'as'  =>'front_magazines',
-//	'type'=>'main',
-//	'kind'=>'magazines',
-//	'title'=>'المجلات والدلائل ',
-//]);
+Route::get('magazines-magazines/{id}',[
+	'uses'=>'MagazineFrontController@magazines',
+	'as'  =>'front_magazines',
+	'type'=>'main',
+	'kind'=>'magazines',
+	'title'=>'المجلات والدلائل ',
+]);
 //// magazine
 //Route::get('magazines-magazine/{id}',[
 //	'uses'=>'MagazineFrontController@magazine',

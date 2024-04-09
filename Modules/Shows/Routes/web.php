@@ -262,13 +262,13 @@ Route::group(['middleware' => ['role','auth']], function() {
 // all shows
 //
 //
-//Route::get('section-all-show/{id}',[
-//	'uses'=>'ShowsfrontController@shows',
-//	'as'  =>'front_shows',
-//	'type'=>'main',
-//	'kind'=>'showes',
-//	'title'=>'المعارض',
-//]);
+Route::get('section-all-show/{id}',[
+	'uses'=>'ShowsfrontController@shows',
+	'as'  =>'front_shows',
+	'type'=>'main',
+	'kind'=>'showes',
+	'title'=>'المعارض',
+]);
 //
 //// show sort
 //Route::get('show-section-view/{name}',[

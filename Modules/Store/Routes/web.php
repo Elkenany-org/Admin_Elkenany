@@ -237,9 +237,9 @@ Route::group(['middleware' => ['role','auth']], function() {
 });
 
 //
-//Route::get('customer/login', 'FrontLoginController@showLoginForm')->name('customer_login');
+Route::get('customer/login', 'FrontLoginController@showLoginForm')->name('customer_login');
 //Route::post('customer/login', 'FrontLoginController@login')->name('customer_login_start');
-//Route::get('customer/register', 'FrontLoginController@showcustomerRegisterForm')->name('customer_register');
+Route::get('customer/register', 'FrontLoginController@showcustomerRegisterForm')->name('customer_register');
 //Route::post('customer/register', 'FrontLoginController@register')->name('customer_register_start');
 //
 //Route::get('auth/google', 'FrontLoginController@redirectToGoogle')->name('customer_google');
@@ -255,13 +255,13 @@ Route::group(['middleware' => ['role','auth']], function() {
 
 //
 //// sections
-//Route::get('store-section/{name}',[
-//	'uses'=>'StoreAdsfrontController@sections',
-//	'as'  =>'front_section_store',
-//	'type'=>'main',
-//	'kind'=>'storesection',
-//	'title'=>'الرئيسية للسوق',
-//]);
+Route::get('store-section/{name}',[
+	'uses'=>'StoreAdsfrontController@sections',
+	'as'  =>'front_section_store',
+	'type'=>'main',
+	'kind'=>'storesection',
+	'title'=>'الرئيسية للسوق',
+]);
 //
 //
 //// sections search

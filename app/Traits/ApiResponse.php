@@ -67,10 +67,9 @@ trait ApiResponse
     {
         $fileName = date('d-m-y').time().rand().'.'.$file->getClientOriginalExtension();
 
-
         $image = Image::make($file);
-        $image->save('uploads/'.$folder.'/'.$fileName);
-
+        // dd('uploads/'.$folder.'/'.$fileName);
+        $image->save('public/uploads/'.$folder.'/'.$fileName);
         $destinationPath = 'uploads/'.$folder.'/thumbnail/';
         $file->move($destinationPath,$fileName);
         $image->resize(300,300, function ($constraint) {

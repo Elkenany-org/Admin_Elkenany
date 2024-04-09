@@ -308,13 +308,13 @@ Route::group(['middleware' => ['role','auth']], function() {
 });
 //
 //// sub sections
-//Route::get('local-stock-section/{name}',[
-//	'uses'=>'LocalStockFrontController@index',
-//	'as'  =>'front_local_sections',
-//	'type'=>'main',
-//	'kind'=>'localstocksection',
-//	'title'=>'القسم الرئيسي للبورصة',
-//]);
+Route::get('local-stock-section/{name}',[
+	'uses'=>'LocalStockFrontController@index',
+	'as'  =>'front_local_sections',
+	'type'=>'main',
+	'kind'=>'localstocksection',
+	'title'=>'القسم الرئيسي للبورصة',
+]);
 //
 //
 //// sub sections sort name

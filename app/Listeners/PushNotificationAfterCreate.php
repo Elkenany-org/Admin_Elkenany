@@ -4,8 +4,8 @@ namespace App\Listeners;
 
 use App\Events\MagazinCreate;
 use App\Noty;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
 use Modules\Magazines\Entities\Magazine;
 use Modules\Notification\Http\Services\NotificationService;
 
@@ -30,6 +30,6 @@ class PushNotificationAfterCreate
     public function handle($event)
     {
         $service = new NotificationService;
-        $service->sendNotificastion($event);
+        // $service->sendNotificastion($event);
     }
 }

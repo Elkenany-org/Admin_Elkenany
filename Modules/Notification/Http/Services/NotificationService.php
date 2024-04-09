@@ -133,7 +133,6 @@ class NotificationService
             'vibrate' => 1,
             'sound' => 1,
             'image' => $image,
-
         );
 
 

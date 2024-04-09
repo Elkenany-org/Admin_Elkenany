@@ -167,13 +167,13 @@ Route::group(['middleware' => ['role','auth']], function() {
 });
 //
 //// news
-//Route::get('news-section/{name}',[
-//	'uses'=>'NewsFrontController@news',
-//	'as'  =>'front_section_news',
-//	'type'=>'main',
-//	'kind'=>'news',
-//	'title'=>'الرئيسية للاخبار ',
-//]);
+Route::get('news-section/{name}',[
+	'uses'=>'NewsFrontController@news',
+	'as'  =>'front_section_news',
+	'type'=>'main',
+	'kind'=>'news',
+	'title'=>'الرئيسية للاخبار ',
+]);
 //
 //// news sort
 //Route::get('news-section-view/{name}',[
@@ -185,13 +185,13 @@ Route::group(['middleware' => ['role','auth']], function() {
 //]);
 //
 //// news sort
-//Route::get('news-section-last/{name}',[
-//	'uses'=>'NewsFrontController@newslast',
-//	'as'  =>'front_section_news_last',
-//	'type'=>'main',
-//	'kind'=>'newslast',
-//	'title'=>'الرئيسية للاخبار حسب الاحدث',
-//]);
+Route::get('news-section-last/{name}',[
+	'uses'=>'NewsFrontController@newslast',
+	'as'  =>'front_section_news_last',
+	'type'=>'main',
+	'kind'=>'newslast',
+	'title'=>'الرئيسية للاخبار حسب الاحدث',
+]);
 //
 //// sections search
 //Route::post('get-section-news-search', 'NewsFrontController@datas')->name('front_section_datas_news');

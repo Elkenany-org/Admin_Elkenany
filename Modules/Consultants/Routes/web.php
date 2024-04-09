@@ -241,7 +241,7 @@ Route::group(['middleware' => ['role','auth']], function() {
 //// majors
 //Route::get('/all-majors', 'frontConsultantsController@index')->name('front_majors');
 //// sections
-//Route::get('major/{name}', 'frontConsultantsController@subsections')->name('front_sections');
+Route::get('major/{name}', 'frontConsultantsController@subsections')->name('front_sections');
 //
 //// sub sections search
 //Route::post('get-section-search-name-in-majors', 'frontConsultantsController@GetSubSectionsserchname')->name('front_section_name_search_major');
@@ -253,7 +253,7 @@ Route::group(['middleware' => ['role','auth']], function() {
 //Route::get('consultant/major/doctor/my-res{id}', 'frontConsultantsController@res')->name('front_my_res');
 //
 //// sections
-//Route::get('consultant/major/{id}', 'frontConsultantsController@sectionss')->name('front_sectionss');
+// Route::get('consultant/major/{id}', 'frontConsultantsController@sectionss')->name('front_sectionss');
 //// doctor
 //Route::get('consultant/{id}', 'frontConsultantsController@doctor')->name('front_doctor');
 //

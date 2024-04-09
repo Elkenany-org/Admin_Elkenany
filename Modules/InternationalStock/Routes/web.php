@@ -422,13 +422,13 @@ Route::group(['middleware' => ['role','auth']], function() {
 
 // ships
 //
-//Route::get('all-ships-traffic',[
-//	'uses'=>'ShipsfrontController@index',
-//	'as'  =>'front_ships',
-//	'type'=>'main',
-//	'kind'=>'ships',
-//	'title'=>'السفن',
-//]);
+Route::get('all-ships-traffic',[
+	'uses'=>'ShipsfrontController@index',
+	'as'  =>'front_ships',
+	'type'=>'main',
+	'kind'=>'ships',
+	'title'=>'السفن',
+]);
 //
 //// ships
 //Route::get('all-ships-traffic-statistc',[

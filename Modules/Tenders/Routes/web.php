@@ -135,13 +135,13 @@ Route::group(['middleware' => ['role','auth']], function() {
 });
 //
 //// tenders
-//Route::get('tenders-section/{name}',[
-//	'uses'=>'TendersFrontController@tenders',
-//	'as'  =>'front_section_tenders',
-//	'type'=>'main',
-//	'kind'=>'tenders',
-//	'title'=>'الرئيسية للاخبار ',
-//]);
+Route::get('tenders-section/{name}',[
+	'uses'=>'TendersFrontController@tenders',
+	'as'  =>'front_section_tenders',
+	'type'=>'main',
+	'kind'=>'tenders',
+	'title'=>'الرئيسية للاخبار ',
+]);
 //
 //// tenders sort
 //Route::get('tenders-section-view/{name}',[

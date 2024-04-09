@@ -365,23 +365,23 @@ Route::group(['middleware' => ['role','auth']], function() {
 });
 //
 //// frontend
-//Route::get('/',[
-//	'uses'=>'GuideFrontController@index',
-//	'as'  =>'fronts',
-//	'type'=>'main',
-//	'kind'=>'home',
-//	'title'=>'الرئيسية ',
-//]);
+Route::get('/',[
+	'uses'=>'GuideFrontController@index',
+	'as'  =>'fronts',
+	'type'=>'main',
+	'kind'=>'home',
+	'title'=>'الرئيسية ',
+]);
 //
 //
 //// sub sections
-//Route::get('Guide-section/{name}',[
-//	'uses'=>'GuideFrontController@SubSections',
-//	'as'  =>'front_section',
-//	'type'=>'main',
-//	'kind'=>'Guidesubsections',
-//	'title'=>'الاقسام الفرعية للدليل ',
-//]);
+Route::get('Guide-section/{name}',[
+	'uses'=>'GuideFrontController@SubSections',
+	'as'  =>'front_section',
+	'type'=>'main',
+	'kind'=>'Guidesubsections',
+	'title'=>'الاقسام الفرعية للدليل ',
+]);
 //
 //// sub sections sort
 //Route::get('Guide-section-sort-view-count/{name}',[
@@ -457,7 +457,7 @@ Route::group(['middleware' => ['role','auth']], function() {
 //
 //
 //// nav_search
-//Route::get('get-search-in-nav', 'GuideFrontController@ser')->name('front_nav_search');
+Route::get('get-search-in-nav', 'GuideFrontController@ser')->name('front_nav_search');
 //
 //// transports
 //Route::post('get-transports', 'GuideFrontController@Gettransports')->name('front_Gettransports');

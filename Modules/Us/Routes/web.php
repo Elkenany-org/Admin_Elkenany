@@ -118,14 +118,14 @@ Route::group(['middleware' => ['role','auth']], function() {
 
 //
 //// contuct
-//Route::get('get-detials-contuct-us', 'UsController@getcontuct')->name('front_get_contuct_uss');
+Route::get('get-detials-contuct-us', 'UsController@getcontuct')->name('front_get_contuct_uss');
 //
 //// contuct
 //Route::post('add-contuct', 'UsController@contuct')->name('front_add_contuct');
 //
 //
 //// about
-//Route::get('get-about-us', 'UsController@about')->name('front_get_about');
+Route::get('get-about-us', 'UsController@about')->name('front_get_about');
 //
 //
 //
@@ -134,6 +134,6 @@ Route::group(['middleware' => ['role','auth']], function() {
 //
 //
 //// privacy
-//Route::get('get-privacy', 'UsController@privacy')->name('front_get_privacy');
+Route::get('get-privacy', 'UsController@privacy')->name('front_get_privacy');
 //
 
